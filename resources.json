@@ -16,6 +16,10 @@
       "label": "Shelter"
     },
     {
+      "id": "health",
+      "label": "Health"
+    },
+    {
       "id": "hygiene",
       "label": "Clean"
     },
@@ -534,7 +538,8 @@
       "cat": [
         "shelter",
         "hygiene",
-        "recovery"
+        "recovery",
+        "health"
       ],
       "desc": "Drop-in day center with shower, laundry, shelter, and bridge housing. Mental health and substance use support.",
       "detail": "Multnomah County run. Bridge housing while you stabilize. No appointment needed for day center.",
@@ -564,6 +569,158 @@
       },
       "hoursText": "Mon, Wed, Fri 8am-noon. Tue & Thu 8am-3:30pm.",
       "url": "rosehaven.org",
+      "noId": false
+    },
+    {
+      "name": "Old Town Clinic",
+      "sub": "Central City Concern: primary care",
+      "cat": [
+        "health"
+      ],
+      "desc": "Primary care doctor visits and an on-site pharmacy in Old Town. Visits in person, by phone, or by video.",
+      "detail": "Sliding-fee scale. Takes OHP, Medicare, and self-pay. They don't turn anyone away for lack of insurance or inability to pay. Call to schedule.",
+      "addr": "727 W Burnside St, Portland, OR 97209",
+      "hoursText": "By appointment. Mon, Tue, Thu, Fri 8am-5pm; Wed 9am-5pm.",
+      "phone": "5032284533",
+      "url": "centralcityconcern.org/health-care-location/old-town-clinic-health-care",
+      "noId": false
+    },
+    {
+      "name": "Hooper Detox",
+      "sub": "Central City Concern: withdrawal management",
+      "cat": [
+        "health",
+        "recovery"
+      ],
+      "desc": "Medically supported withdrawal from alcohol, opioids, and other drugs. Walk in by 7:30am, Monday to Friday, for morning triage.",
+      "detail": "Admission depends on need and open beds, not first come, first served. If you aren't admitted, ask about a standby spot or an afternoon admission. Outpatient help Mon-Fri 1-4pm, walk-in or by appointment. Bring a state ID or driver's license, and your insurance card if you have one.",
+      "highlight": "Walk in by 7:30am, Monday to Friday",
+      "addr": "1535 N Williams Ave, Portland, OR 97232",
+      "hoursText": "Admission triage Mon-Fri 6:45-7:45am. Outpatient Mon-Fri 1-4pm. Closed July 4, Thanksgiving, and Christmas.",
+      "phone": "5032382067",
+      "url": "centralcityconcern.org/recovery-location/hooper-detoxification-stabilization-center",
+      "noId": false
+    },
+    {
+      "name": "Outside In Medical Clinic",
+      "sub": "Downtown and East Burnside",
+      "cat": [
+        "health"
+      ],
+      "desc": "Primary care, an on-site pharmacy, and medication to treat addiction, for ages 13 and up.",
+      "detail": "Call or stop by to ask about same-day appointments. No one is turned away for inability to pay; most insurance accepted. Ages 15-17 can come without a guardian. Second clinic at 16144 E Burnside St.",
+      "addr": "1132 SW 13th Ave, Portland, OR 97205",
+      "hoursText": "Downtown: Mon, Thu, Fri 8:30am-5pm; Tue, Wed 8:30am-7pm",
+      "phone": "5035353860",
+      "url": "outsidein.org/health-services/medical-services",
+      "noId": false
+    },
+    {
+      "name": "Outside In Drug User Health Services",
+      "sub": "Free naloxone and testing",
+      "cat": [
+        "health",
+        "recovery"
+      ],
+      "desc": "Free naloxone (Narcan) and overdose-prevention training, HIV, hepatitis C, and syphilis testing, and drug checking.",
+      "detail": "For adults 18 and up. Free.",
+      "addr": "1219 SW Main St, Portland, OR 97205",
+      "hours": {
+        "mon": "12:00-17:00",
+        "tue": "12:00-17:00",
+        "wed": "12:00-17:00",
+        "thu": "12:00-17:00",
+        "fri": "12:00-17:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Mon-Fri noon-5pm",
+      "phone": "5035353826",
+      "url": "outsidein.org/health-services/substance-user-engagement-services",
+      "noId": false
+    },
+    {
+      "name": "Multnomah County Mobile Clinic",
+      "sub": "Walk-in medical van",
+      "cat": [
+        "health"
+      ],
+      "desc": "A medical van that visits sites around the county: illness and injuries, exams, vaccines, pregnancy tests, limited prescriptions, and dental cleanings at some stops.",
+      "detail": "Walk-ins welcome while spots last, seen in order of arrival. Pay what you can; if you can't pay, you can still get care. Stops change, so check the calendar on their website. Text or call during clinic hours to check wait times.",
+      "highlight": "Walk-ins welcome. Pay what you can.",
+      "hoursText": "Changes by stop. See the calendar on their website.",
+      "phone": "9719403149",
+      "url": "healthcenter.multco.us/mobile-clinic",
+      "noId": false
+    },
+    {
+      "name": "Billi Odegaard Dental Clinic",
+      "sub": "Multnomah County dental",
+      "cat": [
+        "health"
+      ],
+      "desc": "Dental care: X-rays, cleanings, fillings, and more.",
+      "detail": "Cost is based on what you can pay. If you can't pay, you can still get care. Suite 380. For severe tooth pain or a broken tooth, call right away.",
+      "addr": "33 NW Broadway, Portland, OR 97209",
+      "hoursText": "Call to schedule and check hours",
+      "phone": "5039885558",
+      "url": "healthcenter.multco.us/current-patients/our-services/dental",
+      "noId": false
+    },
+    {
+      "name": "Portland Street Medicine",
+      "sub": "Medical care on the street",
+      "cat": [
+        "health"
+      ],
+      "desc": "Medical teams who bring care to people sleeping outside or without stable housing. There is no clinic to visit.",
+      "detail": "Call or text for yourself or someone else. Say where to find the person and what's wrong; the team looks for them on its next rounds. For an emergency, call 911.",
+      "hoursText": "Call or text 503-501-1231",
+      "phone": "5035011231",
+      "url": "portlandstreetmedicine.org",
+      "noId": false
+    },
+    {
+      "name": "Wallace Medical Concern",
+      "sub": "Rockwood clinic, East Portland",
+      "cat": [
+        "health"
+      ],
+      "desc": "Primary care clinic in East Portland. Treats patients regardless of ability to pay, with a sliding fee based on income.",
+      "detail": "Appointments only, no walk-ins. Takes OHP. For help signing up for insurance, ask for ext. 4750. Dental care at the same address.",
+      "addr": "18633 SE Stark St, Portland, OR 97233",
+      "hoursText": "By appointment. Mon-Thu 7:45am-7:30pm, Fri 7:45am-5pm.",
+      "phone": "5034891760",
+      "url": "mywallace.org",
+      "noId": false
+    },
+    {
+      "name": "Free Naloxone (Narcan)",
+      "sub": "Multnomah County",
+      "cat": [
+        "health",
+        "recovery"
+      ],
+      "desc": "Naloxone reverses an opioid overdose. Get it free from the county, by mail from Just in Case Oregon, or at Outside In (1219 SW Main St).",
+      "detail": "Request it online from the county or call its Harm Reduction Program. Pharmacies also sell it without a prescription.",
+      "hoursText": "Call 503-988-3030",
+      "phone": "5039883030",
+      "url": "multco.us/behavioral-health/overdose-prevention",
+      "noId": false
+    },
+    {
+      "name": "Oregon Health Plan (OHP)",
+      "sub": "Free health coverage",
+      "cat": [
+        "health",
+        "more"
+      ],
+      "desc": "Free health coverage for people with low income. Most clinics in this guide take it.",
+      "detail": "Apply online at ONE.Oregon.gov, by phone, at an ODHS office, or with a free certified helper. You don't need a permanent address; give a phone number, email, or a temporary mailing address.",
+      "hoursText": "Call ONE Customer Service at 1-800-699-9075",
+      "phone": "18006999075",
+      "url": "one.oregon.gov",
+      "urlLabel": "Apply online",
       "noId": false
     },
     {

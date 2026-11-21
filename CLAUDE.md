@@ -14,9 +14,9 @@ A mobile-first resource finder for people experiencing homelessness in Portland,
 ## How to update resources
 Edit `resources.json`. Each resource has: name, sub, cat (array of category ids), desc, detail, highlight, addr, hours (object keyed by day abbreviation with "HH:MM-HH:MM" strings or null), hoursText, phone (digits only), url (no protocol prefix), urlLabel (button text, optional), noId (boolean). Leave a field out rather than setting it to null.
 
-Category ids (defined in `resources.json` under `categories`): "work", "food", "shelter", "hygiene", "recovery", "id", "training", "more". The page's icon for each lives in `CATEGORY_EMOJI` in `index.html`.
+Category ids (defined in `resources.json` under `categories`): "work", "food", "shelter", "health", "hygiene", "recovery", "id", "training", "more". The page's icon for each lives in `CATEGORY_EMOJI` in `index.html`.
 
-- Tag a resource only with categories it actually provides. "hygiene" (shown as "Clean") means showers or laundry; "id" means ID and document replacement; "recovery" means addiction recovery or substance use help. Phones, transit, computers, legal help and crisis lines go in "more".
+- Tag a resource only with categories it actually provides. "hygiene" (shown as "Clean") means showers or laundry; "id" means ID and document replacement; "health" means medical, dental, or mental health care, harm reduction, and health coverage; "recovery" means addiction recovery or substance use help (detox and naloxone fit both). Phones, transit, computers, legal help and crisis lines go in "more".
 - Only set `hours` for times someone can walk in and get the service. It drives the Open Now / Closed badge. Orientation times, application windows and arrival cutoffs go in `hoursText` only.
 - A slot whose close time is earlier than its open time runs past midnight (e.g. "21:00-06:30" for an overnight shelter).
 - `addr` is used for the Directions link, so keep it a plain street address. Put notes in `detail`.
