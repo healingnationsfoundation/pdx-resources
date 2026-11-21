@@ -1,0 +1,67 @@
+name: Suggest a resource
+description: A program or service in Portland that should be on the page.
+title: "[New resource] "
+labels: ["new-resource"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We list free or low-barrier services for people experiencing homelessness in Portland. Only include an organization's public contact information.
+  - type: input
+    id: name
+    attributes:
+      label: Organization and program name
+      placeholder: "Cultivate Initiatives: paid internship"
+    validations:
+      required: true
+  - type: checkboxes
+    id: categories
+    attributes:
+      label: What do they offer?
+      options:
+        - label: Work
+        - label: Food
+        - label: Shelter
+        - label: Hygiene (showers, laundry)
+        - label: ID and documents
+        - label: Training
+        - label: Something else (describe below)
+  - type: textarea
+    id: description
+    attributes:
+      label: What they offer, in plain words
+      placeholder: "Free showers and laundry. No ID needed. Walk-ins welcome."
+    validations:
+      required: true
+  - type: input
+    id: address
+    attributes:
+      label: Address
+  - type: textarea
+    id: hours
+    attributes:
+      label: Hours
+      placeholder: "Mon-Fri 8am-4pm, closed weekends"
+  - type: input
+    id: phone
+    attributes:
+      label: Phone
+  - type: input
+    id: website
+    attributes:
+      label: Website
+  - type: dropdown
+    id: id_needed
+    attributes:
+      label: Do people need ID?
+      options:
+        - No ID needed
+        - ID required
+        - Not sure
+  - type: textarea
+    id: source
+    attributes:
+      label: How did you confirm this, and when?
+      description: A phone call, their website, 211info, a news story. Include a link if you have one.
+    validations:
+      required: true

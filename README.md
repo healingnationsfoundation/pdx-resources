@@ -51,6 +51,12 @@ Print a QR code pointing to your deployed URL and post it at Nightwatch (1432 SW
 
 All 40 resources verified active as of November 21, 2026.
 
+## Contributing
+
+Help is welcome, and you don't need to code. If hours have changed, a program has closed, or something's missing, [open an issue](../../issues/new/choose) and tell us how you know. Every change must be verified before it goes live. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Never add personal information about guests or volunteers to this repository. It's public.
+
 ## License
 
-This project is public domain. Use it however you want.
+Dedicated to the public domain under [CC0 1.0](LICENSE). Use it however you want, including for other cities.

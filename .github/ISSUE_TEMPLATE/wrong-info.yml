@@ -1,0 +1,54 @@
+name: Report wrong info
+description: Hours changed, a program closed, a number or address is wrong.
+title: "[Wrong info] "
+labels: ["wrong-info"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for flagging this. Please don't include names or details about any guest or volunteer. This page is public.
+  - type: input
+    id: resource
+    attributes:
+      label: Which resource?
+      description: The name as it appears on the page.
+      placeholder: "Hygiene4All"
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What's wrong?
+      placeholder: "Page says open Tuesday 9-3. They moved to Wednesday."
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What's correct?
+      description: The right hours, address, phone number, etc. Leave blank if you're not sure.
+  - type: dropdown
+    id: source
+    attributes:
+      label: How do you know?
+      options:
+        - I called them
+        - Their website or social media
+        - 211info
+        - I went there in person
+        - A news story
+        - Someone told me (not confirmed yet)
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link (if any)
+      placeholder: "https://..."
+  - type: input
+    id: date
+    attributes:
+      label: When did you check?
+      placeholder: "2026-11-21"
+    validations:
+      required: true
