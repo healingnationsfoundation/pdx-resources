@@ -23,6 +23,7 @@ body:
         - label: Food
         - label: Shelter
         - label: Hygiene (showers, laundry)
+        - label: Addiction recovery
         - label: ID and documents
         - label: Training
         - label: Something else (describe below)

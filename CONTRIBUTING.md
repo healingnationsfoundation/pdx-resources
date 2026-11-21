@@ -41,13 +41,13 @@ Guests can text or email tips through the "Report a problem" links. Tips go to a
 
 ## Changing the code
 
-Everything lives in `index.html`: the resource data, styles and logic. There's no build step and nothing to install.
+The page is `index.html` (styles and logic) plus `resources.json` (every resource). There's no build step and nothing to install.
 
-1. Fork the repo and make your change.
-2. Open `index.html` in a browser. Check it on a small phone screen (Chrome DevTools, iPhone SE size) in both light and dark mode.
+1. Fork the repo and make your change. Resource changes go in `resources.json`; see [README.md](README.md#update-resources) for the fields.
+2. Preview it: run `python -m http.server 4190` in the folder and open http://localhost:4190. Check it on a small phone screen (Chrome DevTools, iPhone SE size) in both light and dark mode.
 3. Open a pull request describing what you changed and how you checked it.
 
-Resource data is the `RESOURCES` array near the top of the `<script>` block. See [README.md](README.md#update-resources) for the fields.
+`resources.json` is also read by other tools, including Healing Nations Foundation's Honest Day app. Don't rename or remove fields or category ids in a pull request; open an issue to discuss it first.
 
 Design rules (also in [CLAUDE.md](CLAUDE.md)):
 

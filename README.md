@@ -1,6 +1,6 @@
 # PDX Resources
 
-Mobile resource finder for Operation Nightwatch guests. Jobs, food, shelter, hygiene, and ID services in Portland, OR.
+Mobile resource finder for Operation Nightwatch guests. Jobs, food, shelter, hygiene, recovery, and ID services in Portland, OR. Run by [Healing Nations Foundation](https://www.healingnationsfoundation.org/). Live at **https://resources.healingnationsfoundation.org**.
 
 ## What this is
 
@@ -23,25 +23,30 @@ This is a static site. Drop it anywhere that serves HTML.
 
 ## Update resources
 
-All resource data lives in the `RESOURCES` array inside `index.html`. Edit the array, commit, push. The site updates automatically.
+All resource data lives in `resources.json`. Edit it, commit, push. The site updates automatically.
 
-Each resource object:
+The same file is published at https://resources.healingnationsfoundation.org/resources.json, so other tools can use the verified list. Healing Nations Foundation's Honest Day recovery app is one of them. Don't rename or remove fields without checking with the maintainer.
+
+Each resource object (leave out fields you don't need):
 ```js
 {
-  name: "Organization Name",
-  sub: "Subtitle / program name",
-  cat: ["work", "food", "shelter", "hygiene", "id", "training", "more"],
-  desc: "What they offer.",
-  detail: "Additional context.",
-  highlight: "Important callout shown in green box",
-  addr: "Plain street address for directions link",
-  hours: { mon:"08:00-16:00", tue:null, ... },  // walk-in hours only; null = closed; "21:00-06:30" = overnight
-  hoursText: "Human-readable hours string",
-  phone: "5031234567",  // digits only, for tel: link
-  url: "example.org",   // no https://, added automatically
-  noId: true  // shows "No ID Needed" badge
+  "name": "Organization Name",
+  "sub": "Subtitle / program name",
+  "cat": ["work", "food", "shelter", "hygiene", "recovery", "id", "training", "more"],
+  "desc": "What they offer.",
+  "detail": "Additional context.",
+  "highlight": "Important callout shown in green box",
+  "addr": "Plain street address for directions link",
+  "hours": { "mon": "08:00-16:00", "tue": null },  // walk-in hours only; null = closed; "21:00-06:30" = overnight
+  "hoursText": "Human-readable hours string",
+  "phone": "5031234567",  // digits only, for tel: link
+  "url": "example.org",   // no https://, added automatically
+  "urlLabel": "Get the app",  // optional button text instead of "Website"
+  "noId": true  // shows "No ID Needed" badge
 }
 ```
+
+To preview changes, serve the folder (browsers won't load `resources.json` from a file opened straight from disk): `python -m http.server 4190`, then open http://localhost:4190.
 
 ## QR code
 
@@ -49,7 +54,7 @@ Print a QR code pointing to your deployed URL and post it at Nightwatch (1432 SW
 
 ## Verified
 
-All 41 resources verified active as of November 21, 2026.
+All 43 resources verified active as of November 21, 2026.
 
 ## Contributing
 
