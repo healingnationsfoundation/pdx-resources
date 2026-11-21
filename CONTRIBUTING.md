@@ -8,6 +8,7 @@ You don't need to know how to code.
 
 - **Something on the page is wrong** (hours changed, a program closed, a phone number doesn't work): [open a "Report wrong info" issue](../../issues/new?template=wrong-info.yml).
 - **A resource is missing**: [open a "Suggest a resource" issue](../../issues/new?template=new-resource.yml).
+- **No GitHub account?** Email admin@healingnationsfoundation.org, or tap "Report a problem" on any listing on the site.
 
 Tell us how you know. "I called them today" or "their website says so, here's the link" is perfect.
 

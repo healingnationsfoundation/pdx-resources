@@ -109,7 +109,7 @@ body::before {
 .results-info { font-size: 13px; color: var(--fg2); padding: 0 0 8px; }
 
 /* Cards */
-.cards { display: flex; flex-direction: column; gap: 10px; padding-bottom: 80px; }
+.cards { display: flex; flex-direction: column; gap: 10px; padding-bottom: 8px; }
 .card {
   background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 14px; box-shadow: var(--card-shadow); transition: border-color 0.15s;
@@ -156,6 +156,19 @@ body::before {
   background: var(--bg); color: var(--accent); border: 1px solid var(--border);
 }
 
+/* Report a problem: quiet text link, still a full 44px tap target */
+.card-report {
+  display: flex; align-items: center; min-height: 44px; margin-top: 4px;
+  font-size: 13px; color: var(--fg2); text-decoration: underline;
+}
+.report-box {
+  margin: 16px 0 4px; padding: 14px 16px; border: 1px solid var(--border);
+  border-radius: var(--radius-sm); background: var(--bg2); text-align: center;
+  font-size: 14px; color: var(--fg); line-height: 1.5;
+}
+.report-box .card-btn { margin-top: 8px; justify-content: center; }
+.report-box .gh { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; color: var(--fg2); }
+
 /* Empty state */
 .empty { text-align: center; padding: 40px 20px; color: var(--fg2); }
 .empty .icon { font-size: 32px; margin-bottom: 12px; }
@@ -195,6 +208,13 @@ body::before {
 </div>
 <div class="results-info" id="results-info"></div>
 <div class="cards" id="cards"></div>
+
+<div class="report-box">
+  <strong>Something wrong or missing?</strong><br>
+  Hours changed, a place closed, a number doesn't work? Tell us so we can fix it.<br>
+  <a class="card-btn btn-web" id="report-general" href="#">✉ Report a problem</a><br>
+  <a class="gh" href="https://github.com/healingnationsfoundation/pdx-resources/issues/new/choose" target="_blank" rel="noopener">Volunteers: report on GitHub</a>
+</div>
 
 <div class="footer">
   Operation Nightwatch | 1432 SW 13th Ave | Thu/Fri/Sat 7-10:30pm<br>
@@ -508,6 +528,15 @@ const CATEGORIES = [
 
 const DAYS = ['sun','mon','tue','wed','thu','fri','sat'];
 
+// Where "Report a problem" emails go. This address is shown publicly.
+const REPORT_EMAIL = "admin@healingnationsfoundation.org";
+
+function reportUrl(r) {
+  const subject = r ? `PDX Resources: problem with ${r.name}` : 'PDX Resources: report a problem';
+  const body = `${r ? 'Resource: ' + r.name + '\n\n' : 'Which resource (or what is missing):\n\n'}What's wrong:\n\n\nHow do you know? (called them, went there, their website...):\n\n`;
+  return `mailto:${REPORT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 let activeFilter = 'all';
 let searchQuery = '';
 
@@ -601,6 +630,7 @@ function renderCards() {
       <div class="card-detail">\u{1F552} ${r.hoursText}</div>
       ${r.addr?`<div class="card-detail">\u{1F4CD} ${r.addr}</div>`:''}
       ${actions?`<div class="card-actions">${actions}</div>`:''}
+      <a class="card-report" href="${reportUrl(r)}">Report a problem with this listing</a>
     </div>`;
   }).join('');
 }
@@ -609,6 +639,8 @@ document.getElementById('search').addEventListener('input', e => {
   searchQuery = e.target.value;
   renderCards();
 });
+
+document.getElementById('report-general').href = reportUrl(null);
 
 renderFilters();
 renderCards();
