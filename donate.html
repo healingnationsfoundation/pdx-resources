@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Donate Surplus Food - PDX Resources</title>
+<meta name="description" content="For Portland businesses: who takes surplus food and supplies, when, and how. Food rescue pickups and drop-off sites, verified.">
+<style>
+/* Same look as index.html: mobile-first, big tap targets, light and dark */
+:root {
+  --bg: #FAFAFA; --bg2: #FFFFFF; --fg: #1a1a1a; --fg2: #555;
+  --accent: #1B4F72; --accent-light: #D6EAF8; --accent-fg: #fff;
+  --green: #1E8449; --green-bg: #E8F8F5;
+  --red: #C0392B; --red-bg: #FDEDEC;
+  --orange: #B35C00; --orange-bg: #FDF2E9;
+  --border: #e0e0e0; --card-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  --radius: 12px; --radius-sm: 8px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111; --bg2: #1a1a1a; --fg: #e8e8e8; --fg2: #a8a8a8;
+    --accent: #5DADE2; --accent-light: #1a2d3d; --accent-fg: #111;
+    --green: #2ECC71; --green-bg: #1a2d1a;
+    --red: #E74C3C; --red-bg: #2d1a1a;
+    --orange: #F39C12; --orange-bg: #2d2a1a;
+    --border: #333; --card-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111; --bg2: #1a1a1a; --fg: #e8e8e8; --fg2: #a8a8a8;
+  --accent: #5DADE2; --accent-light: #1a2d3d; --accent-fg: #111;
+  --green: #2ECC71; --green-bg: #1a2d1a;
+  --red: #E74C3C; --red-bg: #2d1a1a;
+  --orange: #F39C12; --orange-bg: #2d2a1a;
+  --border: #333; --card-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; margin: 0; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  -webkit-text-size-adjust: 100%;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px); z-index: 50; background: var(--accent);
+}
+a { color: var(--accent); }
+
+.header {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40;
+  background: var(--accent); color: var(--accent-fg);
+  margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding: 12px max(16px, env(safe-area-inset-right, 0px)) 12px max(16px, env(safe-area-inset-left, 0px));
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.header h1 { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+.header p { font-size: 12px; opacity: 0.85; margin-top: 2px; }
+.header .back {
+  color: var(--accent-fg); font-size: 13px; font-weight: 600; white-space: nowrap;
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 4px;
+}
+
+/* Callout boxes */
+.box {
+  border-radius: var(--radius-sm); padding: 12px 14px; margin: 12px 0;
+  font-size: 14px; line-height: 1.5; border: 1px solid var(--border); background: var(--bg2);
+}
+.box.urgent { background: var(--orange-bg); border-color: var(--orange); }
+.box strong { display: block; margin-bottom: 2px; }
+.box ul { padding-left: 18px; margin-top: 4px; }
+.box li { margin-top: 2px; }
+
+/* Step labels and choice chips */
+.step { font-size: 13px; font-weight: 700; color: var(--fg2); margin: 14px 0 0; text-transform: uppercase; letter-spacing: 0.4px; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; padding: 8px 0 4px; }
+.chip {
+  border-radius: 22px; padding: 10px 14px; min-height: 44px;
+  font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;
+  background: var(--bg2); color: var(--fg); border: 1px solid var(--border);
+  display: inline-flex; align-items: center; gap: 6px;
+  -webkit-tap-highlight-color: transparent;
+}
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.chip:focus-visible, .card-btn:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+
+.results-info { font-size: 13px; color: var(--fg2); padding: 10px 0 8px; }
+
+/* Cards */
+.cards { display: flex; flex-direction: column; gap: 10px; padding-bottom: 8px; }
+.card {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px; box-shadow: var(--card-shadow);
+}
+.card-name { font-size: 16px; font-weight: 700; line-height: 1.3; }
+.card-org { font-size: 12px; color: var(--fg2); margin-top: 2px; }
+.card-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+.tag {
+  font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 10px;
+  text-transform: uppercase; letter-spacing: 0.3px;
+}
+.tag-pickup { background: var(--accent-light); color: var(--accent); }
+.tag-dropoff { background: var(--bg); color: var(--fg2); border: 1px solid var(--border); }
+.tag-open { background: var(--green-bg); color: var(--green); }
+.tag-closed { background: var(--red-bg); color: var(--red); }
+.card-desc { font-size: 14px; line-height: 1.5; margin-top: 8px; }
+.facts { margin-top: 8px; display: grid; gap: 6px; }
+.fact { font-size: 13px; line-height: 1.45; display: grid; grid-template-columns: 22px 1fr; }
+.fact b { font-weight: 700; }
+.fact.no { color: var(--red); }
+.takes { display: flex; flex-wrap: wrap; gap: 4px; }
+.take { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 10px; background: var(--green-bg); color: var(--green); }
+.take.match { outline: 2px solid var(--green); }
+
+.card-actions { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.card-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 10px 14px; border-radius: var(--radius-sm); min-height: 44px;
+  font-size: 14px; font-weight: 600; font-family: inherit;
+  text-decoration: none; border: none; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-call { background: var(--green-bg); color: var(--green); border: 1px solid var(--green); flex: 1 1 100%; white-space: nowrap; }
+.btn-main { background: var(--accent); color: var(--accent-fg); flex: 1; }
+.btn-web { background: var(--bg); color: var(--accent); border: 1px solid var(--border); }
+
+.card-source { font-size: 12px; color: var(--fg2); margin-top: 8px; line-height: 1.4; }
+.card-source a, .card-report a {
+  color: var(--fg2); display: inline-flex; align-items: center; min-height: 44px;
+}
+.card-report { font-size: 13px; }
+
+.section-title { font-size: 16px; font-weight: 700; margin: 22px 0 4px; }
+.law { font-size: 14px; line-height: 1.5; }
+.law p { margin-top: 6px; }
+.law .card-source { margin-top: 2px; }
+
+.empty { text-align: center; padding: 28px 16px; color: var(--fg2); line-height: 1.5; }
+.footer { text-align: center; padding: 20px 0 12px; font-size: 11px; color: var(--fg2); line-height: 1.5; }
+.footer a { color: inherit; display: inline-flex; align-items: center; min-height: 44px; }
+
+@media (min-width: 600px) { .cards { display: grid; grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>Donate Surplus Food</h1>
+    <p>For Portland restaurants, grocers, bakeries, caterers, farms and shops</p>
+  </div>
+  <a class="back" href="./">&larr; Find help</a>
+</div>
+
+<div class="box urgent">
+  <strong>Food that has to go today? Call first.</strong>
+  <ul>
+    <li>Don't show up with prepared or refrigerated food without a yes. Storage fills up.</li>
+    <li>Only food that hasn't been served or opened. Would you eat it yourself?</li>
+    <li>Keep cold food cold and hot food hot until it's handed over.</li>
+  </ul>
+</div>
+
+<p class="step" id="step-kind">1. What do you have?</p>
+<div class="chips" id="kinds" role="group" aria-labelledby="step-kind"></div>
+
+<p class="step" id="step-how">2. How will it get there?</p>
+<div class="chips" id="hows" role="group" aria-labelledby="step-how"></div>
+
+<div class="results-info" id="results-info" aria-live="polite"></div>
+<div class="cards" id="cards"></div>
+
+<div class="box" id="match-box">
+  <strong>Can't find a match?</strong>
+  Healing Nations Foundation, the group behind this page, can help find a home for it. Email us what you have, about how much, where it is, and by when it has to go.<br>
+  <a class="card-btn btn-main" id="match-email" href="#" style="margin-top:8px">&#x2709; Email us about a donation</a><br>
+  <span style="font-size:13px;color:var(--fg2)">Email isn't instant. If food must go within a few hours, call the places above too.</span>
+</div>
+
+<div id="law"></div>
+
+<div class="box">
+  <strong>Run a program that takes donations?</strong>
+  If your listing is wrong, or you want to be added, tell us. We check every listing with the organization's own website or 211info before it goes up.<br>
+  <a class="card-btn btn-web" id="report-general" href="#" style="margin-top:8px">&#x2709; Fix or add a listing</a>
+</div>
+
+<div class="footer">
+  A free service of <a href="https://www.healingnationsfoundation.org/" target="_blank" rel="noopener">Healing Nations Foundation</a><br>
+  <span id="verified"></span><br>
+  <a href="./">Looking for help? See the resource guide</a>
+</div>
+
+<script>
+// Donation recipients live in donations.json (kept apart from resources.json,
+// which other HNF apps read). Edit donations.json, not this file.
+let KINDS = [];
+let RECIPIENTS = [];
+let LAW = [];
+
+const KIND_EMOJI = {hot:"\u{1F372}", cold:"\u{2744}\u{FE0F}", produce:"\u{1F955}", bakery:"\u{1F35E}", packaged:"\u{1F96B}", hygiene:"\u{1F9FC}", clothing:"\u{1F9E5}"};
+const HOWS = [
+  {id:"any", label:"Either way"},
+  {id:"pickup", label:"\u{1F69A} Pick it up from us"},
+  {id:"dropoff", label:"\u{1F4E6} We'll drop it off"}
+];
+const DAYS = ['sun','mon','tue','wed','thu','fri','sat'];
+
+// Shown publicly. Donation-match requests and listing fixes both go here.
+const HNF_EMAIL = "admin@healingnationsfoundation.org";
+
+let activeKind = null;   // null = show everything
+let activeHow = 'any';
+
+function mailto(subject, body) {
+  return `mailto:${HNF_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+const MATCH_BODY = "Business name:\nWhere the food is (address or cross streets):\n\nWhat you have (hot, refrigerated, produce, bakery, packaged, supplies):\nAbout how much:\nBy when it has to go:\nCan you drop it off, or does it need a pickup?\n\nBest way to reach you:\n";
+function reportUrl(r) {
+  const subject = r ? `PDX Resources donate page: problem with ${r.name}` : 'PDX Resources donate page: fix or add a listing';
+  const body = `${r ? 'Listing: ' + r.name + '\n\n' : 'Organization:\n\n'}What's wrong or missing:\n\n\nHow do you know? (their website, a phone call...):\n\n`;
+  return mailto(subject, body);
+}
+
+// Hours are "HH:MM-HH:MM"; same format as resources.json.
+function parseSlot(slot) {
+  return slot.split('-').map(t => { const [h, m] = t.split(':').map(Number); return h*60 + m; });
+}
+function isOpenNow(hours, now = new Date()) {
+  if (!hours) return null;
+  const d = now.getDay(), mins = now.getHours()*60 + now.getMinutes();
+  const today = hours[DAYS[d]];
+  if (today) {
+    const [o, c] = parseSlot(today);
+    if (c > o ? (mins >= o && mins < c) : mins >= o) return true;
+  }
+  const y = hours[DAYS[(d + 6) % 7]];
+  if (y) { const [o, c] = parseSlot(y); if (c <= o && mins < c) return true; }
+  return false;
+}
+
+function esc(v) {
+  return String(v ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+function digits(v) { return String(v).replace(/[^0-9]/g, ''); }
+function formatPhone(d) { d = digits(d); return d.length === 10 ? `${d.slice(0,3)}-${d.slice(3,6)}-${d.slice(6)}` : d; }
+function mapsUrl(addr) { return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addr)}`; }
+function niceDate(iso) {
+  const [y, m, d] = String(iso).split('-').map(Number);
+  if (!y) return esc(iso);
+  return new Date(y, m - 1, d).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+}
+function kindLabel(id) { const k = KINDS.find(k => k.id === id); return k ? k.label : id; }
+
+function chip(id, label, pressed, group) {
+  return `<button type="button" class="chip" data-group="${group}" data-id="${esc(id)}" aria-pressed="${pressed}">${label}</button>`;
+}
+
+function renderChips() {
+  document.getElementById('kinds').innerHTML =
+    chip('', 'Show all', activeKind === null, 'kind') +
+    KINDS.map(k => chip(k.id, `<span aria-hidden="true">${KIND_EMOJI[k.id] || ''}</span>${esc(k.label)}`, activeKind === k.id, 'kind')).join('');
+  document.getElementById('hows').innerHTML =
+    HOWS.map(h => chip(h.id, esc(h.label), activeHow === h.id, 'how')).join('');
+  document.querySelectorAll('.chip').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.group === 'kind') activeKind = b.dataset.id || null;
+    else activeHow = b.dataset.id;
+    renderChips();
+    renderCards();
+  }));
+}
+
+function renderCards() {
+  const el = document.getElementById('cards');
+  const info = document.getElementById('results-info');
+
+  let list = RECIPIENTS.filter(r => {
+    if (activeKind && !(r.accepts || []).includes(activeKind)) return false;
+    if (activeHow === 'pickup' && !r.pickup) return false;
+    if (activeHow === 'dropoff' && !r.dropoff) return false;
+    return true;
+  });
+  // Pickup programs first: a business with a lot of perishable food usually needs a truck.
+  list = list.map((r, i) => ({r, i})).sort((a, b) => (b.r.pickup ? 1 : 0) - (a.r.pickup ? 1 : 0) || a.i - b.i).map(x => x.r);
+
+  const what = activeKind ? kindLabel(activeKind).toLowerCase() : '';
+  const how = activeHow === 'pickup' ? ' with pickup' : activeHow === 'dropoff' ? ' with drop-off' : '';
+  info.textContent = `${list.length} place${list.length !== 1 ? 's' : ''}${what ? (list.length === 1 ? ' that takes ' : ' that take ') + what : ''}${how}`;
+
+  if (!list.length) {
+    el.innerHTML = `<div class="empty">No listed place matches that yet.<br>Try "Either way", or email us below and we'll help find a home for it.</div>`;
+    return;
+  }
+
+  el.innerHTML = list.map(r => {
+    let tags = '';
+    if (r.pickup) tags += '<span class="tag tag-pickup">Picks up</span>';
+    if (r.dropoff) tags += '<span class="tag tag-dropoff">Drop-off</span>';
+    const open = isOpenNow(r.dropoffHours);
+    if (open === true) tags += '<span class="tag tag-open">Taking drop-offs now</span>';
+    else if (open === false) tags += '<span class="tag tag-closed">Drop-off closed now</span>';
+
+    const takes = (r.accepts || []).map(k => `<span class="take${k === activeKind ? ' match' : ''}">${esc(kindLabel(k))}</span>`).join('');
+    const facts = [];
+    const fact = (icon, label, text, cls = '') => facts.push(`<div class="fact ${cls}"><span aria-hidden="true">${icon}</span><span><b>${label}:</b> ${esc(text)}</span></div>`);
+    if (takes) facts.push(`<div class="fact"><span aria-hidden="true">\u{2705}</span><span class="takes"><b>Takes:</b> ${takes}</span></div>`);
+    if (r.acceptsText) fact('', 'Details', r.acceptsText);
+    if (r.notAccepted) fact('\u{26D4}', "Doesn't take", r.notAccepted, 'no');
+    if (r.pickupText) fact('\u{1F69A}', 'Pickup', r.pickupText);
+    if (r.dropoffText) fact('\u{1F552}', 'Drop-off', r.dropoffText);
+    if (r.leadTime) fact('\u{23F1}\u{FE0F}', 'Notice', r.leadTime);
+    if (r.minimum) fact('\u{2696}\u{FE0F}', 'Minimum', r.minimum);
+    if (r.foodSafety) fact('\u{1F321}\u{FE0F}', 'Food safety', r.foodSafety);
+    if (r.addr) fact('\u{1F4CD}', 'Address', r.addr);
+
+    let actions = '';
+    if (r.phone) actions += `<a class="card-btn btn-call" href="tel:${digits(r.phone)}">&#x260E; Call ${formatPhone(r.phone)}</a>`;
+    if (r.formUrl) actions += `<a class="card-btn btn-main" href="https://${esc(r.formUrl)}" target="_blank" rel="noopener">${esc(r.formLabel || 'Donation form')}</a>`;
+    if (r.email) actions += `<a class="card-btn btn-web" href="mailto:${esc(r.email)}">&#x2709; Email</a>`;
+    if (r.addr) actions += `<a class="card-btn btn-web" href="${mapsUrl(r.addr)}" target="_blank" rel="noopener">&#x1F4CD; Directions</a>`;
+    if (r.url) actions += `<a class="card-btn btn-web" href="https://${esc(r.url)}" target="_blank" rel="noopener">&#x1F310; Website</a>`;
+
+    const src = (r.sources || []).map(s => `<a href="https://${esc(s)}" target="_blank" rel="noopener">${esc(s.split('/')[0])}</a>`).join(', ');
+
+    return `<div class="card">
+      <div class="card-name">${esc(r.name)}</div>
+      ${r.sub ? `<div class="card-org">${esc(r.sub)}</div>` : ''}
+      <div class="card-tags">${tags}</div>
+      <div class="card-desc">${esc(r.desc)}</div>
+      <div class="facts">${facts.join('')}</div>
+      ${actions ? `<div class="card-actions">${actions}</div>` : ''}
+      <div class="card-source">Source: ${src || 'not recorded'} &middot; checked ${niceDate(r.checked)}</div>
+      <div class="card-report"><a href="${reportUrl(r)}">Report a problem with this listing</a></div>
+    </div>`;
+  }).join('');
+}
+
+function renderLaw() {
+  if (!LAW.length) return;
+  document.getElementById('law').innerHTML =
+    `<div class="section-title">Are we protected if we donate?</div>` +
+    LAW.map(l => `<div class="box law">
+      <strong>${esc(l.title)}</strong>
+      ${(l.text || []).map(p => `<p>${esc(p)}</p>`).join('')}
+      <div class="card-source">Source: <a href="https://${esc(l.url)}" target="_blank" rel="noopener">${esc(l.urlLabel || l.url)}</a> &middot; checked ${niceDate(l.checked)}</div>
+    </div>`).join('') +
+    `<p class="card-source">This is a plain-language summary, not legal advice.</p>`;
+}
+
+document.getElementById('match-email').href = mailto('PDX Resources: help placing a food donation', MATCH_BODY);
+document.getElementById('report-general').href = reportUrl(null);
+
+document.getElementById('results-info').textContent = 'Loading...';
+fetch('donations.json', {cache: 'no-cache'})
+  .then(res => { if (!res.ok) throw new Error(res.status); return res.json(); })
+  .then(data => {
+    KINDS = data.kinds;
+    RECIPIENTS = data.recipients;
+    LAW = data.law || [];
+    document.getElementById('verified').textContent = `Listings checked ${niceDate(data.verified)}`;
+    renderChips();
+    renderCards();
+    renderLaw();
+  })
+  .catch(() => {
+    document.getElementById('results-info').textContent = '';
+    document.getElementById('cards').innerHTML = `<div class="empty">Couldn't load the list. Check your connection and try again.</div>`;
+  });
+</script>
+</body>
+</html>

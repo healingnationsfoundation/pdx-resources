@@ -48,6 +48,12 @@ Each resource object (leave out fields you don't need):
 
 To preview changes, serve the folder (browsers won't load `resources.json` from a file opened straight from disk): `python -m http.server 4190`, then open http://localhost:4190.
 
+## Donate section (for businesses)
+
+[`donate.html`](https://resources.healingnationsfoundation.org/donate.html) helps Portland restaurants, grocers, bakeries, caterers, farms and shops get extra food and supplies to the right place fast. A business taps what it has (prepared/catered, refrigerated, produce, bakery, packaged, hygiene supplies, clothing) and whether it needs a pickup. It then sees who takes it, what they don't take, drop-off hours, notice needed, and how to call, with food-rescue programs that pick up listed first. Each listing shows its source and the date it was checked. The page also summarizes the federal and Oregon Good Samaritan donation laws, quoted from the official statutes, and offers an email to Healing Nations Foundation when nothing matches.
+
+Recipients live in `donations.json`, separate from `resources.json`. See [CLAUDE.md](CLAUDE.md#how-to-update-donation-recipients) for the fields. 13 recipients verified November 21, 2026.
+
 ## QR code
 
 Print a QR code pointing to your deployed URL and post it at Nightwatch (1432 SW 13th Ave). Guests scan it with their phone camera.

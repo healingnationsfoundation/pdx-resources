@@ -19,6 +19,18 @@ Tell us how you know. "I called them today" or "their website says so, here's th
 3. **Don't guess hours.** If you can't confirm a day's hours, leave that day as `null` (closed/unknown) and put what you know in `hoursText`.
 4. **Keep it short and plain.** People read this standing outside on a small screen. Write `desc` and `detail` the way you'd say it out loud.
 
+## Donation recipients (donate.html)
+
+The Donate page is for businesses with extra food or supplies. The same verification rules apply, plus:
+
+- Only list what the organization itself says it takes from donors, on its own website or 211info. A general "donate" page that only asks for money doesn't count.
+- If two of an organization's pages disagree (for example, about hours or catered food), publish only what they agree on and tell donors to call.
+- Record every source URL and the date you checked it in `sources` and `checked`. The page shows both.
+- Use the organization's general phone and email, never a staff member's personal address.
+- Want your organization listed, or yours is wrong? Email admin@healingnationsfoundation.org.
+
+Organizations checked but not listed yet, because what they take or where to drop off wasn't clear on their own site: Hygiene4All, Rahab's Sisters, New Avenues for Youth, Outside In, Do Good Multnomah, Transition Projects (food), Salvation Army, Sunshine Division. A phone call could confirm them.
+
 ## Privacy: never commit personal information
 
 This repository is public, and everything in it, including its history, is visible to anyone.
