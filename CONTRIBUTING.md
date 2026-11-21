@@ -29,6 +29,16 @@ This repository is public, and everything in it, including its history, is visib
 
 The page itself must stay free of tracking: no analytics, cookies, accounts, or requests to outside servers (including web fonts and CDNs).
 
+## Handling tips from guests (text line and email)
+
+Guests can text or email tips through the "Report a problem" links. Tips go to a private inbox, never straight to the page or to public GitHub issues.
+
+1. **Verify before publishing.** A tip is a lead, not a fact. Confirm it with the organization or another source from the list above, then make the change.
+2. **Keep tips private.** Don't paste a tip's text, sender's number or email into an issue, pull request or commit. Describe the change in your own words ("Hygiene4All moved Tuesday showers to Wednesday, confirmed by phone 2026-11-21").
+3. **Organizations and services only.** Never publish places where people sleep or camp, or anything that identifies a person, even if a guest suggests it. Listing them publicly can get people swept.
+4. **No "unconfirmed" listings.** Don't publish tips with a "reported by a guest" label. If it can't be confirmed yet, it stays off the page.
+5. **Count tips, not people.** It's fine to keep totals by topic (for example, "12 tips about meal times in November") to show what guests need. Don't keep a record of who sent what.
+
 ## Changing the code
 
 Everything lives in `index.html`: the resource data, styles and logic. There's no build step and nothing to install.

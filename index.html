@@ -158,9 +158,14 @@ body::before {
 
 /* Report a problem: quiet text link, still a full 44px tap target */
 .card-report {
-  display: flex; align-items: center; min-height: 44px; margin-top: 4px;
-  font-size: 13px; color: var(--fg2); text-decoration: underline;
+  display: flex; align-items: center; flex-wrap: wrap; column-gap: 4px; margin-top: 4px;
+  font-size: 13px; color: var(--fg2);
 }
+.card-report a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px;
+  color: var(--fg2); text-decoration: underline;
+}
+.card-report a:first-child { padding-left: 0; }
 .report-box {
   margin: 16px 0 4px; padding: 14px 16px; border: 1px solid var(--border);
   border-radius: var(--radius-sm); background: var(--bg2); text-align: center;
@@ -212,7 +217,8 @@ body::before {
 <div class="report-box">
   <strong>Something wrong or missing?</strong><br>
   Hours changed, a place closed, a number doesn't work? Tell us so we can fix it.<br>
-  <a class="card-btn btn-web" id="report-general" href="#">✉ Report a problem</a><br>
+  <span id="report-text-wrap" hidden><a class="card-btn btn-call" id="report-text" href="#">&#x1F4AC; Text us</a> <span id="report-text-num"></span><br></span>
+  <a class="card-btn btn-web" id="report-general" href="#">✉ Email us</a><br>
   <a class="gh" href="https://github.com/healingnationsfoundation/pdx-resources/issues/new/choose" target="_blank" rel="noopener">Volunteers: report on GitHub</a>
 </div>
 
@@ -537,6 +543,25 @@ function reportUrl(r) {
   return `mailto:${REPORT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
+// Text line for tips and problem reports. Digits only, e.g. "5035551234".
+// Leave empty to hide all "Text us" links. This number is shown publicly.
+const REPORT_TEXT = "";
+
+function textUrl(r) {
+  const msg = r ? `PDX Resources - ${r.name}: ` : 'PDX Resources: ';
+  // "?&body=" is understood by both iPhone and Android messaging apps
+  return `sms:+1${REPORT_TEXT}?&body=${encodeURIComponent(msg)}`;
+}
+
+function formatPhone(d) {
+  return `${d.slice(0,3)}-${d.slice(3,6)}-${d.slice(6)}`;
+}
+
+function reportLinks(r) {
+  if (!REPORT_TEXT) return `<a href="${reportUrl(r)}">Report a problem with this listing</a>`;
+  return `<span>Problem with this listing?</span><a href="${textUrl(r)}">Text us</a><a href="${reportUrl(r)}">Email us</a>`;
+}
+
 let activeFilter = 'all';
 let searchQuery = '';
 
@@ -630,7 +655,7 @@ function renderCards() {
       <div class="card-detail">\u{1F552} ${r.hoursText}</div>
       ${r.addr?`<div class="card-detail">\u{1F4CD} ${r.addr}</div>`:''}
       ${actions?`<div class="card-actions">${actions}</div>`:''}
-      <a class="card-report" href="${reportUrl(r)}">Report a problem with this listing</a>
+      <div class="card-report">${reportLinks(r)}</div>
     </div>`;
   }).join('');
 }
@@ -641,6 +666,11 @@ document.getElementById('search').addEventListener('input', e => {
 });
 
 document.getElementById('report-general').href = reportUrl(null);
+if (REPORT_TEXT) {
+  document.getElementById('report-text').href = textUrl(null);
+  document.getElementById('report-text-num').textContent = formatPhone(REPORT_TEXT);
+  document.getElementById('report-text-wrap').hidden = false;
+}
 
 renderFilters();
 renderCards();
