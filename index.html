@@ -1,7 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
 <title>PDX Resources</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Portland employment and services resource finder for Operation Nightwatch guests">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <style>
 /* Layout: category-filtered resource cards, mobile-first, big tap targets */
 :root {
@@ -37,7 +41,7 @@
 * { box-sizing: border-box; margin: 0; }
 body {
   background: var(--bg); color: var(--fg);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
   padding-block: 0;
@@ -168,6 +172,8 @@ body::before {
   .cards { grid-template-columns: repeat(3, 1fr); }
 }
 </style>
+</head>
+<body>
 
 <div class="header">
   <h1>PDX Resources</h1>
@@ -184,7 +190,7 @@ body::before {
 
 <div class="filters" id="filters"></div>
 <div class="search-wrap">
-  <span class="search-icon">\u{1F50D}</span>
+  <span class="search-icon" aria-hidden="true">&#x1F50D;</span>
   <input type="search" id="search" placeholder="Search resources..." autocomplete="off">
 </div>
 <div class="results-info" id="results-info"></div>
@@ -591,3 +597,5 @@ document.getElementById('search').addEventListener('input', e => {
 renderFilters();
 renderCards();
 </script>
+</body>
+</html>

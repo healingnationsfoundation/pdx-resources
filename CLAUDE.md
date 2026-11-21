@@ -16,8 +16,9 @@ Valid categories: "work", "food", "shelter", "hygiene", "id", "training"
 
 ## Constraints
 - Must work on old phones with slow connections. No heavy libraries.
-- Must work without JavaScript disabled (progressive enhancement is a future goal).
+- Should eventually work with JavaScript disabled. Today the app needs JavaScript to render; progressive enhancement is a future goal.
 - No login, no accounts, no tracking, no cookies, no analytics.
+- No requests to outside servers (no web fonts, CDNs, or third-party scripts). Use system fonts.
 - All resources must be individually verified before updating.
 - Touch targets minimum 44px.
 - Must look good in dark mode (many users are outside at night).
