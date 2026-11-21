@@ -1,0 +1,593 @@
+<title>PDX Resources</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Portland employment and services resource finder for Operation Nightwatch guests">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: category-filtered resource cards, mobile-first, big tap targets */
+:root {
+  --bg: #FAFAFA; --bg2: #FFFFFF; --fg: #1a1a1a; --fg2: #555;
+  --accent: #1B4F72; --accent-light: #D6EAF8; --accent-fg: #fff;
+  --green: #1E8449; --green-bg: #E8F8F5;
+  --red: #C0392B; --red-bg: #FDEDEC;
+  --orange: #E67E22; --orange-bg: #FDF2E9;
+  --border: #e0e0e0; --card-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  --radius: 12px; --radius-sm: 8px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111; --bg2: #1a1a1a; --fg: #e8e8e8; --fg2: #999;
+    --accent: #5DADE2; --accent-light: #1a2d3d; --accent-fg: #111;
+    --green: #2ECC71; --green-bg: #1a2d1a;
+    --red: #E74C3C; --red-bg: #2d1a1a;
+    --orange: #F39C12; --orange-bg: #2d2a1a;
+    --border: #333; --card-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111; --bg2: #1a1a1a; --fg: #e8e8e8; --fg2: #999;
+  --accent: #5DADE2; --accent-light: #1a2d3d; --accent-fg: #111;
+  --green: #2ECC71; --green-bg: #1a2d1a;
+  --red: #E74C3C; --red-bg: #2d1a1a;
+  --orange: #F39C12; --orange-bg: #2d2a1a;
+  --border: #333; --card-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; margin: 0; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+  -webkit-text-size-adjust: 100%;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px); z-index: 50;
+  background: var(--accent);
+}
+
+/* Header */
+.header {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40;
+  background: var(--accent); color: var(--accent-fg);
+  margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding: 12px max(16px, env(safe-area-inset-right, 0px)) 12px max(16px, env(safe-area-inset-left, 0px));
+}
+.header h1 { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+.header p { font-size: 12px; opacity: 0.85; margin-top: 2px; }
+
+/* Emergency banner */
+.emergency {
+  background: var(--red-bg); border: 1px solid var(--red); border-radius: var(--radius-sm);
+  padding: 12px 14px; margin: 12px 0; display: flex; align-items: center; gap: 10px;
+}
+.emergency .icon { font-size: 20px; flex-shrink: 0; }
+.emergency .text { font-size: 13px; line-height: 1.4; color: var(--fg); }
+.emergency a { color: var(--red); font-weight: 600; text-decoration: none; }
+
+/* Category filters */
+.filters {
+  display: flex; gap: 8px; overflow-x: auto; padding: 12px 0 8px;
+  -webkit-overflow-scrolling: touch; scrollbar-width: none;
+}
+.filters::-webkit-scrollbar { display: none; }
+.filter-btn {
+  flex-shrink: 0; border: none; border-radius: 20px;
+  padding: 10px 16px; font-size: 14px; font-weight: 600;
+  font-family: inherit; cursor: pointer; transition: all 0.15s;
+  background: var(--bg2); color: var(--fg2); border: 1px solid var(--border);
+  display: flex; align-items: center; gap: 6px;
+  -webkit-tap-highlight-color: transparent;
+}
+.filter-btn.active { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.filter-btn .emoji { font-size: 16px; }
+
+/* Search */
+.search-wrap {
+  position: relative; margin: 8px 0 12px;
+}
+.search-wrap input {
+  width: 100%; padding: 12px 14px 12px 40px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border); background: var(--bg2); color: var(--fg);
+  font-size: 16px; font-family: inherit; outline: none;
+}
+.search-wrap input:focus { border-color: var(--accent); }
+.search-wrap .search-icon {
+  position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+  font-size: 16px; color: var(--fg2); pointer-events: none;
+}
+
+/* Results count */
+.results-info { font-size: 13px; color: var(--fg2); padding: 0 0 8px; }
+
+/* Cards */
+.cards { display: flex; flex-direction: column; gap: 10px; padding-bottom: 80px; }
+.card {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px; box-shadow: var(--card-shadow); transition: border-color 0.15s;
+}
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.card-name { font-size: 16px; font-weight: 700; color: var(--fg); line-height: 1.3; }
+.card-org { font-size: 12px; color: var(--fg2); margin-top: 2px; }
+.card-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 2px; }
+.tag {
+  font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px;
+  text-transform: uppercase; letter-spacing: 0.3px;
+}
+.tag-open { background: var(--green-bg); color: var(--green); }
+.tag-closed { background: var(--red-bg); color: var(--red); }
+.tag-noid { background: var(--orange-bg); color: var(--orange); }
+.tag-cat { background: var(--accent-light); color: var(--accent); }
+
+.card-desc { font-size: 14px; line-height: 1.5; color: var(--fg); margin-top: 8px; }
+.card-detail { font-size: 13px; color: var(--fg2); margin-top: 4px; line-height: 1.4; }
+.card-highlight {
+  font-size: 13px; font-weight: 600; color: var(--green);
+  margin-top: 6px; padding: 6px 10px;
+  background: var(--green-bg); border-radius: var(--radius-sm);
+}
+
+.card-actions {
+  display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;
+}
+.card-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 14px; border-radius: var(--radius-sm);
+  font-size: 14px; font-weight: 600; font-family: inherit;
+  text-decoration: none; border: none; cursor: pointer;
+  -webkit-tap-highlight-color: transparent; min-height: 44px;
+}
+.btn-directions {
+  background: var(--accent); color: var(--accent-fg); flex: 1;
+  justify-content: center;
+}
+.btn-call {
+  background: var(--green-bg); color: var(--green); border: 1px solid var(--green);
+}
+.btn-web {
+  background: var(--bg); color: var(--accent); border: 1px solid var(--border);
+}
+
+/* Empty state */
+.empty { text-align: center; padding: 40px 20px; color: var(--fg2); }
+.empty .icon { font-size: 32px; margin-bottom: 12px; }
+
+/* Footer */
+.footer {
+  text-align: center; padding: 20px 0 12px; font-size: 11px; color: var(--fg2); line-height: 1.5;
+}
+
+@media (min-width: 600px) {
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
+
+<div class="header">
+  <h1>PDX Resources</h1>
+  <p>Find work, food, shelter, and services in Portland</p>
+</div>
+
+<div class="emergency">
+  <span class="icon">☎</span>
+  <div class="text">
+    <strong>Need help now?</strong> Call <a href="tel:211">2-1-1</a> for emergency services.
+    Shelter beds are limited. Always call ahead.
+  </div>
+</div>
+
+<div class="filters" id="filters"></div>
+<div class="search-wrap">
+  <span class="search-icon">\u{1F50D}</span>
+  <input type="search" id="search" placeholder="Search resources..." autocomplete="off">
+</div>
+<div class="results-info" id="results-info"></div>
+<div class="cards" id="cards"></div>
+
+<div class="footer">
+  Operation Nightwatch | 1432 SW 13th Ave | Thu/Fri/Sat 7-10:30pm<br>
+  All programs verified November 21, 2026 | V6.0<br>
+  operationnightwatch.org
+</div>
+
+<script>
+const RESOURCES = [
+  // === WORK: START TODAY ===
+  {name:"Street Roots",sub:"Newspaper Vendor Program",cat:["work"],
+   desc:"Sell newspapers for $1 (buy for $0.25). Keep ALL profit and tips. Set your own hours. Bring a pet. 800+ vendors.",
+   detail:"Fastest path to income. Start earning within days of orientation.",
+   highlight:"NO ID REQUIRED",
+   addr:"281 W Burnside St, Portland, OR 97201",
+   hours:{mon:null,tue:null,wed:"14:15-16:00",thu:null,fri:"14:15-16:00",sat:null,sun:null},
+   hoursText:"Orientation: Wed & Fri at 2:15pm",
+   phone:null, url:"streetroots.org/vendors", noId:true},
+
+  {name:"GLITTER",sub:"Ground Score Association",cat:["work"],
+   desc:"$80 cash per 4-hour shift. Waste collection on foot, bike, or e-bike. CPR and First Aid training provided.",
+   detail:"Won national award Jul 2026. 95% of workers were homeless at hire. 83% now permanently housed. Funding secured.",
+   addr:"624 NW Couch St, Portland, OR 97211",
+   hours:{mon:"08:00-16:00",tue:"08:00-16:00",wed:"08:00-16:00",thu:"08:00-16:00",fri:"08:00-16:00",sat:null,sun:null},
+   hoursText:"Mon-Fri, show up by 8am for lottery",
+   phone:null, url:"groundscoreassociation.org/glitter", noId:false},
+
+  {name:"Voz Workers' Center",sub:"$22/hr Minimum Day Labor",cat:["work"],
+   desc:"Same-day paid work: landscaping, moving, construction, cleaning. $22/hr minimum guaranteed. All pay goes directly to you.",
+   detail:"Nonprofit worker center. ESL classes, safety training, workforce development. New member orientations twice a month.",
+   addr:"3575 NE Broadway St, Portland, OR 97232",
+   hours:{mon:"07:00-14:00",tue:"07:00-14:00",wed:"07:00-14:00",thu:"07:00-14:00",fri:"07:00-14:00",sat:"07:00-12:00",sun:null},
+   hoursText:"Mon-Fri 7am-2pm, Sat 7am-12pm",
+   phone:"5032342043", url:"portlandvoz.org", noId:false},
+
+  // === WORK: APPLY THIS WEEK ===
+  {name:"Clean Start",sub:"Central City Concern",cat:["work"],
+   desc:"Paid 9-month trainee program. Sidewalk cleaning, graffiti removal. 40 hrs/wk. Peer mentoring plus housing, healthcare, and recovery services.",
+   detail:"Above minimum wage. Full-time roles are union with benefits. 130+ employees. Majority exit with long-term housing and permanent job.",
+   addr:"208 NW 1st Ave, Portland, OR",
+   hours:{mon:"08:00-17:00",tue:"08:00-17:00",wed:"08:00-17:00",thu:"08:00-17:00",fri:"08:00-17:00",sat:null,sun:null},
+   hoursText:"Email to apply: cleanstart@ccconcern.org",
+   phone:null, url:"centralcityconcern.org/jobs-location/clean-start", noId:false},
+
+  {name:"Central City Staffing",sub:"Central City Concern",cat:["work"],
+   desc:"12-month on-call trainee program. Work across 47+ CCC buildings. Janitorial, maintenance, front desk. Flexible scheduling.",
+   detail:"Low-barrier. Accommodates treatment and appointments. Over 40% of CCC staff are former clients. Applications open 1st Monday of each month.",
+   addr:"Portland, OR",
+   hoursText:"Email: CCStaffing@ccconcern.org. Apps open 1st Monday monthly.",
+   phone:null, url:"centralcityconcern.org/jobs-location/central-city-staffing", noId:false},
+
+  {name:"PeopleReady",sub:"Temp Staffing",cat:["work"],
+   desc:"Temporary shifts in construction, warehouse, hospitality, manufacturing, retail. Pick shifts on the JobStack app.",
+   detail:"No resume required. Set your own schedule. W-2 paid employment. Multiple Portland locations. Need valid I-9 identification.",
+   hoursText:"Download the JobStack app to get started",
+   phone:null, url:"peopleready.com/jobstack", noId:false},
+
+  {name:"Cultivate Initiatives",sub:"$600/week Internship",cat:["work","hygiene"],
+   desc:"$600 per week paid internship. Beautification and cleanup work. Path to full-time employment with benefits, PTO, and 401(k).",
+   detail:"475 participants per year. Orientation Mondays, work Tue-Thu. Workforce Hub also offers free showers, laundry, ID help, and work clothing.",
+   highlight:"East Portland - free showers and laundry at Workforce Hub",
+   addr:"14625 SE Stark St, Portland, OR 97233",
+   hours:{mon:"08:00-16:00",tue:"08:00-16:00",wed:"08:00-16:00",thu:"08:00-16:00",fri:"08:00-16:00",sat:null,sun:null},
+   hoursText:"Mon-Fri. Orientation every Monday.",
+   phone:null, url:"cultivateinitiatives.org/workforce-development", noId:false},
+
+  {name:"RRBC (Rapid Response Bio-Clean)",sub:"Second-Chance Employer",cat:["work"],
+   desc:"Campsite cleanup and biohazard remediation. Training in safety, de-escalation, CPR, and Naloxone.",
+   detail:"Hires people with lived experience of homelessness and criminal history. City of Portland contractor.",
+   hoursText:"Contact RRBC directly to apply",
+   phone:null, url:null, noId:false},
+
+  // === WORK: ONGOING SUPPORT ===
+  {name:"Employment Access Center",sub:"Central City Concern",cat:["work"],
+   desc:"Career mapping, resume help, interview prep, job leads. Employer presentations every Wednesday 10-11am. Free computers, copiers, fax, phone.",
+   detail:"Placed 551 people in jobs in 2024. Ask any CCC case manager for referral.",
+   addr:"Old Town Chinatown, Portland, OR",
+   hoursText:"Mon, Tue, Thu. See centralcityconcern.org for hours.",
+   phone:null, url:"centralcityconcern.org/jobs-location/employment-access-center", noId:false},
+
+  {name:"Blackburn Center",sub:"Central City Concern - East Portland",cat:["work"],
+   desc:"Employment specialists plus transportation assistance to get to work. Resume help, career exploration, mock interviews.",
+   detail:"Healthcare, recovery, housing, and employment all under one roof. Great for East Portland residents.",
+   addr:"12121 E Burnside St, Portland, OR",
+   hoursText:"TriMet Bus #20",
+   phone:null, url:"centralcityconcern.org/jobs-location/employment-assistance-at-blackburn-center", noId:false},
+
+  // === CAREER TRAINING ===
+  {name:"Constructing Hope",sub:"Free Pre-Apprenticeship",cat:["work","training"],
+   desc:"FREE 10-week construction training. Carpentry, electrical, plumbing. Resume help, interview prep, boots and tools provided. 3 years of post-grad support.",
+   detail:"Average starting wage $21/hr. 1,300+ graduates placed. Accepts people with criminal history (63% of participants). Need state ID and GED/diploma.",
+   highlight:"Next cohort: January 2027. Apply now.",
+   addr:"405 NE Church St, Portland, OR 97211",
+   hoursText:"Classes quarterly: Jan, Apr, Jun, Sep",
+   phone:"5032811234", url:"constructinghope.org/programs", noId:false},
+
+  {name:"POIC Portland",sub:"Employment & Training",cat:["work","training"],
+   desc:"Multiple paid training tracks: healthcare certifications, semiconductor/tech (Microchip partnership), outdoor conservation.",
+   detail:"Paid internships available. Free or low-cost industry-recognized certifications. Youth and adult programs.",
+   hoursText:"See portlandoic.org for current programs",
+   phone:null, url:"portlandoic.org/employment-training/programs", noId:false},
+
+  {name:"Oregon Tradeswomen",sub:"Pre-Apprenticeship",cat:["work","training"],
+   desc:"Free skilled trades training for women and gender-diverse people. Construction, electrical, welding. Leads to union apprenticeships with full benefits.",
+   detail:"Funded through Worksystems and Future Ready Oregon. Union apprenticeship means career path plus full benefits.",
+   highlight:"Next cohort starting soon. Check website.",
+   hoursText:"Visit oregontradeswomen.org for application window",
+   phone:null, url:"oregontradeswomen.org", noId:false},
+
+  {name:"Portland Youth Builders",sub:"Ages 17-24",cat:["work","training"],
+   desc:"GED completion plus construction pre-apprenticeship. Combined education and career training for young adults.",
+   detail:"2026-2027 classes active. For younger guests needing both education credentials and a career path into the trades.",
+   hoursText:"Visit portlandyouthbuilders.org",
+   phone:null, url:"portlandyouthbuilders.org", noId:false},
+
+  {name:"Bridges to Change",sub:"Peer Wellness Specialist Certification",cat:["work","training","hygiene"],
+   desc:"Peer Wellness Specialist certification, a paid career pathway into behavioral health work. Also day center with lunch, shower, and housing support.",
+   detail:"Turn your lived experience into a career helping others. Growing field with strong demand.",
+   hoursText:"Visit bridgestochange.com",
+   phone:null, url:"bridgestochange.com", noId:false},
+
+  // === WORKFORCE CENTERS ===
+  {name:"WorkSource Portland Metro",sub:"Free Career Services",cat:["work"],
+   desc:"Free resume workshops, interview prep, job leads, training scholarships. Veterans get priority services. Register in iMatchSkills.",
+   detail:"Part of the American Job Center network. Workshops on soft skills, Excel, Word, computer basics, and state jobs. All services free.",
+   hoursText:"Multiple Portland locations. worksourceportlandmetro.org",
+   phone:null, url:"worksourceportlandmetro.org", noId:false},
+
+  {name:"SE Works / WorkSource SE",sub:"Career Center + Reentry",cat:["work"],
+   desc:"Full career center plus NewStart Reentry Resource Center for people with criminal history. CDL training, career mapping.",
+   detail:"Reentry services at 8044 SE Harold St. Road-to-success curriculum, career mapping, resume help, WIOA-funded services.",
+   addr:"6401 SE Foster Rd, Portland, OR",
+   hours:{mon:"08:00-16:30",tue:"08:00-16:30",wed:"08:00-16:30",thu:"08:00-16:30",fri:"08:00-16:30",sat:null,sun:null},
+   hoursText:"Mon-Fri 8am-4:30pm",
+   phone:"5037722300", url:"seworks.org/job-seekers", noId:false},
+
+  {name:"Goodwill Job Connection",sub:"Job Fairs & Placement",cat:["work"],
+   desc:"Job placement assistance and multi-employer job fairs. Goodwill also hires directly and provides vocational opportunities.",
+   detail:"Mission: vocational opportunities for people with disabilities and barriers to employment. Job fairs 3rd Tuesday monthly.",
+   hoursText:"meetgoodwill.org/job-connection",
+   phone:null, url:"meetgoodwill.org/job-connection-home", noId:false},
+
+  // === ID / DOCUMENTS ===
+  {name:"PDX ID Assistance",sub:"Free ID Replacement",cat:["id"],
+   desc:"Free drop-in clinics to replace birth certificates (all 50 states), driver's licenses, and ID cards. Paul Susi pays the fees himself.",
+   detail:"Without an ID, most employment programs are out of reach. Get your ID first, everything else gets easier.",
+   highlight:"Free. No appointment needed for clinics.",
+   hoursText:"Email: pdx.id.assistance@protonmail.com",
+   phone:null, url:"paulsusi.wordpress.com/pdx-id-assistance", noId:true},
+
+  {name:"Oregon Free ID Card",sub:"HB 3026 - DMV Fee Waiver",cat:["id"],
+   desc:"Oregon law waives the $44.50 state ID card fee for people experiencing homelessness. Get a Declaration of Homelessness form first.",
+   detail:"Go to Transition Projects (650 NE Irving St) to get the Declaration form, then take it to the DMV.",
+   addr:"650 NE Irving St, Portland, OR (Transition Projects for the form)",
+   hoursText:"Get form from Transition Projects, then visit any DMV",
+   phone:null, url:null, noId:true},
+
+  {name:"Oregon Lifeline",sub:"Free Phone",cat:["id"],
+   desc:"Free wireless phone service through Access Wireless if you receive Medicaid, SNAP, TANF, or SSI. One phone per household.",
+   hoursText:"Call 1-800-848-4442 or visit lifeline.oregon.gov",
+   phone:"18008484442", url:null, noId:false},
+
+  {name:"Social Security Card",sub:"Replacement",cat:["id"],
+   desc:"Call SSA to request a replacement Social Security card. You need your SSN for most employment.",
+   hoursText:"Call 1-800-772-1213",
+   phone:"18007721213", url:null, noId:false},
+
+  // === FOOD ===
+  {name:"Blanchet House",sub:"Meals + Clothing + Housing",cat:["food","shelter","hygiene"],
+   desc:"Meals 3 times daily, 6 days a week. Bethanie's Room overnight shelter for women and nonbinary guests. Clothing distributed Mon-Sat.",
+   detail:"Drop-in daily 6am-10pm. Ask about the transitional housing program. Blanchet Farm in Carlton for longer-term recovery.",
+   addr:"310 NW Glisan St, Portland, OR 97209",
+   hours:{mon:"06:00-22:00",tue:"06:00-22:00",wed:"06:00-22:00",thu:"06:00-22:00",fri:"06:00-22:00",sat:"06:00-22:00",sun:null},
+   hoursText:"Mon-Sat 6am-10pm. Meals served at set times.",
+   phone:"5032414340", url:"blanchethouse.org", noId:true},
+
+  {name:"Union Gospel Mission",sub:"Meals + Shelter + FREE Expungement",cat:["food","shelter","id"],
+   desc:"200,000+ meals per year. Clothing, hygiene, showers. 100-bed shelter nightly. Search and Rescue van visits camps 5 nights per week.",
+   detail:"FREE legal services for criminal record expungement. A cleared record opens doors to jobs, housing, and education.",
+   highlight:"FREE criminal record expungement services",
+   addr:"15 NW 3rd Ave, Portland, OR",
+   hoursText:"Open daily. Contact for meal times.",
+   phone:null, url:"ugmportland.org", noId:true},
+
+  {name:"Potluck in the Park",sub:"Free Sunday Meals",cat:["food"],
+   desc:"Free hot meal every Sunday, rain or shine, 52 weeks a year since 1991. No questions asked.",
+   detail:"A Portland institution for over 30 years. Reliable. Everyone welcome.",
+   hoursText:"Every Sunday",
+   phone:null, url:"potluckinthepark.org", noId:true},
+
+  {name:"St. Michael's Catholic Church",sub:"Homeless Ministry Lunch",cat:["food"],
+   desc:"Lunch plus pre-packaged snacks, new socks, gloves, and hand warmers. Prayer and conversation.",
+   detail:"Works of Mercy Ministry. Show up at 12:15. No signup needed.",
+   hoursText:"Show up at 12:15pm",
+   phone:null, url:"stmichaelportland.org", noId:true},
+
+  {name:"William Temple House",sub:"Food Pantry + Transport Help",cat:["food","hygiene"],
+   desc:"Food pantry plus transportation assistance plus clothing plus counseling. Thrift store on site.",
+   detail:"Transportation assistance helps you get to job interviews and work.",
+   highlight:"Transportation assistance for interviews",
+   hoursText:"Visit williamtemple.org for hours",
+   phone:null, url:"williamtemple.org", noId:false},
+
+  // === SHELTER / HOUSING ===
+  {name:"Transition Projects",sub:"Shelter + Mail + ID Forms",cat:["shelter","id"],
+   desc:"Shelter plus employment navigation plus mail receipt services. Declaration of Homelessness forms for free DMV ID.",
+   detail:"One of Portland's largest homeless services providers. Multiple shelter locations citywide. Rent Well program.",
+   addr:"650 NE Irving St, Portland, OR",
+   hoursText:"Call 211 for intake",
+   phone:null, url:"tprojects.org", noId:false},
+
+  {name:"Portland Rescue Mission",sub:"Shelter + Meals + Mail",cat:["shelter","food"],
+   desc:"Shelter, meals, mail services, addiction recovery programs. Crisis care and resource referrals since 1949.",
+   hoursText:"Visit portlandrescuemission.org",
+   phone:null, url:"portlandrescuemission.org", noId:false},
+
+  {name:"JOIN",sub:"Housing Navigation",cat:["shelter","hygiene"],
+   desc:"Housing navigation, showers, food, and day center. Outreach teams meet you where you are. Direct pathway from streets to housing.",
+   detail:"One of Portland's most effective housing-focused organizations. Great first step toward stable housing.",
+   hoursText:"Visit joinpdx.org or call for intake",
+   phone:null, url:"joinpdx.org", noId:false},
+
+  {name:"CityTeam Portland",sub:"Rehab + 100-Bed Shelter",cat:["shelter","food","hygiene"],
+   desc:"Rehabilitation, shelter, food. Women's showers Mon/Wed/Fri 1-3pm. 100-bed overnight shelter 9pm-6:30am nightly. Pets welcome (leashed or crated).",
+   addr:"526 SE Grand Ave, Portland, OR",
+   hours:{mon:null,tue:null,wed:null,thu:null,fri:null,sat:null,sun:null},
+   hoursText:"Overnight shelter 9pm-6:30am. Women's showers M/W/F 1-3pm.",
+   phone:null, url:"cityteam.org/get-help/portland", noId:true},
+
+  {name:"NW Pilot Project",sub:"Housing for Adults 55+",cat:["shelter"],
+   desc:"Housing navigation and rent/deposit assistance focused on older adults 55+ experiencing or at risk of homelessness.",
+   detail:"If you're 55+ and homeless, this is your first call. They focus exclusively on older adult housing.",
+   hoursText:"Visit nwpilotproject.org",
+   phone:null, url:"nwpilotproject.org", noId:false},
+
+  {name:"Salvation Army Portland",sub:"Emergency Shelter",cat:["shelter"],
+   desc:"Emergency shelter. Part of Portland's shelter network.",
+   hoursText:"Call for current availability",
+   phone:null, url:"portland.salvationarmy.org", noId:false},
+
+  {name:"Behavioral Health Resource Center",sub:"Day Center + Mental Health",cat:["shelter","hygiene"],
+   desc:"Drop-in day center with shower, laundry, shelter, and bridge housing. Mental health and substance use support.",
+   detail:"Multnomah County run. Bridge housing while you stabilize. No appointment needed for day center.",
+   addr:"Downtown Portland",
+   hoursText:"Walk-in. No appointment needed.",
+   phone:null, url:null, noId:true},
+
+  {name:"Rose Haven",sub:"Women, Children, Gender-Diverse",cat:["shelter","food","hygiene"],
+   desc:"Clothing, supplies, meals, and case management specifically for women, children, and gender-diverse people.",
+   detail:"Safe space. Case management can connect you to housing and employment resources.",
+   hoursText:"Visit rosehaven.org",
+   phone:null, url:"rosehaven.org", noId:false},
+
+  // === HYGIENE ===
+  {name:"Hygiene4All",sub:"Free Showers",cat:["hygiene"],
+   desc:"Free showers under the Morrison Bridge. Soap, towels, hygiene supplies, clean clothing, first aid, and device charging.",
+   addr:"SE MLK & Belmont, Portland, OR (under Morrison Bridge)",
+   hours:{mon:null,tue:"15:00-21:00",wed:null,thu:"15:00-21:00",fri:"15:00-19:00",sat:null,sun:"15:00-19:00"},
+   hoursText:"Tue & Thu 3-9pm, Sun & Fri 3-7pm",
+   phone:"9712362524", url:"h4apdx.org/services", noId:true},
+
+  {name:"The Wash House",sub:"Free Laundry",cat:["hygiene"],
+   desc:"Free laundry service. Drop off one bag (up to 40 lbs), pick up same day or next day.",
+   addr:"2609 SE 6th Ave, Portland, OR",
+   hours:{mon:null,tue:"09:00-16:00",wed:null,thu:"09:00-16:00",fri:null,sat:null,sun:null},
+   hoursText:"Tue & Thu 9am-4pm",
+   phone:null, url:null, noId:true},
+
+  {name:"Multnomah County Central Library",sub:"Free Computers + Wi-Fi",cat:["hygiene","id"],
+   desc:"Free computer access (no library card needed), restrooms, warmth, quiet space. Use for job applications, email, and resume work.",
+   detail:"Open daily. All branches across Portland have free computers and Wi-Fi.",
+   addr:"801 SW 10th Ave, Portland, OR 97205",
+   hours:{mon:"10:00-20:00",tue:"10:00-20:00",wed:"10:00-20:00",thu:"10:00-20:00",fri:"10:00-18:00",sat:"10:00-18:00",sun:"10:00-17:00"},
+   hoursText:"Mon-Thu 10am-8pm, Fri-Sat 10am-6pm, Sun 10am-5pm",
+   phone:null, url:"multcolib.org", noId:true},
+
+  // === TRIMET ===
+  {name:"TriMet Reduced Fare",sub:"$1.25 with OHP/SNAP/TANF",cat:["id"],
+   desc:"If you receive OHP (Medicaid), SNAP, or TANF, you qualify for $1.25 fare (normally $2.50). Hop Fastpass daily cap: $5.",
+   detail:"Age 65+ or Medicare/disability = $1.00 fare. Trip planner: trimet.org/tripplanner",
+   hoursText:"Apply at trimet.org/reducedfare or call (503) 238-7433",
+   phone:"5032387433", url:"trimet.org/reducedfare", noId:false},
+
+  // === VETERANS ===
+  {name:"VA Portland",sub:"Veterans Healthcare & Employment",cat:["shelter","work"],
+   desc:"Healthcare, mental health, housing programs, and employment assistance for eligible veterans.",
+   addr:"3710 SW U.S. Veterans Hospital Rd, Portland, OR",
+   hoursText:"Call (503) 220-8262",
+   phone:"5032208262", url:null, noId:false},
+
+  {name:"Veterans Crisis Line",sub:"24/7 Support",cat:["shelter"],
+   desc:"Dial 988, then press 1. Available 24/7. You can also text 838255.",
+   highlight:"If you're in crisis, call now. You are not alone.",
+   hoursText:"24 hours, 7 days a week",
+   phone:"988", url:null, noId:true},
+];
+
+const CATEGORIES = [
+  {id:"all",label:"All",emoji:"⭐"},
+  {id:"work",label:"Work",emoji:"\u{1F4BC}"},
+  {id:"food",label:"Food",emoji:"\u{1F37D}"},
+  {id:"shelter",label:"Shelter",emoji:"\u{1F3E0}"},
+  {id:"hygiene",label:"Clean",emoji:"\u{1F6BF}"},
+  {id:"id",label:"ID / Docs",emoji:"\u{1F4C4}"},
+  {id:"training",label:"Training",emoji:"\u{1F3D7}"},
+];
+
+const DAYS = ['sun','mon','tue','wed','thu','fri','sat'];
+
+let activeFilter = 'all';
+let searchQuery = '';
+
+function isOpenNow(r) {
+  if (!r.hours) return null;
+  const now = new Date();
+  const day = DAYS[now.getDay()];
+  const slot = r.hours[day];
+  if (!slot) return false;
+  const [open, close] = slot.split('-');
+  const [oh,om] = open.split(':').map(Number);
+  const [ch,cm] = close.split(':').map(Number);
+  const mins = now.getHours()*60 + now.getMinutes();
+  return mins >= oh*60+om && mins < ch*60+cm;
+}
+
+function mapsUrl(addr) {
+  const q = encodeURIComponent(addr);
+  return `https://www.google.com/maps/search/?api=1&query=${q}`;
+}
+
+function renderFilters() {
+  const el = document.getElementById('filters');
+  el.innerHTML = CATEGORIES.map(c =>
+    `<button class="filter-btn ${c.id===activeFilter?'active':''}" data-cat="${c.id}">
+      <span class="emoji">${c.emoji}</span>${c.label}
+    </button>`
+  ).join('');
+  el.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeFilter = btn.dataset.cat;
+      renderFilters();
+      renderCards();
+    });
+  });
+}
+
+function renderCards() {
+  const el = document.getElementById('cards');
+  const info = document.getElementById('results-info');
+  const q = searchQuery.toLowerCase();
+
+  let filtered = RESOURCES.filter(r => {
+    if (activeFilter !== 'all' && !r.cat.includes(activeFilter)) return false;
+    if (q) {
+      const haystack = `${r.name} ${r.sub||''} ${r.desc} ${r.detail||''} ${r.highlight||''}`.toLowerCase();
+      return haystack.includes(q);
+    }
+    return true;
+  });
+
+  info.textContent = `${filtered.length} resource${filtered.length!==1?'s':''}${activeFilter!=='all'?' in '+CATEGORIES.find(c=>c.id===activeFilter).label:''}${q?' matching "'+searchQuery+'"':''}`;
+
+  if (!filtered.length) {
+    el.innerHTML = `<div class="empty"><div class="icon">\u{1F50D}</div><p>No resources found. Try a different category or search.</p></div>`;
+    return;
+  }
+
+  el.innerHTML = filtered.map(r => {
+    const open = isOpenNow(r);
+    let tags = '';
+    if (open === true) tags += '<span class="tag tag-open">Open Now</span>';
+    else if (open === false) tags += '<span class="tag tag-closed">Closed</span>';
+    if (r.noId) tags += '<span class="tag tag-noid">No ID Needed</span>';
+
+    let actions = '';
+    if (r.addr) actions += `<a class="card-btn btn-directions" href="${mapsUrl(r.addr)}" target="_blank" rel="noopener">\u{1F4CD} Directions</a>`;
+    if (r.phone) actions += `<a class="card-btn btn-call" href="tel:${r.phone}">☎ Call</a>`;
+    if (r.url) actions += `<a class="card-btn btn-web" href="https://${r.url}" target="_blank" rel="noopener">\u{1F310} Website</a>`;
+
+    return `<div class="card">
+      <div class="card-header">
+        <div><div class="card-name">${r.name}</div>${r.sub?`<div class="card-org">${r.sub}</div>`:''}</div>
+        <div class="card-tags">${tags}</div>
+      </div>
+      <div class="card-desc">${r.desc}</div>
+      ${r.detail?`<div class="card-detail">${r.detail}</div>`:''}
+      ${r.highlight?`<div class="card-highlight">★ ${r.highlight}</div>`:''}
+      <div class="card-detail">\u{1F552} ${r.hoursText}</div>
+      ${r.addr?`<div class="card-detail">\u{1F4CD} ${r.addr}</div>`:''}
+      ${actions?`<div class="card-actions">${actions}</div>`:''}
+    </div>`;
+  }).join('');
+}
+
+document.getElementById('search').addEventListener('input', e => {
+  searchQuery = e.target.value;
+  renderCards();
+});
+
+renderFilters();
+renderCards();
+</script>
