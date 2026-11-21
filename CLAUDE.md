@@ -12,7 +12,12 @@ A mobile-first resource finder for people experiencing homelessness in Portland,
 ## How to update resources
 Edit the `RESOURCES` array in `index.html`. Each object has: name, sub, cat (array of category strings), desc, detail, highlight, addr, hours (object keyed by day abbreviation with "HH:MM-HH:MM" strings or null), hoursText, phone (digits only), url (no protocol prefix), noId (boolean).
 
-Valid categories: "work", "food", "shelter", "hygiene", "id", "training"
+Valid categories: "work", "food", "shelter", "hygiene", "id", "training", "more"
+
+- Tag a resource only with categories it actually provides. "hygiene" (shown as "Clean") means showers or laundry; "id" means ID and document replacement. Phones, transit, computers, legal help and crisis lines go in "more".
+- Only set `hours` for times someone can walk in and get the service. It drives the Open Now / Closed badge. Orientation times, application windows and arrival cutoffs go in `hoursText` only.
+- A slot whose close time is earlier than its open time runs past midnight (e.g. "21:00-06:30" for an overnight shelter).
+- `addr` is used for the Directions link, so keep it a plain street address. Put notes in `detail`.
 
 ## Constraints
 - Must work on old phones with slow connections. No heavy libraries.

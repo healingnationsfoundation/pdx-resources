@@ -30,12 +30,12 @@ Each resource object:
 {
   name: "Organization Name",
   sub: "Subtitle / program name",
-  cat: ["work", "food", "shelter", "hygiene", "id", "training"],
+  cat: ["work", "food", "shelter", "hygiene", "id", "training", "more"],
   desc: "What they offer.",
   detail: "Additional context.",
   highlight: "Important callout shown in green box",
-  addr: "Street address for directions link",
-  hours: { mon:"08:00-16:00", tue:null, ... },  // null = closed that day
+  addr: "Plain street address for directions link",
+  hours: { mon:"08:00-16:00", tue:null, ... },  // walk-in hours only; null = closed; "21:00-06:30" = overnight
   hoursText: "Human-readable hours string",
   phone: "5031234567",  // digits only, for tel: link
   url: "example.org",   // no https://, added automatically
@@ -49,7 +49,7 @@ Print a QR code pointing to your deployed URL and post it at Nightwatch (1432 SW
 
 ## Verified
 
-All 40 resources verified active as of November 21, 2026.
+All 41 resources verified active as of November 21, 2026.
 
 ## Contributing
 
