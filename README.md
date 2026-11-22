@@ -1,6 +1,6 @@
 # PDX Resources
 
-Mobile resource finder for Operation Nightwatch guests. Jobs, food, shelter, health care, hygiene, recovery, and ID services in Portland, OR. Run by [Healing Nations Foundation](https://www.healingnationsfoundation.org/). Live at **https://resources.healingnationsfoundation.org**.
+Mobile resource finder for Operation Nightwatch guests. Jobs, food, shelter, health care, showers and laundry, clothing and supplies, recovery, and ID services in Portland, OR. Run by [Healing Nations Foundation](https://www.healingnationsfoundation.org/). Live at **https://resources.healingnationsfoundation.org**.
 
 ## What this is
 
@@ -32,7 +32,7 @@ Each resource object (leave out fields you don't need):
 {
   "name": "Organization Name",
   "sub": "Subtitle / program name",
-  "cat": ["work", "food", "shelter", "health", "hygiene", "recovery", "id", "training", "more"],
+  "cat": ["work", "food", "shelter", "health", "hygiene", "supplies", "recovery", "id", "training", "more"],
   "desc": "What they offer.",
   "detail": "Additional context.",
   "highlight": "Important callout shown in green box",

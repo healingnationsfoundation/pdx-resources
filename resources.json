@@ -21,7 +21,11 @@
     },
     {
       "id": "hygiene",
-      "label": "Clean"
+      "label": "Showers & Laundry"
+    },
+    {
+      "id": "supplies",
+      "label": "Clothes & Supplies"
     },
     {
       "id": "recovery",
@@ -37,7 +41,7 @@
     },
     {
       "id": "more",
-      "label": "Phone, Bus & More"
+      "label": "Phone, Legal & More"
     }
   ],
   "resources": [
@@ -47,6 +51,7 @@
       "cat": [
         "food",
         "health",
+        "supplies",
         "more"
       ],
       "desc": "A warm place to be in the evening, when other agencies are closed: coffee, a meal, supplies, company, and mental health services.",
@@ -467,7 +472,8 @@
       "sub": "Meals + Clothing + Housing",
       "cat": [
         "food",
-        "shelter"
+        "shelter",
+        "supplies"
       ],
       "desc": "Meals 3 times daily, 6 days a week. Bethanie's Room overnight shelter for women and nonbinary guests. Clothing distributed Mon-Sat.",
       "detail": "Drop-in daily 6am-10pm. Ask about the transitional housing program. Blanchet Farm in Carlton for longer-term recovery.",
@@ -493,6 +499,7 @@
         "food",
         "shelter",
         "hygiene",
+        "supplies",
         "more"
       ],
       "desc": "200,000+ meals per year. Clothing, hygiene, showers. 100-bed shelter nightly. Search and Rescue van visits camps 5 nights per week.",
@@ -531,7 +538,7 @@
       "cat": [
         "food",
         "hygiene",
-        "more"
+        "supplies"
       ],
       "desc": "A hot meal on Thursday nights, plus haircuts, foot washing, and replacement clothing and sleeping bags.",
       "detail": "First come, first served. Now indoors at Liberation Street Church. The schedule changes on Thanksgiving and from mid-December to early January; check the website.",
@@ -555,6 +562,7 @@
       "cat": [
         "food",
         "health",
+        "supplies",
         "more"
       ],
       "desc": "A restaurant-style Friday dinner with clothing and hygiene supplies, and a Wednesday and Thursday drop-in with lunch.",
@@ -579,7 +587,7 @@
       "sub": "Formerly Downtown Chapel: sack lunch and Friday dinner",
       "cat": [
         "food",
-        "more"
+        "supplies"
       ],
       "desc": "A morning sack lunch Tuesday to Thursday, afternoon hospitality, and a hot Friday evening meal, with some clothing and hygiene supplies.",
       "detail": "Ages 18+. First come, first served. Hours are from 211info; call to confirm.",
@@ -602,7 +610,7 @@
       "sub": "Hot meal Monday and Thursday downtown",
       "cat": [
         "food",
-        "more"
+        "supplies"
       ],
       "desc": "A hot meal twice a week for people who are homeless or low-income, plus groceries, clothing, and toiletries while they last.",
       "detail": "Next to the Central Library, at 11th and Taylor.",
@@ -694,6 +702,7 @@
       "cat": [
         "food",
         "hygiene",
+        "supplies",
         "more"
       ],
       "desc": "Sit-down or to-go meals four days a week, a walk-up grocery pantry, free showers, and clothing.",
@@ -722,6 +731,7 @@
       "cat": [
         "food",
         "hygiene",
+        "supplies",
         "id",
         "more"
       ],
@@ -800,6 +810,7 @@
       "cat": [
         "food",
         "hygiene",
+        "supplies",
         "more"
       ],
       "desc": "Hot breakfast and lunch on weekdays, plus phone and mail service, computers, showers, laundry, and clothing.",
@@ -906,7 +917,7 @@
       "sub": "Emergency food and clothing, SE 82nd",
       "cat": [
         "food",
-        "more"
+        "supplies"
       ],
       "desc": "Free food, plus clothing, hygiene items, and blankets when available. No appointment or documents needed.",
       "detail": "Unhoused guests can come once a week. Bring bags.",
@@ -1004,7 +1015,7 @@
       "sub": "Food bags and clothing pantry, NE 82nd",
       "cat": [
         "food",
-        "more"
+        "supplies"
       ],
       "desc": "Pre-made food bags once a week, and a clothing and hygiene pantry every 14 days.",
       "detail": "Low barrier. Bring bags. Closed on holidays and when Portland Public Schools close for weather.",
@@ -1062,7 +1073,8 @@
       "name": "St. Michael's Catholic Church",
       "sub": "Homeless Ministry Lunch",
       "cat": [
-        "food"
+        "food",
+        "supplies"
       ],
       "desc": "Hot lunch plus pre-packaged snacks, new socks, gloves, and hand warmers. Prayer and conversation.",
       "detail": "Served under the west side of the Hawthorne Bridge, not at the church. No signup needed.",
@@ -1110,6 +1122,7 @@
       "cat": [
         "shelter",
         "hygiene",
+        "supplies",
         "id"
       ],
       "desc": "Shelter plus employment navigation plus mail receipt services. Declaration of Homelessness forms for free DMV ID.",
@@ -1386,9 +1399,10 @@
       "name": "New Avenues for Youth Drop-In",
       "sub": "Ages 16-24: meals, showers, laundry",
       "cat": [
+        "work",
         "food",
         "hygiene",
-        "work",
+        "supplies",
         "more"
       ],
       "desc": "Daytime drop-in with meals six days a week, showers, laundry, clothes, computers, and advocates for jobs, school, and housing.",
@@ -1608,9 +1622,10 @@
       "name": "Rose Haven",
       "sub": "Women, Children, Gender-Diverse",
       "cat": [
-        "shelter",
         "food",
-        "hygiene"
+        "shelter",
+        "hygiene",
+        "supplies"
       ],
       "desc": "Clothing, supplies, meals, showers, laundry, and case management for women, children, and gender-diverse people.",
       "detail": "Showers and laundry are for registered guests. Sign up during service hours. Showers first come, first served.",
@@ -1853,9 +1868,10 @@
       "name": "NAYA",
       "sub": "Native American Youth and Family Center",
       "cat": [
+        "work",
         "food",
         "shelter",
-        "work",
+        "supplies",
         "more"
       ],
       "desc": "Native-led center with a food pantry, clothing closet, rent and utility help, family shelter, youth housing and recovery support, and job programs.",
@@ -2418,7 +2434,8 @@
       "name": "Hygiene4All",
       "sub": "Free Showers",
       "cat": [
-        "hygiene"
+        "hygiene",
+        "supplies"
       ],
       "desc": "Free showers under the Morrison Bridge. Soap, towels, hygiene supplies, clean clothing, first aid, and device charging.",
       "addr": "SE MLK & Belmont, Portland, OR (under Morrison Bridge)",
@@ -2460,7 +2477,8 @@
       "name": "13 Salmon Shower Project",
       "sub": "Free showers at First Unitarian",
       "cat": [
-        "hygiene"
+        "hygiene",
+        "supplies"
       ],
       "desc": "Free showers and clean clothing, open to anyone who wants a shower. First come, first served.",
       "detail": "You don't need to belong to the church. ADA accessible. Lower level of the Buchan building at SW 13th & Salmon.",
@@ -2484,6 +2502,7 @@
       "sub": "City day center: showers, laundry, charging",
       "cat": [
         "hygiene",
+        "supplies",
         "more"
       ],
       "desc": "An open-air City day center with showers, washers and dryers, a clothing closet, phone charging, and a place to warm up or cool down.",
