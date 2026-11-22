@@ -826,7 +826,16 @@
       "phone": "18006624357",
       "url": "findtreatment.gov",
       "urlLabel": "Find treatment",
-      "noId": true
+      "noId": true,
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      }
     },
     {
       "name": "VA Portland",
@@ -851,7 +860,16 @@
       "highlight": "If you're in crisis, call now. You are not alone.",
       "hoursText": "24 hours, 7 days a week",
       "phone": "988",
-      "noId": true
+      "noId": true,
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      }
     }
   ]
 }

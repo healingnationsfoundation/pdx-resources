@@ -58,6 +58,8 @@ Recipients live in `donations.json`, separate from `resources.json`. See [CLAUDE
 
 Print a QR code pointing to your deployed URL and post it at Nightwatch (1432 SW 13th Ave). Guests scan it with their phone camera.
 
+A QR code or link can open straight to a category, or to what's open right now: add `#food`, `#shelter`, `#health`, `#shelter+open`, or `#open` to the end of the address.
+
 ## Verified
 
 All 53 resources verified active as of November 21, 2026.

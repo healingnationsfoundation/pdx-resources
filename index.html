@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<title>PDX Resources</title>
-<meta name="description" content="Portland employment and services resource finder for Operation Nightwatch guests">
+<title>Portland Resource Guide</title>
+<meta name="description" content="Free food, shelter, health care, showers, work, ID help, and recovery services in Portland, with what is open right now. From Healing Nations Foundation.">
 <style>
 /* Layout: category-filtered resource cards, mobile-first, big tap targets */
 :root {
@@ -73,22 +73,44 @@ body::before {
 .emergency .text { font-size: 13px; line-height: 1.4; color: var(--fg); }
 .emergency a { color: var(--red); font-weight: 600; text-decoration: none; }
 
-/* Category filters */
+/* Category filters: wrap onto rows so every category is visible without sideways scrolling */
 .filters {
-  display: flex; gap: 8px; overflow-x: auto; padding: 12px 0 8px;
-  -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 0 10px;
 }
-.filters::-webkit-scrollbar { display: none; }
 .filter-btn {
-  flex-shrink: 0; border: none; border-radius: 20px;
-  padding: 10px 16px; font-size: 14px; font-weight: 600;
-  font-family: inherit; cursor: pointer; transition: all 0.15s;
-  background: var(--bg2); color: var(--fg2); border: 1px solid var(--border);
+  border-radius: 20px; min-height: 44px;
+  padding: 8px 14px; font-size: 14px; font-weight: 600;
+  font-family: inherit; cursor: pointer; transition: background 0.15s, color 0.15s;
+  background: var(--bg2); color: var(--fg); border: 1px solid var(--border);
   display: flex; align-items: center; gap: 6px;
   -webkit-tap-highlight-color: transparent;
 }
 .filter-btn.active { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
 .filter-btn .emoji { font-size: 16px; }
+.filter-btn .count { font-size: 12px; font-weight: 600; opacity: 0.7; }
+.section-label { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--fg2); margin: 14px 0 6px; }
+button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* Open now toggle */
+.open-row { display: flex; align-items: center; gap: 10px; margin: 2px 0 4px; }
+.open-row .open-hint { flex: 1; min-width: 0; }
+.open-toggle {
+  flex-shrink: 0; white-space: nowrap;
+  min-height: 44px; border-radius: 20px; padding: 10px 18px;
+  font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer;
+  background: var(--bg2); color: var(--green); border: 2px solid var(--green);
+  display: inline-flex; align-items: center; gap: 8px;
+  -webkit-tap-highlight-color: transparent;
+}
+.open-toggle .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green); }
+.open-toggle[aria-pressed="true"] { background: var(--green); color: #fff; }
+.open-toggle[aria-pressed="true"] .dot { background: #fff; }
+.open-hint { font-size: 13px; color: var(--fg2); line-height: 1.3; }
+.empty .btn-show-all {
+  margin-top: 14px; min-height: 44px; border-radius: 20px; padding: 10px 18px;
+  font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;
+  background: var(--bg2); color: var(--accent); border: 1px solid var(--border);
+}
 
 /* Search */
 .search-wrap {
@@ -156,6 +178,20 @@ body::before {
   background: var(--bg); color: var(--accent); border: 1px solid var(--border);
 }
 
+/* More details: longer notes and the report link stay folded so the list is quick to scan */
+.more { margin-top: 6px; }
+.more summary {
+  display: flex; align-items: center; gap: 6px; min-height: 44px;
+  font-size: 14px; font-weight: 600; color: var(--accent); cursor: pointer;
+  list-style: none; -webkit-tap-highlight-color: transparent;
+}
+.more summary::-webkit-details-marker { display: none; }
+.more summary::after { content: "\25BE"; font-size: 12px; transition: transform 0.15s; }
+.more[open] summary::after { transform: rotate(180deg); }
+.more[open] summary .lbl-open { display: none; }
+.more:not([open]) summary .lbl-close { display: none; }
+.more .card-detail { margin-top: 0; }
+
 /* Report a problem: quiet text link, still a full 44px tap target */
 .card-report {
   display: flex; align-items: center; flex-wrap: wrap; column-gap: 4px; margin-top: 4px;
@@ -195,22 +231,28 @@ body::before {
 <body>
 
 <div class="header">
-  <h1>PDX Resources</h1>
-  <p>Find work, food, shelter, and services in Portland</p>
+  <h1>Portland Resource Guide</h1>
+  <p>Free food, shelter, health care, work, and more in Portland</p>
 </div>
 
 <div class="emergency">
-  <span class="icon">☎</span>
+  <span class="icon" aria-hidden="true">☎</span>
   <div class="text">
-    <strong>Need help now?</strong> Call <a href="tel:211">2-1-1</a> for emergency services.
-    Shelter beds are limited. Always call ahead.
+    <strong>In danger?</strong> Call <a href="tel:911">911</a>.
+    <strong>Need shelter or services?</strong> Call <a href="tel:211">2-1-1</a>.
+    Shelter beds are limited, so call ahead.
   </div>
 </div>
 
-<div class="filters" id="filters"></div>
+<p class="section-label" id="filters-label">What do you need?</p>
+<div class="filters" id="filters" role="group" aria-labelledby="filters-label"></div>
+<div class="open-row">
+  <button type="button" class="open-toggle" id="open-now" aria-pressed="false"><span class="dot" aria-hidden="true"></span>Open now</button>
+  <span class="open-hint" id="open-hint">Show only places open right now</span>
+</div>
 <div class="search-wrap">
   <span class="search-icon" aria-hidden="true">&#x1F50D;</span>
-  <input type="search" id="search" placeholder="Search resources..." autocomplete="off">
+  <input type="search" id="search" placeholder="Search: shower, dentist, ID, Burnside..." autocomplete="off" aria-label="Search resources">
 </div>
 <div class="results-info" id="results-info"></div>
 <div class="cards" id="cards"></div>
@@ -278,6 +320,9 @@ function reportLinks(r) {
 
 let activeFilter = 'all';
 let searchQuery = '';
+// "Open now" shows only listings whose walk-in hours say they are open this minute.
+// Listings without set hours can't be confirmed, so they are counted, not shown.
+let openOnly = false;
 
 // Hours are "HH:MM-HH:MM". A close time earlier than the open time means
 // the slot runs past midnight (e.g. "21:00-06:30" overnight shelter).
@@ -316,9 +361,10 @@ function esc(v) {
 
 function renderFilters() {
   const el = document.getElementById('filters');
+  const count = id => id === 'all' ? RESOURCES.length : RESOURCES.filter(r => r.cat.includes(id)).length;
   el.innerHTML = CATEGORIES.map(c =>
-    `<button class="filter-btn ${c.id===activeFilter?'active':''}" data-cat="${c.id}">
-      <span class="emoji">${CATEGORY_EMOJI[c.id]||""}</span>${esc(c.label)}
+    `<button type="button" class="filter-btn ${c.id===activeFilter?'active':''}" data-cat="${c.id}" aria-pressed="${c.id===activeFilter}">
+      <span class="emoji" aria-hidden="true">${CATEGORY_EMOJI[c.id]||""}</span>${esc(c.label)}${RESOURCES.length ? ` <span class="count">${count(c.id)}</span>` : ''}
     </button>`
   ).join('');
   el.querySelectorAll('.filter-btn').forEach(btn => {
@@ -326,8 +372,22 @@ function renderFilters() {
       activeFilter = btn.dataset.cat;
       renderFilters();
       renderCards();
+      saveView();
     });
   });
+}
+
+// The view lives in the address, so a QR code or link can open straight to it
+// (for example #food or #shelter+open), and Back works as expected.
+function saveView() {
+  const h = (activeFilter === 'all' ? '' : activeFilter) + (openOnly ? (activeFilter === 'all' ? 'open' : '+open') : '');
+  history.replaceState(null, '', h ? '#' + h : location.pathname + location.search);
+}
+function loadView() {
+  const parts = decodeURIComponent(location.hash.slice(1)).split('+');
+  openOnly = parts.includes('open');
+  const cat = parts.find(p => p && p !== 'open');
+  activeFilter = CATEGORIES.some(c => c.id === cat) ? cat : 'all';
 }
 
 function renderCards() {
@@ -335,24 +395,40 @@ function renderCards() {
   const info = document.getElementById('results-info');
   const q = searchQuery.toLowerCase();
 
-  let filtered = RESOURCES.filter(r => {
+  const now = new Date();
+  const matching = RESOURCES.filter(r => {
     if (activeFilter !== 'all' && !r.cat.includes(activeFilter)) return false;
     if (q) {
-      const haystack = `${r.name} ${r.sub||''} ${r.desc} ${r.detail||''} ${r.highlight||''}`.toLowerCase();
+      const cats = r.cat.map(id => (CATEGORIES.find(c => c.id === id) || {}).label || id).join(' ');
+      const haystack = `${r.name} ${r.sub||''} ${r.desc} ${r.detail||''} ${r.highlight||''} ${r.addr||''} ${r.hoursText||''} ${cats}`.toLowerCase();
       return haystack.includes(q);
     }
     return true;
   });
+  const openCount = matching.filter(r => isOpenNow(r, now) === true).length;
+  const noHours = matching.filter(r => isOpenNow(r, now) === null).length;
+  const filtered = openOnly ? matching.filter(r => isOpenNow(r, now) === true) : matching;
 
-  info.textContent = `${filtered.length} resource${filtered.length!==1?'s':''}${activeFilter!=='all'?' in '+CATEGORIES.find(c=>c.id===activeFilter).label:''}${q?' matching "'+searchQuery+'"':''}`;
+  const where = `${activeFilter!=='all'?' in '+CATEGORIES.find(c=>c.id===activeFilter).label:''}${q?' matching "'+searchQuery+'"':''}`;
+  if (openOnly) {
+    info.textContent = `${filtered.length} open now${where}.` +
+      (noHours ? ` ${noHours} more ${noHours!==1?'have':'has'} no set hours: call ahead.` : '');
+  } else {
+    info.textContent = `${filtered.length} resource${filtered.length!==1?'s':''}${where}` +
+      (openCount ? ` · ${openCount} open now` : '');
+  }
 
   if (!filtered.length) {
-    el.innerHTML = `<div class="empty"><div class="icon">\u{1F50D}</div><p>No resources found. Try a different category or search.</p></div>`;
+    el.innerHTML = openOnly && matching.length
+      ? `<div class="empty"><div class="icon">\u{1F552}</div><p>Nothing here shows as open right now.${noHours ? ' Some places have no set hours, so call ahead.' : ''}<br>Need help now? Call <a href="tel:211">2-1-1</a>.</p><button type="button" class="btn-show-all" id="show-all">Show everything${where}</button></div>`
+      : `<div class="empty"><div class="icon">\u{1F50D}</div><p>No resources found. Try a different category or search.</p></div>`;
+    const showAll = document.getElementById('show-all');
+    if (showAll) showAll.addEventListener('click', () => setOpenOnly(false));
     return;
   }
 
   el.innerHTML = filtered.map(r => {
-    const open = isOpenNow(r);
+    const open = isOpenNow(r, now);
     let tags = '';
     if (open === true) tags += '<span class="tag tag-open">Open Now</span>';
     else if (open === false) tags += '<span class="tag tag-closed">Closed</span>';
@@ -369,12 +445,15 @@ function renderCards() {
         <div class="card-tags">${tags}</div>
       </div>
       <div class="card-desc">${esc(r.desc)}</div>
-      ${r.detail?`<div class="card-detail">${esc(r.detail)}</div>`:''}
       ${r.highlight?`<div class="card-highlight">★ ${esc(r.highlight)}</div>`:''}
       <div class="card-detail">\u{1F552} ${esc(r.hoursText)}</div>
       ${r.addr?`<div class="card-detail">\u{1F4CD} ${esc(r.addr)}</div>`:''}
       ${actions?`<div class="card-actions">${actions}</div>`:''}
-      <div class="card-report">${reportLinks(r)}</div>
+      <details class="more">
+        <summary><span class="lbl-open">More details</span><span class="lbl-close">Less</span></summary>
+        ${r.detail?`<div class="card-detail">${esc(r.detail)}</div>`:''}
+        <div class="card-report">${reportLinks(r)}</div>
+      </details>
     </div>`;
   }).join('');
 }
@@ -383,6 +462,26 @@ document.getElementById('search').addEventListener('input', e => {
   searchQuery = e.target.value;
   renderCards();
 });
+
+function syncOpenButton() {
+  document.getElementById('open-now').setAttribute('aria-pressed', openOnly ? 'true' : 'false');
+  document.getElementById('open-hint').textContent = openOnly
+    ? 'Showing places open right now. Tap again to see everything.'
+    : 'Show only places open right now';
+}
+function setOpenOnly(on) {
+  openOnly = on;
+  syncOpenButton();
+  renderCards();
+  saveView();
+}
+document.getElementById('open-now').addEventListener('click', () => setOpenOnly(!openOnly));
+
+// Keep Open Now / Closed current while the page stays open, but don't
+// fold up a card someone is reading.
+setInterval(() => {
+  if (RESOURCES.length && !document.querySelector('.more[open]')) renderCards();
+}, 60000);
 
 document.getElementById('report-general').href = reportUrl(null);
 if (REPORT_TEXT) {
@@ -403,6 +502,8 @@ fetch('resources.json', {cache: 'no-cache'})
   .then(data => {
     RESOURCES = data.resources;
     CATEGORIES = [{id:'all', label:'All'}, ...data.categories];
+    loadView();
+    syncOpenButton();
     renderFilters();
     renderCards();
   })
