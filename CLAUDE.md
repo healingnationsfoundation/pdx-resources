@@ -8,6 +8,9 @@ A mobile-first resource finder for people experiencing homelessness in Portland,
 - `resources.json` — every resource and category. The page fetches it on load.
 - `resources.json` is a shared contract. HNF's Honest Day recovery app (separate, private repo) is meant to read it from https://resources.healingnationsfoundation.org/resources.json. Never rename or remove a field, change a category id, or change the file's shape without checking with the maintainer first. Adding new optional fields is fine.
 - `donate.html` + `donations.json` — the Donate section, for businesses (restaurants, grocers, bakeries, caterers, farms, shops) with surplus food or supplies, not for guests. Linked from the guest page's footer. `donations.json` is its own file so `resources.json` stays unchanged; it isn't a shared contract yet, but keep its field names stable anyway.
+- `sw.js` — keeps the guide working with no signal. Network first: online visitors always get the latest page and list, and the saved copy is refreshed; offline, the last saved copy is served with an `X-PDX-Offline` header so the page shows a "No connection" note. Same-origin files only. If you change its caching rules, bump `CACHE`.
+- On the page, listings are sorted open now first, then opening later today, then no set hours, then closed (data order within each group). Badges say until when a place is open or when it opens next, from `hours`, `closed` and `stops`.
+- Search needs every word to match and maps everyday words to categories (`SYNONYMS` in `index.html`: "bed" finds shelter, "blanket" finds Clothes & Supplies, "doctor" finds Health). Add a word there when guests search for something and get nothing.
 - No frameworks. No build tools. No node_modules. Plain HTML/CSS/JS.
 - Deployed as a static site via GitHub Pages from `main`. The `CNAME` file holds the custom domain; leave it alone.
 
