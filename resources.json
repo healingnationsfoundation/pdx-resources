@@ -450,6 +450,19 @@
       "noId": false
     },
     {
+      "name": "Free Oregon Birth Certificate",
+      "sub": "For people experiencing homelessness",
+      "cat": [
+        "id"
+      ],
+      "desc": "If you were born in Oregon and are homeless, you can get your own birth certificate free through a participating service provider.",
+      "detail": "The provider helps with the form, pays the fee, and gives an address to mail it to. Ask a shelter or day center if they take part, or see the provider map on the state's page.",
+      "hoursText": "Through a participating provider",
+      "url": "oregon.gov/oha/PH/BIRTHDEATHCERTIFICATES/GETVITALRECORDS/Pages/homeless-resources.aspx",
+      "urlLabel": "How it works",
+      "noId": true
+    },
+    {
       "name": "Blanchet House",
       "sub": "Meals + Clothing + Housing",
       "cat": [
@@ -513,6 +526,539 @@
       "noId": true
     },
     {
+      "name": "Night Strike",
+      "sub": "CityTeam: Thursday night meal, haircuts, foot care",
+      "cat": [
+        "food",
+        "hygiene",
+        "more"
+      ],
+      "desc": "A hot meal on Thursday nights, plus haircuts, foot washing, and replacement clothing and sleeping bags.",
+      "detail": "First come, first served. Now indoors at Liberation Street Church. The schedule changes on Thanksgiving and from mid-December to early January; check the website.",
+      "addr": "214 W Burnside St, Portland, OR 97209",
+      "hours": {
+        "mon": null,
+        "tue": null,
+        "wed": null,
+        "thu": "19:30-21:30",
+        "fri": null,
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Thursdays, doors 6:30pm; guests served about 7:30-9:30pm",
+      "url": "cityteam.org/portland/nightstrike",
+      "noId": true
+    },
+    {
+      "name": "Rahab's Sisters",
+      "sub": "Friday dinner and weekday drop-in for women, trans, and nonbinary people",
+      "cat": [
+        "food",
+        "health",
+        "more"
+      ],
+      "desc": "A restaurant-style Friday dinner with clothing and hygiene supplies, and a Wednesday and Thursday drop-in with lunch.",
+      "detail": "Open to all women, trans, and nonbinary people. Thursdays include medical care. Help with benefits and ID: ask at a Friday gathering. Check the monthly calendar on the website for changes.",
+      "addr": "232 SE 80th Ave, Portland, OR 97215",
+      "hours": {
+        "mon": null,
+        "tue": null,
+        "wed": "13:00-16:00",
+        "thu": "13:00-16:00",
+        "fri": "17:00-20:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Drop-in Wed & Thu 1-4pm. Dinner Fri 5-8pm.",
+      "phone": "9712083176",
+      "url": "rahabs-sisters.org",
+      "noId": true
+    },
+    {
+      "name": "St. André Bessette Church Hospitality",
+      "sub": "Formerly Downtown Chapel: sack lunch and Friday dinner",
+      "cat": [
+        "food",
+        "more"
+      ],
+      "desc": "A morning sack lunch Tuesday to Thursday, afternoon hospitality, and a hot Friday evening meal, with some clothing and hygiene supplies.",
+      "detail": "Ages 18+. First come, first served. Hours are from 211info; call to confirm.",
+      "addr": "601 W Burnside St, Portland, OR 97209",
+      "hours": {
+        "mon": null,
+        "tue": "09:30-10:30,13:00-16:00",
+        "wed": "09:30-10:30,13:00-16:00",
+        "thu": "09:30-10:30,13:00-16:00",
+        "fri": "18:30-19:30",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Tue-Thu sack lunch 9:30-10:30am, hospitality 1-4pm. Fri hot meal 6:30-7:30pm.",
+      "phone": "5032280746",
+      "noId": true
+    },
+    {
+      "name": "First Baptist Drop-In",
+      "sub": "Hot meal Monday and Thursday downtown",
+      "cat": [
+        "food",
+        "more"
+      ],
+      "desc": "A hot meal twice a week for people who are homeless or low-income, plus groceries, clothing, and toiletries while they last.",
+      "detail": "Next to the Central Library, at 11th and Taylor.",
+      "addr": "909 SW 11th Ave, Portland, OR 97205",
+      "hours": {
+        "mon": "14:00-16:00",
+        "tue": null,
+        "wed": null,
+        "thu": "14:00-16:00",
+        "fri": null,
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Mon & Thu 2-4pm",
+      "phone": "5032287465",
+      "url": "fbc-portland.org/drop-in-ministry",
+      "noId": true
+    },
+    {
+      "name": "Grace Memorial Community Dinner",
+      "sub": "Sunday evening dinner, NE Portland",
+      "cat": [
+        "food"
+      ],
+      "desc": "A free sit-down dinner every Sunday evening. All are welcome.",
+      "addr": "1535 NE 17th Ave, Portland, OR 97232",
+      "hours": {
+        "mon": null,
+        "tue": null,
+        "wed": null,
+        "thu": null,
+        "fri": null,
+        "sat": null,
+        "sun": "16:30-18:30"
+      },
+      "hoursText": "Sundays 5-6:30pm (doors 4:30pm)",
+      "phone": "5032870418",
+      "url": "grace-memorial.org",
+      "noId": true
+    },
+    {
+      "name": "All Saints Woodstock Hot Meals",
+      "sub": "Saturday hot lunch, SE Portland",
+      "cat": [
+        "food"
+      ],
+      "desc": "A hot lunch every Saturday, to eat there or take out. The church also runs the Woodstock Pantry.",
+      "detail": "Hours are from 211info; call to confirm.",
+      "addr": "4033 SE Woodstock Blvd, Portland, OR 97202",
+      "hours": {
+        "mon": null,
+        "tue": null,
+        "wed": null,
+        "thu": null,
+        "fri": null,
+        "sat": "11:00-12:30",
+        "sun": null
+      },
+      "hoursText": "Saturdays 11am-12:30pm",
+      "phone": "5037773829",
+      "url": "allsaintspdx.org",
+      "noId": true
+    },
+    {
+      "name": "Highland Christian Center",
+      "sub": "Sunday breakfast, NE Portland",
+      "cat": [
+        "food"
+      ],
+      "desc": "A community breakfast every Sunday morning, and a food pantry twice a month.",
+      "detail": "Pantry needs proof of address: 1st and 3rd Friday 9-11am in Nov-Dec, 2nd and 4th Friday Jan-Oct. Hours are from 211info.",
+      "addr": "7600 NE Glisan St, Portland, OR 97213",
+      "hours": {
+        "mon": null,
+        "tue": null,
+        "wed": null,
+        "thu": null,
+        "fri": null,
+        "sat": null,
+        "sun": "08:30-09:15"
+      },
+      "hoursText": "Breakfast Sundays 8:30-9:15am",
+      "phone": "5032879567",
+      "noId": true
+    },
+    {
+      "name": "Clackamas Service Center",
+      "sub": "Meals, pantry, showers: SE Portland (Lents)",
+      "cat": [
+        "food",
+        "hygiene",
+        "more"
+      ],
+      "desc": "Sit-down or to-go meals four days a week, a walk-up grocery pantry, free showers, and clothing.",
+      "detail": "Walk-up pantry Tue & Thu from 11:45am: give first name, last initial, ZIP, and household size; the list fills fast. Showers and clothing Tue-Thu 10am-1pm (15-minute limit; arrive before noon). Mail service available.",
+      "addr": "8800 SE 80th Ave, Portland, OR 97206",
+      "hours": {
+        "mon": null,
+        "tue": "10:00-14:30",
+        "wed": "10:00-14:30",
+        "thu": "10:00-14:30",
+        "fri": null,
+        "sat": null,
+        "sun": "15:00-15:30"
+      },
+      "closed": [
+        "2026-11-26"
+      ],
+      "hoursText": "Meals Tue-Thu 1-2:30pm, Sun 3-3:30pm. Showers Tue-Thu 10am-1pm.",
+      "phone": "5037717914",
+      "url": "cscoregon.org",
+      "noId": true
+    },
+    {
+      "name": "PDX Saints Love Day Center",
+      "sub": "Weekday day center on SE 82nd",
+      "cat": [
+        "food",
+        "hygiene",
+        "id",
+        "more"
+      ],
+      "desc": "Warm meals, showers and laundry, clothing, hygiene kits, phone charging, a place to rest, and peer support.",
+      "detail": "Low barrier. Help with ID and birth records, OHP and SNAP forms, housing, and detox or treatment referrals. Haircuts Mondays 10am-2pm. The mobile clinic visits here; see its card for dates.",
+      "addr": "247 SE 82nd Ave, Portland, OR 97215",
+      "hours": {
+        "mon": "09:00-14:00",
+        "tue": "09:00-14:00",
+        "wed": "09:00-14:00",
+        "thu": "09:00-14:00",
+        "fri": "09:00-14:00",
+        "sat": null,
+        "sun": null
+      },
+      "closed": [
+        "2026-11-26",
+        "2026-12-25"
+      ],
+      "hoursText": "Mon-Fri 9am-2pm. Closed Thanksgiving and Christmas.",
+      "url": "pdxsaintslove.org/day-center",
+      "noId": true
+    },
+    {
+      "name": "Recovery Café Roseway",
+      "sub": "Recovery community with free lunch",
+      "cat": [
+        "food",
+        "recovery"
+      ],
+      "desc": "A recovery community with a free lunch, espresso bar, recovery circles, and peer support.",
+      "detail": "Visit as a guest first. Members stay drug- and alcohol-free in the space and join a weekly Recovery Circle. Lunch about 12:15-1:30pm.",
+      "addr": "3516 NE 71st Ave, Portland, OR 97213",
+      "hours": {
+        "mon": null,
+        "tue": "11:00-16:00",
+        "wed": "11:00-16:00",
+        "thu": "11:00-16:00",
+        "fri": null,
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Tue-Thu 11am-4pm",
+      "phone": "9714599899",
+      "url": "recoverycaferoseway.org",
+      "noId": true
+    },
+    {
+      "name": "Catholic Charities Women's Day Services",
+      "sub": "Weekday drop-in for women 25+",
+      "cat": [
+        "food",
+        "hygiene",
+        "more"
+      ],
+      "desc": "A weekday drop-in with lunch, coffee, showers, laundry, phone and voicemail, a mailing address, and computers.",
+      "detail": "For women 25 and older experiencing homelessness who are not parenting. Well-behaved pets allowed. Hours are from 211info; call to confirm.",
+      "addr": "2740 SE Powell Blvd, Suite 5, Portland, OR 97202",
+      "hours": {
+        "mon": "10:00-13:00",
+        "tue": "10:00-13:00",
+        "wed": "10:00-13:00",
+        "thu": "10:00-13:00",
+        "fri": "10:00-13:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Mon-Fri 10am-1pm; lunch 11:30am-1pm",
+      "phone": "9712221880",
+      "url": "catholiccharitiesoregon.org/services/homeless-services",
+      "noId": true
+    },
+    {
+      "name": "HIV Day Center",
+      "sub": "For people living with HIV",
+      "cat": [
+        "food",
+        "hygiene",
+        "more"
+      ],
+      "desc": "Hot breakfast and lunch on weekdays, plus phone and mail service, computers, showers, laundry, and clothing.",
+      "detail": "For low-income people living with HIV/AIDS. Self-referral welcome.",
+      "addr": "2941 NE Ainsworth St, Portland, OR 97211",
+      "hoursText": "Weekdays from 9am. Call for hours.",
+      "phone": "5034603822",
+      "url": "hivdaycenter.org",
+      "noId": false
+    },
+    {
+      "name": "My Brothers and Sisters Kitchen",
+      "sub": "Thursday lunch in Gresham",
+      "cat": [
+        "food"
+      ],
+      "desc": "A weekly community lunch for individuals and families experiencing homelessness, at St. Henry Catholic Church.",
+      "detail": "Not held in July or August. Hours are from 211info.",
+      "addr": "346 NW 1st St, Gresham, OR 97030",
+      "hours": {
+        "mon": null,
+        "tue": null,
+        "wed": null,
+        "thu": "12:00-13:00",
+        "fri": null,
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Thursdays noon-1pm (not July-August)",
+      "phone": "5036659129",
+      "noId": true
+    },
+    {
+      "name": "Zarephath Kitchen & Pantry",
+      "sub": "Gresham hot lunch and grocery pantry",
+      "cat": [
+        "food"
+      ],
+      "desc": "A hot lunch Monday, Wednesday, and Friday, and a grocery pantry with staples, meat, produce, and dairy.",
+      "detail": "Enter through the church parking lot off Ava Ave, or from Eastman Pkwy north of Powell. Thanksgiving week: lunch Mon, Thanksgiving dinner Wed 11am-1pm; pantry Tue Nov 24 3-5pm and Wed Nov 25 10am-12:30pm; no pantry Thu or Fri.",
+      "addr": "59 NW Ava Ave, Gresham, OR 97030",
+      "hours": {
+        "mon": "11:00-13:00",
+        "tue": null,
+        "wed": "11:00-13:00",
+        "thu": "10:00-12:30",
+        "fri": "11:00-13:00",
+        "sat": null,
+        "sun": null
+      },
+      "closed": [
+        "2026-11-26"
+      ],
+      "hoursText": "Lunch Mon, Wed, Fri 11am-1pm. Pantry Thu 10am-12:30pm.",
+      "phone": "5036672692",
+      "url": "feedeastcounty.org",
+      "noId": true
+    },
+    {
+      "name": "Sunshine Division Free Food Markets",
+      "sub": "Free groceries, NW and SE Portland",
+      "cat": [
+        "food"
+      ],
+      "desc": "Free groceries you choose yourself, like a store, at two markets.",
+      "detail": "By appointment on the website or by phone. Bring photo ID if you have one; no one is turned away without it. SE market: 12436 SE Stark St, Mon-Fri 9am-noon and 1-4pm, 971-325-8810.",
+      "addr": "2121 NW Front Ave, Portland, OR 97209",
+      "closed": [
+        "2026-11-26",
+        "2026-11-27",
+        "2026-12-24",
+        "2026-12-25"
+      ],
+      "hoursText": "By appointment. NW: Tue, Wed, Fri 9am-noon & 1-4pm; Thu 11am-3pm & 4-7pm; Sat 9am-2pm.",
+      "phone": "9713798083",
+      "url": "sunshinedivision.org",
+      "noId": true
+    },
+    {
+      "name": "Lift UP Preston's Pantry",
+      "sub": "Downtown grocery pantry, Goose Hollow",
+      "cat": [
+        "food"
+      ],
+      "desc": "A shopping-style pantry with meat, eggs, produce, dairy, and dry goods, up to twice a month.",
+      "detail": "No ID or proof of income needed, but income must meet guidelines. Thu and Fri shopping order is by lottery; arrive no earlier than 2pm. Enter at the rear of First United Methodist Church, by the playground.",
+      "addr": "1838 SW Jefferson St, Portland, OR 97201",
+      "hours": {
+        "mon": null,
+        "tue": null,
+        "wed": null,
+        "thu": "14:00-18:00",
+        "fri": "14:00-18:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Thu & Fri 3-6pm (arrive 2pm for the lottery)",
+      "phone": "5032211224",
+      "url": "lifturbanportland.org/prestons-pantry-and-free-food-market",
+      "noId": true
+    },
+    {
+      "name": "Francis Center",
+      "sub": "Emergency food and clothing, SE 82nd",
+      "cat": [
+        "food",
+        "more"
+      ],
+      "desc": "Free food, plus clothing, hygiene items, and blankets when available. No appointment or documents needed.",
+      "detail": "Unhoused guests can come once a week. Bring bags.",
+      "addr": "6535 SE 82nd Ave, Portland, OR 97266",
+      "hours": {
+        "mon": "10:00-13:30",
+        "tue": "10:00-13:30",
+        "wed": "10:00-13:30",
+        "thu": "10:00-13:30",
+        "fri": null,
+        "sat": null,
+        "sun": null
+      },
+      "closed": [
+        "2026-11-26",
+        "2026-12-24",
+        "2026-12-31"
+      ],
+      "hoursText": "Mon-Thu 10am-1:30pm",
+      "phone": "5037756784",
+      "url": "franciscenterpdx.org",
+      "noId": true
+    },
+    {
+      "name": "SnowCap Community Services",
+      "sub": "East county food pantry",
+      "cat": [
+        "food"
+      ],
+      "desc": "Food every weekday plus some evenings, up to twice a month.",
+      "detail": "New clients apply online or call. Food is handed out outside: dress for the weather and bring bags. Behind The Rockwood Center; use the west driveway off Stark. The mobile clinic visits here; see its card.",
+      "addr": "17805 SE Stark St, Portland, OR 97233",
+      "hours": {
+        "mon": "10:00-14:00,18:00-20:00",
+        "tue": "10:00-14:00",
+        "wed": "10:00-14:00,18:00-20:00",
+        "thu": "10:00-14:00",
+        "fri": "10:00-14:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Weekdays 10am-2pm; also Mon & Wed 6-8pm",
+      "phone": "5036748785",
+      "url": "snowcap.org",
+      "noId": false
+    },
+    {
+      "name": "Salvation Army Food Pantries",
+      "sub": "North Portland and Gresham",
+      "cat": [
+        "food"
+      ],
+      "desc": "Food boxes at two Salvation Army centers. Proof of address is not needed if you are homeless.",
+      "detail": "N Williams (5325 N Williams Ave): Wed & Fri 9am-1pm, one box a week. Gresham Corps (473 SE 194th Ave): Mon-Thu 9am-noon, one box every 30 days. Each serves certain ZIP codes.",
+      "addr": "5325 N Williams Ave, Portland, OR 97217",
+      "hours": {
+        "mon": null,
+        "tue": null,
+        "wed": "09:00-13:00",
+        "thu": null,
+        "fri": "09:00-13:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "N Williams Wed & Fri 9am-1pm; Gresham Mon-Thu 9am-noon",
+      "phone": "9713404010",
+      "url": "salvationarmyusa.org/usa-western-territory/cascade/portland-metro-area/hunger",
+      "noId": true
+    },
+    {
+      "name": "Northeast Emergency Food Program",
+      "sub": "Shopping-style pantry, NE 72nd",
+      "cat": [
+        "food"
+      ],
+      "desc": "Fruit, vegetables, bread, meat, and dairy, shopping style, weekly.",
+      "detail": "Arrive within 30 minutes of opening to get a number. In the basement of the Luther Memorial building.",
+      "addr": "4800 NE 72nd Ave, Portland, OR 97218",
+      "hours": {
+        "mon": null,
+        "tue": "16:00-18:30",
+        "wed": null,
+        "thu": "09:30-12:00",
+        "fri": null,
+        "sat": "09:30-12:00",
+        "sun": null
+      },
+      "hoursText": "Tue 4-6:30pm; Thu & Sat 9:30am-noon",
+      "phone": "5032845470",
+      "url": "emo-nefp.org",
+      "noId": true
+    },
+    {
+      "name": "Mainspring",
+      "sub": "Food bags and clothing pantry, NE 82nd",
+      "cat": [
+        "food",
+        "more"
+      ],
+      "desc": "Pre-made food bags once a week, and a clothing and hygiene pantry every 14 days.",
+      "detail": "Low barrier. Bring bags. Closed on holidays and when Portland Public Schools close for weather.",
+      "addr": "3500 NE 82nd Ave, Portland, OR 97220",
+      "hours": {
+        "mon": null,
+        "tue": "10:00-13:00",
+        "wed": null,
+        "thu": "09:00-13:00",
+        "fri": null,
+        "sat": null,
+        "sun": null
+      },
+      "closed": [
+        "2026-11-22",
+        "2026-11-23",
+        "2026-11-24",
+        "2026-11-25",
+        "2026-11-26",
+        "2026-11-27",
+        "2026-11-28"
+      ],
+      "hoursText": "Food bags Thu 9am-1pm; clothing Tue & Thu 10am-1pm. Closed Nov 22-28.",
+      "phone": "5032335533",
+      "url": "mainspringpdx.org",
+      "noId": true
+    },
+    {
+      "name": "Clay Street Table Pantry",
+      "sub": "Monthly downtown grocery pantry",
+      "cat": [
+        "food"
+      ],
+      "desc": "A shopping-style grocery pantry open to everyone in need of food.",
+      "addr": "1314 SW Park Ave, Portland, OR 97201",
+      "hoursText": "4th Thursday of the month, 11am-noon. November falls on Thanksgiving: call first.",
+      "phone": "5034494969",
+      "url": "claystreettable.org/food-pantry",
+      "noId": true
+    },
+    {
+      "name": "Oregon Food Bank FoodFinder",
+      "sub": "Map of every free food site near you",
+      "cat": [
+        "food"
+      ],
+      "desc": "A searchable map of food pantries, free meals, and other free food in your neighborhood, including small church pantries not listed here.",
+      "hoursText": "Online any time",
+      "phone": "5032820555",
+      "url": "foodfinder.oregonfoodbank.org",
+      "urlLabel": "Find food near you",
+      "noId": true
+    },
+    {
       "name": "St. Michael's Catholic Church",
       "sub": "Homeless Ministry Lunch",
       "cat": [
@@ -563,10 +1109,11 @@
       "sub": "Shelter + Mail + ID Forms",
       "cat": [
         "shelter",
+        "hygiene",
         "id"
       ],
       "desc": "Shelter plus employment navigation plus mail receipt services. Declaration of Homelessness forms for free DMV ID.",
-      "detail": "One of Portland's largest homeless services providers. Multiple shelter locations citywide. Rent Well program.",
+      "detail": "Showers and laundry Mon-Fri 9am-noon (last shower 11:30, last laundry 11:00). Free haircuts Wed-Fri noon-2pm. Clothing closet Mon, Wed, Fri 1:30-2:30pm. Lockers daily. Staff can sign the form for a free Oregon ID.",
       "addr": "650 NW Irving St, Portland, OR 97209",
       "hours": {
         "mon": "08:30-15:30",
@@ -699,17 +1246,338 @@
       "noId": false
     },
     {
-      "name": "Agape Village Overnight Shelters",
-      "sub": "Adults only, two locations",
+      "name": "SE Grand Recovery Shelter",
+      "sub": "Transition Projects: sober overnight shelter",
+      "cat": [
+        "shelter",
+        "recovery"
+      ],
+      "desc": "City-funded overnight shelter for adults who want an alcohol- and drug-free place to sleep.",
+      "detail": "Arrive sober. Your bed from last night is held for tonight; new people get the beds that are left. Don't line up more than 30 minutes before 9pm.",
+      "addr": "636 SE Grand Ave, Portland, OR 97214",
+      "hoursText": "Nightly 9pm-7am. New people get leftover beds.",
+      "phone": "5032804766",
+      "url": "portland.gov/shelter-services/overnight-emergency-shelters/se-grand-recovery-636-se-grand-ave",
+      "noId": false
+    },
+    {
+      "name": "City of Portland Shelter Services",
+      "sub": "Find a City shelter bed, or ask for outreach",
       "cat": [
         "shelter"
       ],
-      "desc": "Overnight shelter for adults: a safe night of sleep. Pets welcome if on a leash or in a crate.",
-      "detail": "St. Stephen's (1432 SW 13th Ave, with Operation Nightwatch): open 9pm-7am, call 971-610-4291. Central Nazarene (9715 SE Powell Blvd): open 9pm-6:30am, call 503-760-6272. Phones answered 8-11pm only, no voicemail. Once you arrive, if you leave you can't come back until the next night. Last night's guests get in first, then recent guests, then first-timers in order of arrival. Your photo is taken for a badge at check-in. No showers, no drug use, no weapons.",
+      "desc": "The City runs overnight shelters and 24/7 pod and tiny-home villages. A live map shows which overnight shelters have beds tonight.",
+      "detail": "Check the shelter availability map on portland.gov/shelter-services. Pod and tiny-home villages only take referrals from outreach workers: call 311 to ask for one. The City is closing and combining some shelters because of budget cuts, and a City workers’ strike that began Nov 9 may slow 311.",
+      "hours": {
+        "mon": "07:00-20:00",
+        "tue": "07:00-20:00",
+        "wed": "07:00-20:00",
+        "thu": "07:00-20:00",
+        "fri": "07:00-20:00",
+        "sat": "07:00-20:00",
+        "sun": "07:00-20:00"
+      },
+      "hoursText": "Call 311 (or 503-823-4000), 7am-8pm daily",
+      "phone": "5038234000",
+      "url": "portland.gov/shelter-services",
+      "noId": true
+    },
+    {
+      "name": "Bybee Lakes Hope Center",
+      "sub": "Helping Hands Reentry: 24/7 shelter, North Portland",
+      "cat": [
+        "shelter",
+        "recovery"
+      ],
+      "desc": "A large 24/7 shelter for men, women, and families, with up to 30 days of emergency shelter and a longer reentry program.",
+      "detail": "By referral. Call the center to ask about open beds and how to get a referral. You must commit to sobriety. The mobile clinic visits here; see its card for dates.",
+      "addr": "14355 N Bybee Lake Ct, Portland, OR 97203",
+      "hoursText": "Open 24/7 by referral. Call to ask about beds.",
+      "phone": "9713335070",
+      "url": "helpinghandsreentry.org/hope-centers",
+      "noId": false
+    },
+    {
+      "name": "Severe Weather Shelters",
+      "sub": "Multnomah County: open only in dangerous cold or heat",
+      "cat": [
+        "shelter"
+      ],
+      "desc": "Extra overnight shelters the County opens on top of year-round beds when the weather is dangerous.",
+      "detail": "Check multco.us/care-when-its-cold, or call 211, to find out if they are open tonight. 211 may stay open longer during weather emergencies. Libraries and the Behavioral Health Resource Center are warm daytime spaces.",
+      "hoursText": "Only during weather emergencies. Check daily in cold weather.",
+      "phone": "211",
+      "url": "multco.us/care-when-its-cold",
+      "noId": true
+    },
+    {
+      "name": "211info",
+      "sub": "Help line for shelter and services",
+      "cat": [
+        "shelter",
+        "more"
+      ],
+      "desc": "Free help line that connects you to shelter, family shelter, warming centers, food, and other services.",
+      "detail": "Families looking for shelter call 211 to be screened. If 211 won’t dial from your phone, call 866-698-6155. Text your zip code to 898211 (Mon-Fri 9am-5pm). Interpreters available. Longer hours during emergencies.",
+      "hours": {
+        "mon": "08:00-18:00",
+        "tue": "08:00-18:00",
+        "wed": "08:00-18:00",
+        "thu": "08:00-18:00",
+        "fri": "08:00-18:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Call 211, Mon-Fri 8am-6pm",
+      "phone": "211",
+      "url": "211info.org",
+      "noId": true
+    },
+    {
+      "name": "Janus Youth Access Center",
+      "sub": "Ages 16-24: the way in to youth shelter and drop-ins",
+      "cat": [
+        "shelter",
+        "more"
+      ],
+      "desc": "Young people 16-24 who are homeless start here to get screened for youth shelter, drop-in centers, and housing.",
+      "detail": "Call to talk with a screener, or leave your name and a callback number. After 5pm, go to Porch Light shelter at 8:45pm.",
+      "addr": "1635 SW Alder St, Portland, OR 97205",
+      "hours": {
+        "mon": "09:00-17:00",
+        "tue": "09:00-17:00",
+        "wed": "09:00-17:00",
+        "thu": "09:00-17:00",
+        "fri": "09:00-17:00",
+        "sat": "09:00-17:00",
+        "sun": "09:00-17:00"
+      },
+      "hoursText": "Screenings 9am-5pm, every day of the year",
+      "phone": "5034323986",
+      "url": "janusyouth.org/find-help",
+      "noId": true
+    },
+    {
+      "name": "Porch Light Youth Shelter",
+      "sub": "Janus Youth: walk-in shelter, ages 16-24",
+      "cat": [
+        "shelter",
+        "food",
+        "hygiene"
+      ],
+      "desc": "Nightly shelter for youth 16-24 with meals, bunk beds, and showers. LGBTQ affirming.",
+      "detail": "Come to the door any time between 9pm and 5am; beds are first come, first served. An intake worker meets with you in the morning.",
+      "addr": "1635 SW Alder St, Portland, OR 97205",
+      "hours": {
+        "mon": "21:00-05:00",
+        "tue": "21:00-05:00",
+        "wed": "21:00-05:00",
+        "thu": "21:00-05:00",
+        "fri": "21:00-05:00",
+        "sat": "21:00-05:00",
+        "sun": "21:00-05:00"
+      },
+      "hoursText": "Open nightly 8:45pm-8:45am. Walk in 9pm-5am.",
+      "phone": "5034323986",
+      "url": "janusyouth.org/homeless-youth",
+      "noId": true
+    },
+    {
+      "name": "New Avenues for Youth Drop-In",
+      "sub": "Ages 16-24: meals, showers, laundry",
+      "cat": [
+        "food",
+        "hygiene",
+        "work",
+        "more"
+      ],
+      "desc": "Daytime drop-in with meals six days a week, showers, laundry, clothes, computers, and advocates for jobs, school, and housing.",
+      "detail": "Get screened first through the Janus Youth Access Center (503-432-3986). Meals are served in the first hour of each session. East County drop-in: 470 SE 165th Ave, Mon-Fri 10am-6pm.",
+      "addr": "820 SW Oak St, Portland, OR 97205",
+      "hoursText": "Downtown Mon-Fri 9-10am, 1-3pm, 3:30-6pm; Sat 1-3pm, 4-6:30pm. Screening needed.",
+      "phone": "5032244339",
+      "url": "newavenues.org/drop-in-day",
+      "noId": false
+    },
+    {
+      "name": "Outside In Youth Services",
+      "sub": "Ages 16-24: meals, health care, support",
+      "cat": [
+        "food",
+        "health",
+        "more"
+      ],
+      "desc": "Meals, a health clinic, counseling, school and job help, and housing connections for young people.",
+      "detail": "For ages 16-24 screened into youth services. You can start the screening here, or call the Janus Youth Access Center at 503-432-3986.",
+      "addr": "1132 SW 13th Ave, Portland, OR 97205",
+      "hoursText": "Come in or call to start screening",
+      "phone": "5035353800",
+      "url": "outsidein.org/young-adult-services",
+      "noId": false
+    },
+    {
+      "name": "p:ear",
+      "sub": "Drop-in for homeless youth: food, art, mentoring",
+      "cat": [
+        "food",
+        "training",
+        "more"
+      ],
+      "desc": "A drop-in for young people experiencing homelessness with food, mentoring, art and education programs, and mail pickup.",
+      "addr": "338 NW 6th Ave, Portland, OR 97209",
+      "hours": {
+        "mon": null,
+        "tue": "09:00-14:00",
+        "wed": "09:00-14:00",
+        "thu": "09:00-14:00",
+        "fri": "09:00-14:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Tue-Fri 9am-2pm",
+      "phone": "5032286677",
+      "url": "pearmentor.org",
+      "noId": true
+    },
+    {
+      "name": "Call to Safety",
+      "sub": "24/7 domestic and sexual violence line",
+      "cat": [
+        "shelter",
+        "more"
+      ],
+      "desc": "Free, confidential 24/7 support for survivors of domestic and sexual violence: safety planning and help finding DV shelter.",
+      "detail": "Interpreters available. Its website shows each day which DV shelters are taking new people.",
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      },
+      "hoursText": "Call any time, 24/7. Toll-free 1-888-235-5333.",
+      "phone": "5032355333",
+      "url": "calltosafety.org",
+      "noId": true
+    },
+    {
+      "name": "Raphael House",
+      "sub": "Domestic violence shelter (confidential location)",
+      "cat": [
+        "shelter"
+      ],
+      "desc": "Emergency shelter and support for domestic violence survivors and their children.",
+      "detail": "Check calltosafety.org to see if Raphael House is taking new people, then call with a completed Safety and Stabilization Assessment (SSA). The Gateway Center can help you do the SSA.",
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      },
+      "hoursText": "24/7 crisis line",
+      "phone": "5032226222",
+      "url": "raphaelhouse.com/get-help",
+      "noId": true
+    },
+    {
+      "name": "Bradley Angle",
+      "sub": "Domestic violence shelter and services",
+      "cat": [
+        "shelter",
+        "more"
+      ],
+      "desc": "Emergency shelter and housing help for anyone affected by domestic violence, with programs for Black and LGBTQIA+ survivors.",
+      "detail": "Call the intake line or use the request form on the website. For crisis help any time, call Call to Safety at 503-235-5333.",
+      "hoursText": "Intake: 503-281-2442 ext. 302",
+      "phone": "5032812442",
+      "url": "bradleyangle.org",
+      "noId": true
+    },
+    {
+      "name": "Gateway Center",
+      "sub": "Multnomah County: help for abuse survivors",
+      "cat": [
+        "more"
+      ],
+      "desc": "Safety planning, restraining orders, and connections to DV shelter for survivors of partner abuse, sexual assault, and trafficking.",
+      "detail": "Waits can be long and it sometimes fills for the day, so call first. Calls are returned from a blocked number. After hours, call Call to Safety at 503-235-5333.",
+      "addr": "10305 E Burnside St, Portland, OR 97216",
+      "hours": {
+        "mon": "09:00-16:00",
+        "tue": "09:00-16:00",
+        "wed": "09:00-16:00",
+        "thu": "09:00-16:00",
+        "fri": "09:00-16:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Mon-Fri 9am-4pm. Call first.",
+      "phone": "5039886400",
+      "url": "multco.us/dv/gateway-center-domestic-violence-services",
+      "noId": true
+    },
+    {
+      "name": "StrongHearts Native Helpline",
+      "sub": "24/7 for Native survivors of violence",
+      "cat": [
+        "more"
+      ],
+      "desc": "Safe, confidential, anonymous help for American Indians and Alaska Natives affected by domestic, dating, or sexual violence.",
+      "detail": "Call or text 1-844-762-8483, or chat on the website.",
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      },
+      "hoursText": "Call or text 24/7",
+      "phone": "18447628483",
+      "url": "strongheartshelpline.org",
+      "noId": true
+    },
+    {
+      "name": "Agape Village Shelter at St. Stephen's",
+      "sub": "Adults only, overnight",
+      "cat": [
+        "shelter"
+      ],
+      "desc": "Overnight shelter for adults in the same building as Operation Nightwatch: a safe night of sleep. Pets welcome if on a leash or in a crate.",
+      "detail": "Open 9pm-7am; arrive no earlier than 8:30pm, doors close 11pm. Phone answered 8-11pm only, no voicemail. Once you arrive, if you leave you can't come back until the next night. Last night's guests get in first, then recent guests, then first-timers in order of arrival. Your photo is taken for a badge at check-in. No showers, no drug use, no weapons. Agape's second shelter is at Central Nazarene, 9715 SE Powell Blvd.",
       "addr": "1432 SW 13th Ave, Portland, OR 97201",
-      "hoursText": "Doors 9pm-11pm; arrive no earlier than 8:30pm. Nights not posted, so call 8-11pm to check.",
+      "hoursText": "Doors 9pm-11pm. Nights not posted, so call 8-11pm to check.",
       "phone": "9716104291",
       "url": "agapevillagepdx.org/shelter",
+      "noId": false
+    },
+    {
+      "name": "Agape Village Shelter at Central Nazarene",
+      "sub": "Adults only, overnight, first come first served",
+      "cat": [
+        "shelter"
+      ],
+      "desc": "City-funded overnight shelter for adults in a church in outer SE Portland. Pets welcome if on a leash or in a crate.",
+      "detail": "Line up no earlier than 8:30pm. Open 9pm-6:30am; doors close 11pm. Phone answered 8-11pm only, no voicemail. Once you arrive, if you leave you can't come back until the next night. Your photo is taken for a badge at check-in. No showers, no drug use, no weapons.",
+      "addr": "9715 SE Powell Blvd, Portland, OR 97266",
+      "hours": {
+        "mon": "21:00-23:00",
+        "tue": "21:00-23:00",
+        "wed": "21:00-23:00",
+        "thu": "21:00-23:00",
+        "fri": "21:00-23:00",
+        "sat": "21:00-23:00",
+        "sun": "21:00-23:00"
+      },
+      "hoursText": "Nightly: doors 9pm-11pm, shelter until 6:30am",
+      "phone": "5037606272",
+      "url": "portland.gov/shelter-services/overnight-emergency-shelters",
       "noId": false
     },
     {
@@ -805,6 +1673,235 @@
       "phone": "5032382067",
       "url": "centralcityconcern.org/recovery-location/hooper-detoxification-stabilization-center",
       "noId": false
+    },
+    {
+      "name": "Fora Health Detox",
+      "sub": "Walk-in withdrawal management every morning",
+      "cat": [
+        "health",
+        "recovery"
+      ],
+      "desc": "Medically supported detox from alcohol and drugs. Walk in by 7:30am any day of the week.",
+      "detail": "Admission depends on beds and a medical check. Weekends: OHP only. Private insurance or outside Multnomah, Washington, or Clackamas County: call first, Mon-Fri 7:30am-4:30pm. No one is denied for inability to pay. Medications for addiction: walk in Mon-Fri 9am-4pm or call 503-713-9156.",
+      "addr": "10230 SE Cherry Blossom Dr, Portland, OR 97216",
+      "hoursText": "Detox: arrive by 7:30am, every day. Addiction medication walk-in Mon-Fri 9am-4pm.",
+      "phone": "5035351151",
+      "url": "forahealth.org/walk-in-process",
+      "noId": false
+    },
+    {
+      "name": "Old Town Recovery Center",
+      "sub": "Central City Concern: walk-in addiction and mental health care",
+      "cat": [
+        "health",
+        "recovery"
+      ],
+      "desc": "Outpatient mental health care and addiction treatment, including Suboxone, counseling, peer support, and an on-site pharmacy.",
+      "detail": "Walk in or call to start care. Takes OHP and self-pay; no one turned away for inability to pay.",
+      "addr": "33 NW Broadway, Portland, OR 97209",
+      "hours": {
+        "mon": "09:00-17:00",
+        "tue": "09:00-17:00",
+        "wed": "09:00-17:00",
+        "thu": "09:00-17:00",
+        "fri": "09:00-17:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Walk in Mon-Fri 9am-5pm. Closed holidays.",
+      "phone": "5032287134",
+      "url": "centralcityconcern.org/recovery-location/old-town-recovery-center",
+      "noId": false
+    },
+    {
+      "name": "CODA Portland Recovery Center",
+      "sub": "Methadone and opioid treatment",
+      "cat": [
+        "health",
+        "recovery"
+      ],
+      "desc": "Medication treatment for opioid use disorder, including methadone.",
+      "detail": "Call for a short phone screening; most people get an appointment the same or next day. Sliding scale if you have no insurance. Buses 12, 19, 20, 70.",
+      "addr": "1030 NE Couch St, Portland, OR 97232",
+      "hoursText": "Call to schedule",
+      "phone": "8557332632",
+      "url": "codainc.org",
+      "noId": false
+    },
+    {
+      "name": "Alcohol & Drug Helpline",
+      "sub": "Lines for Life: 24/7 substance use help",
+      "cat": [
+        "recovery",
+        "more"
+      ],
+      "desc": "Free, confidential support and treatment referrals for people using alcohol or drugs, and for their families.",
+      "detail": "Interpreters available. Search treatment that takes OHP at treatmentaccessline.org.",
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      },
+      "hoursText": "24/7",
+      "phone": "18009234357",
+      "url": "linesforlife.org/get-help-now",
+      "noId": true
+    },
+    {
+      "name": "Portland AA",
+      "sub": "Alcoholics Anonymous meetings and 24-hour hotline",
+      "cat": [
+        "recovery"
+      ],
+      "desc": "Free AA meetings all over Portland, every day, including Spanish and ASL meetings. No sign-up.",
+      "detail": "Find a meeting at pdxaa.org/meetings or in the Meeting Guide app.",
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      },
+      "hoursText": "24-hour hotline",
+      "phone": "5032238569",
+      "url": "pdxaa.org",
+      "noId": true
+    },
+    {
+      "name": "Portland NA",
+      "sub": "Narcotics Anonymous meetings and 24-hour helpline",
+      "cat": [
+        "recovery"
+      ],
+      "desc": "Free Narcotics Anonymous meetings around Portland. No sign-up.",
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      },
+      "hoursText": "24-hour helpline",
+      "phone": "5033459839",
+      "url": "portlandna.org",
+      "noId": true
+    },
+    {
+      "name": "Alano Club of Portland",
+      "sub": "Recovery center with 100+ meetings a week",
+      "cat": [
+        "recovery"
+      ],
+      "desc": "A recovery community center hosting over 100 free recovery meetings a week, plus classes.",
+      "detail": "Open to anyone in or seeking recovery. Meeting schedule on the website.",
+      "addr": "909 NW 24th Ave, Portland, OR 97210",
+      "hoursText": "Office open daily 11am-7pm; meetings at many times",
+      "phone": "5032225756",
+      "url": "portlandalano.org",
+      "noId": true
+    },
+    {
+      "name": "The Miracles Club",
+      "sub": "Black-led peer recovery community",
+      "cat": [
+        "recovery"
+      ],
+      "desc": "Free peer recovery mentors, meetings, and help connecting to housing, treatment, jobs, and health care.",
+      "detail": "Call or apply for services on the website. Second site: Miracles Central, 1306 NE 2nd Ave.",
+      "addr": "4200 NE Martin Luther King Jr Blvd, Portland, OR 97211",
+      "hoursText": "Call or apply online",
+      "phone": "5032498559",
+      "url": "miraclesclub.org",
+      "noId": false
+    },
+    {
+      "name": "4D Recovery",
+      "sub": "Peer recovery mentors, ages 14-35",
+      "cat": [
+        "recovery"
+      ],
+      "desc": "Young people in or seeking recovery get peer mentors, help with housing, jobs, and OHP, and nightly meetings and sober events.",
+      "addr": "11010 SE Division St, Suite 200, Portland, OR 97266",
+      "hoursText": "Call or use the referral form on the website",
+      "phone": "9717034623",
+      "url": "4drecovery.org",
+      "noId": false
+    },
+    {
+      "name": "The Peer Company",
+      "sub": "Formerly MHAAO: free peer support",
+      "cat": [
+        "recovery",
+        "health"
+      ],
+      "desc": "Free peer support from people with lived experience of mental health or addiction: help getting into detox, treatment, and housing.",
+      "detail": "Self-refer with the form on mhaoforegon.org, or call.",
+      "hoursText": "Call or self-refer online",
+      "phone": "5039222377",
+      "url": "mhaoforegon.org",
+      "noId": false
+    },
+    {
+      "name": "NAYA",
+      "sub": "Native American Youth and Family Center",
+      "cat": [
+        "food",
+        "shelter",
+        "work",
+        "more"
+      ],
+      "desc": "Native-led center with a food pantry, clothing closet, rent and utility help, family shelter, youth housing and recovery support, and job programs.",
+      "detail": "For Native American people and families, from infants to Elders. Call first.",
+      "addr": "5135 NE Columbia Blvd, Portland, OR 97218",
+      "hoursText": "Mon-Fri 9am-4:30pm. Call first.",
+      "phone": "5032888177",
+      "url": "nayapdx.org",
+      "noId": false
+    },
+    {
+      "name": "NARA Indian Health Clinic",
+      "sub": "Native-led health and addiction care",
+      "cat": [
+        "health",
+        "recovery"
+      ],
+      "desc": "Family medicine, mental health, HIV/STI and hepatitis C testing, and addiction treatment for Native American and Alaska Native people.",
+      "detail": "Call for an appointment. Sliding-scale fees. Bring a tribal or Native ID if you have one. Also: NARA Wellness Center, 12360 E Burnside St, 971-279-4800.",
+      "addr": "703 NE Hancock St, Portland, OR 97212",
+      "hoursText": "By appointment",
+      "phone": "5032309875",
+      "url": "naranorthwest.org",
+      "noId": false
+    },
+    {
+      "name": "Painted Horse Recovery",
+      "sub": "Native-centered drop-in recovery",
+      "cat": [
+        "recovery"
+      ],
+      "desc": "Drop-in recovery support with Wellbriety and Native-based AA and NA meetings, skill groups, and culture nights. Open to anyone seeking recovery.",
+      "addr": "10209 SE Division St, Portland, OR 97266",
+      "hours": {
+        "mon": "13:00-21:00",
+        "tue": "13:00-21:00",
+        "wed": "13:00-21:00",
+        "thu": "13:00-21:00",
+        "fri": "13:00-21:00",
+        "sat": "13:00-21:00",
+        "sun": "13:00-21:00"
+      },
+      "hoursText": "Daily 1pm-9pm, at Spence Community Center",
+      "phone": "9712055144",
+      "url": "paintedhorserecovery.org",
+      "noId": true
     },
     {
       "name": "Outside In Medical Clinic",
@@ -1046,6 +2143,203 @@
       "noId": false
     },
     {
+      "name": "988 Suicide & Crisis Lifeline",
+      "sub": "Call or text 988, any time",
+      "cat": [
+        "health",
+        "more"
+      ],
+      "desc": "Free, confidential support for thoughts of suicide, a mental health crisis, or a substance use crisis.",
+      "detail": "Call or text 988, or chat at 988lifeline.org. Spanish: 1-888-628-9454.",
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      },
+      "hoursText": "24/7",
+      "phone": "988",
+      "url": "988lifeline.org",
+      "noId": true
+    },
+    {
+      "name": "Multnomah County Crisis Line",
+      "sub": "24/7 mental health crisis line and mobile crisis",
+      "cat": [
+        "health",
+        "more"
+      ],
+      "desc": "Trained clinicians give crisis support, resources, and referrals by phone, for you or someone else. They can also send Project Respond, a crisis team that comes to you.",
+      "detail": "Free and confidential, any language. Spanish line: 503-988-4853.",
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      },
+      "hoursText": "24/7",
+      "phone": "5039884888",
+      "url": "multco.us/services/behavioral-health-crisis-services",
+      "noId": true
+    },
+    {
+      "name": "Cascadia Urgent Walk-In Clinic",
+      "sub": "Mental health crisis care, free",
+      "cat": [
+        "health",
+        "recovery"
+      ],
+      "desc": "Walk in for immediate, in-person help with a mental health or substance use crisis. Free for anyone.",
+      "addr": "4212 SE Division St, Portland, OR 97206",
+      "hours": {
+        "mon": "07:00-22:30",
+        "tue": "07:00-22:30",
+        "wed": "07:00-22:30",
+        "thu": "07:00-22:30",
+        "fri": "07:00-22:30",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Mon-Fri 7am-10:30pm. Closed weekends (per the County).",
+      "phone": "5039632575",
+      "url": "multco.us/services/behavioral-health-crisis-services",
+      "noId": true
+    },
+    {
+      "name": "Unity Center for Behavioral Health",
+      "sub": "24-hour psychiatric emergency care",
+      "cat": [
+        "health"
+      ],
+      "desc": "A 24-hour mental health emergency center. Adults can walk in or be dropped off.",
+      "detail": "Youth 9-17 need a referral and cannot walk in.",
+      "addr": "1225 NE 2nd Ave, Portland, OR 97232",
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      },
+      "hoursText": "Open 24 hours for adults",
+      "phone": "5039448000",
+      "url": "unityhealthcenter.org",
+      "noId": false
+    },
+    {
+      "name": "Portland Street Response",
+      "sub": "Crisis help without police",
+      "cat": [
+        "health",
+        "more"
+      ],
+      "desc": "City teams come in person to help someone having a mental health or behavioral health crisis, anywhere in Portland.",
+      "detail": "Call 911 or 503-823-7773 and ask for Portland Street Response. A City workers’ strike began Nov 9; the City says critical public safety services continue.",
+      "hours": {
+        "mon": "06:00-24:00",
+        "tue": "06:00-24:00",
+        "wed": "06:00-24:00",
+        "thu": "06:00-24:00",
+        "fri": "06:00-24:00",
+        "sat": "06:00-24:00",
+        "sun": "06:00-24:00"
+      },
+      "hoursText": "6am to midnight, every day",
+      "phone": "5038237773",
+      "url": "portland.gov/streetresponse",
+      "noId": true
+    },
+    {
+      "name": "YouthLine",
+      "sub": "Teen-to-teen help line, ages 24 and under",
+      "cat": [
+        "health",
+        "more"
+      ],
+      "desc": "Free support and crisis line for young people. Teens answer 4-10pm; adults answer the phone at other times.",
+      "detail": "Call, text teen2teen to 839863, or chat at theyouthline.org.",
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      },
+      "hoursText": "Phone 24/7; teens answer 4-10pm",
+      "phone": "18779688491",
+      "url": "theyouthline.org",
+      "noId": true
+    },
+    {
+      "name": "The Trevor Project",
+      "sub": "24/7 crisis support for LGBTQ+ young people",
+      "cat": [
+        "health",
+        "more"
+      ],
+      "desc": "Free, confidential crisis counseling for LGBTQ+ young people by phone, text, or chat.",
+      "detail": "Text START to 678-678, or chat at thetrevorproject.org/get-help.",
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      },
+      "hoursText": "24/7",
+      "phone": "18664887386",
+      "url": "thetrevorproject.org/get-help",
+      "noId": true
+    },
+    {
+      "name": "Testing 4 All",
+      "sub": "Cascade AIDS Project: free walk-in HIV testing",
+      "cat": [
+        "health"
+      ],
+      "desc": "Free, confidential HIV testing. Walk in, no appointment.",
+      "addr": "520 NW Davis St, Suite 215, Portland, OR 97209",
+      "hours": {
+        "mon": "10:00-16:00",
+        "tue": null,
+        "wed": "10:00-16:00",
+        "thu": null,
+        "fri": null,
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Walk in Mon & Wed 10am-4pm",
+      "phone": "5032235907",
+      "url": "capnw.org/get-tested",
+      "noId": true
+    },
+    {
+      "name": "Multnomah County STI Clinic",
+      "sub": "STI and HIV testing and treatment",
+      "cat": [
+        "health"
+      ],
+      "desc": "Testing and treatment for HIV, syphilis, gonorrhea, and chlamydia, plus PrEP.",
+      "detail": "By appointment, no walk-ins. For an urgent need, call to get seen. No ID or insurance needed; no one turned away for inability to pay.",
+      "addr": "619 NW 6th Ave, 2nd Floor, Portland, OR 97209",
+      "hoursText": "Mon-Fri 9am-5pm, by appointment",
+      "phone": "5039883700",
+      "url": "multco.us/health/std-services",
+      "noId": true
+    },
+    {
       "name": "Portland Street Medicine",
       "sub": "Medical care on the street",
       "cat": [
@@ -1163,6 +2457,161 @@
       "noId": true
     },
     {
+      "name": "13 Salmon Shower Project",
+      "sub": "Free showers at First Unitarian",
+      "cat": [
+        "hygiene"
+      ],
+      "desc": "Free showers and clean clothing, open to anyone who wants a shower. First come, first served.",
+      "detail": "You don't need to belong to the church. ADA accessible. Lower level of the Buchan building at SW 13th & Salmon.",
+      "addr": "1034 SW 13th Ave, Portland, OR 97205",
+      "hours": {
+        "mon": null,
+        "tue": null,
+        "wed": "10:00-14:30",
+        "thu": "10:00-14:30",
+        "fri": null,
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Wed & Thu 10am-2:30pm",
+      "phone": "5032286389",
+      "url": "firstunitarianportland.org/13-salmon-shower-project",
+      "noId": true
+    },
+    {
+      "name": "NW Glisan Oasis Day Center",
+      "sub": "City day center: showers, laundry, charging",
+      "cat": [
+        "hygiene",
+        "more"
+      ],
+      "desc": "An open-air City day center with showers, washers and dryers, a clothing closet, phone charging, and a place to warm up or cool down.",
+      "detail": "Anyone can use it. First aid, transit help, and bike repair. A mobile health clinic comes Fridays 10am-5pm. Run by Urban Alchemy. The City warns budget cuts may change City-funded sites.",
+      "addr": "601 NW Glisan St, Portland, OR 97209",
+      "hours": {
+        "mon": "06:00-22:00",
+        "tue": "06:00-22:00",
+        "wed": "06:00-22:00",
+        "thu": "06:00-22:00",
+        "fri": "06:00-22:00",
+        "sat": "06:00-22:00",
+        "sun": "06:00-22:00"
+      },
+      "hoursText": "Daily 6am-10pm",
+      "phone": "9715099412",
+      "url": "portland.gov/shelter-services/city-day-centers/nw-glisan-oasis-day-center-nw-6th-ave-nw-glisan",
+      "noId": true
+    },
+    {
+      "name": "City Day Storage",
+      "sub": "Free storage for your belongings",
+      "cat": [
+        "more"
+      ],
+      "desc": "Store your things safely for the day, overnight, or up to 30 days. Free.",
+      "detail": "Everything must fit in a 32-gallon bin with the lid closed. No carts, weapons, food, or liquids. Items left 30 days are thrown away; daily check-in preferred. First come, first served.",
+      "addr": "435 NW Glisan St, Portland, OR 97209",
+      "hours": {
+        "mon": "07:00-19:45",
+        "tue": "07:00-19:45",
+        "wed": "07:00-19:45",
+        "thu": "07:00-19:45",
+        "fri": "07:00-19:45",
+        "sat": "07:00-19:45",
+        "sun": "07:00-19:45"
+      },
+      "hoursText": "Daily 7am-7:45pm, except holidays",
+      "phone": "5038234000",
+      "url": "portland.gov/homelessness-impact-reduction/day-storage",
+      "noId": true
+    },
+    {
+      "name": "Ground Score Storage",
+      "sub": "Daytime storage, coffee, phone charging",
+      "cat": [
+        "more"
+      ],
+      "desc": "Locked daytime storage for up to 3 containers, with free coffee, snacks, and phone charging.",
+      "detail": "New members sign a short agreement. Email hello@groundscoreassociation.org.",
+      "addr": "624 NW Couch St, Portland, OR 97209",
+      "hours": {
+        "mon": "08:00-15:00",
+        "tue": "08:00-15:00",
+        "wed": "08:00-15:00",
+        "thu": "08:00-15:00",
+        "fri": "08:00-15:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Weekdays 8am-3pm",
+      "url": "groundscoreassociation.org/special-programs",
+      "noId": true
+    },
+    {
+      "name": "Marie Equi Center",
+      "sub": "Trans and queer day center",
+      "cat": [
+        "health",
+        "more"
+      ],
+      "desc": "A day center for LGBTQIA2S+ people, especially low-income and unhoused: peer support, mail, computers, harm reduction, and help with housing and benefits.",
+      "detail": "Hours are from the County day center list; call to confirm.",
+      "addr": "4434 SE 25th Ave, Portland, OR 97202",
+      "hours": {
+        "mon": "10:00-16:00",
+        "tue": "10:00-16:00",
+        "wed": "10:00-16:00",
+        "thu": "10:00-16:00",
+        "fri": "10:00-14:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Mon-Thu 10am-4pm, Fri 10am-2pm",
+      "phone": "5034592584",
+      "noId": true
+    },
+    {
+      "name": "PAW Team",
+      "sub": "Free vet care and pet food",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free vet care for pets of people experiencing homelessness, and a Pet Food and Supply Bank.",
+      "detail": "Vet clinic by appointment: fill out the pre-screening form on the website first. No emergency care. Pet Supply Bank once a month.",
+      "addr": "1718 NE 82nd Ave, Portland, OR 97220",
+      "hours": {
+        "mon": null,
+        "tue": "10:00-15:00",
+        "wed": "10:00-15:00",
+        "thu": "10:00-15:00",
+        "fri": null,
+        "sat": null,
+        "sun": null
+      },
+      "closed": [
+        "2026-12-21",
+        "2026-12-22",
+        "2026-12-23",
+        "2026-12-24",
+        "2026-12-25",
+        "2026-12-26",
+        "2026-12-27",
+        "2026-12-28",
+        "2026-12-29",
+        "2026-12-30",
+        "2026-12-31",
+        "2027-01-01",
+        "2027-01-02",
+        "2027-01-03",
+        "2027-01-04"
+      ],
+      "hoursText": "Tue-Thu 10am-3pm. Closed Dec 21 - Jan 4.",
+      "phone": "5032066033",
+      "url": "pawteam.org",
+      "noId": true
+    },
+    {
       "name": "Multnomah County Central Library",
       "sub": "Free Computers + Wi-Fi",
       "cat": [
@@ -1182,6 +2631,91 @@
       },
       "hoursText": "Mon-Thu 10am-8pm, Fri-Sat 10am-6pm, Sun 10am-5pm",
       "url": "multcolib.org",
+      "noId": true
+    },
+    {
+      "name": "Court Legal Resource Center",
+      "sub": "Free help if you go to court without a lawyer",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free help with court forms and procedures for family, landlord-tenant, and small claims cases.",
+      "detail": "Free for anyone without a lawyer. Staff explain procedures but cannot give legal advice. A limited number of walk-in spots each day.",
+      "addr": "1200 SW 1st Ave, Room 02307, Portland, OR 97204",
+      "hours": {
+        "mon": "08:30-12:00,13:00-16:00",
+        "tue": "08:30-12:00,13:00-16:00",
+        "wed": "08:30-12:00,13:00-15:00",
+        "thu": "08:30-12:00,13:00-16:00",
+        "fri": "08:30-12:00,13:00-16:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Weekdays 8:30am-noon and 1-4pm (Wed until 3pm)",
+      "phone": "9712368670",
+      "url": "courts.oregon.gov/courts/multnomah/programs-services/pages/legalresourcecenter.aspx",
+      "noId": true
+    },
+    {
+      "name": "Multnomah Project Reset",
+      "sub": "Get Multnomah County fines and fees forgiven",
+      "cat": [
+        "more"
+      ],
+      "desc": "Each month 60 people with low incomes are picked at random to have their Multnomah County court fines and fees waived. No community service needed.",
+      "detail": "Sign up online; if not picked, you stay in the pool for next month. Run by Metropolitan Public Defender with the court and DA.",
+      "hoursText": "Sign up online, or call and leave a message",
+      "phone": "5032738224",
+      "url": "mpdlaw.com/multnomah-project-reset",
+      "noId": true
+    },
+    {
+      "name": "CLEAR Clinic",
+      "sub": "Free criminal and eviction record clearing",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free legal help to clear criminal records and eviction records, plus some immigration help.",
+      "detail": "Walk-in clinics at locations around Portland; see the drop-in calendar on the website. No appointment needed at drop-ins.",
+      "addr": "537 SE Ash St, Suite 202, Portland, OR 97214",
+      "hoursText": "See the drop-in calendar on the website",
+      "phone": "5033895919",
+      "url": "clear-clinic.org",
+      "noId": true
+    },
+    {
+      "name": "Legal Aid Services of Oregon",
+      "sub": "Free civil legal help, Portland office",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free legal help for low-income people with public benefits, tenant and housing problems, and family law and protection orders.",
+      "detail": "Intake is by phone. Interpreters available. Toll-free 1-800-228-6958.",
+      "hours": {
+        "mon": "09:00-12:00,13:00-17:00",
+        "tue": "09:00-12:00,13:00-17:00",
+        "wed": "09:00-12:00,13:00-17:00",
+        "thu": "09:00-12:00,13:00-17:00",
+        "fri": "09:00-12:00,13:00-17:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Call Mon-Fri 9am-noon and 1-5pm",
+      "phone": "5032244086",
+      "url": "lasoregon.org/locations/portland-regional-office",
+      "noId": true
+    },
+    {
+      "name": "Eviction Defense Project",
+      "sub": "Oregon Law Center: free help facing eviction",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free legal help for low-income tenants with an eviction court case.",
+      "detail": "Contact them at least 48 business hours before your first court date. Have your case number and hearing date ready. In Multnomah County, help may start as soon as you get a termination notice.",
+      "hoursText": "Call or use the web form",
+      "phone": "8885859638",
+      "url": "oregonlawcenter.org/eviction-defense-project",
       "noId": true
     },
     {
