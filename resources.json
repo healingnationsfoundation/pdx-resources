@@ -42,6 +42,31 @@
   ],
   "resources": [
     {
+      "name": "Operation Nightwatch",
+      "sub": "Evening hospitality center",
+      "cat": [
+        "food",
+        "health",
+        "more"
+      ],
+      "desc": "A warm place to be in the evening, when other agencies are closed: coffee, a meal, supplies, company, and mental health services.",
+      "detail": "At St. Stephen's Episcopal Church. Everyone is welcome just as they are; no faith practice required. Agape Village runs an overnight shelter in the same building (see Agape Village Overnight Shelters).",
+      "addr": "1432 SW 13th Ave, Portland, OR 97201",
+      "hours": {
+        "mon": null,
+        "tue": null,
+        "wed": null,
+        "thu": "18:30-22:00",
+        "fri": "18:30-22:00",
+        "sat": "18:30-22:00",
+        "sun": null
+      },
+      "hoursText": "Thu, Fri, Sat 6:30pm-10pm",
+      "phone": "5032200438",
+      "url": "operationnightwatch.org",
+      "noId": true
+    },
+    {
       "name": "Street Roots",
       "sub": "Newspaper Vendor Program",
       "cat": [
@@ -671,6 +696,20 @@
       },
       "hoursText": "Nightly from 8pm. Burnside until 8am, Moore Street until 6am.",
       "url": "portland.gov/shelter-services/emergency-shelters",
+      "noId": false
+    },
+    {
+      "name": "Agape Village Overnight Shelters",
+      "sub": "Adults only, two locations",
+      "cat": [
+        "shelter"
+      ],
+      "desc": "Overnight shelter for adults: a safe night of sleep. Pets welcome if on a leash or in a crate.",
+      "detail": "St. Stephen's (1432 SW 13th Ave, with Operation Nightwatch): open 9pm-7am, call 971-610-4291. Central Nazarene (9715 SE Powell Blvd): open 9pm-6:30am, call 503-760-6272. Phones answered 8-11pm only, no voicemail. Once you arrive, if you leave you can't come back until the next night. Last night's guests get in first, then recent guests, then first-timers in order of arrival. Your photo is taken for a badge at check-in. No showers, no drug use, no weapons.",
+      "addr": "1432 SW 13th Ave, Portland, OR 97201",
+      "hoursText": "Doors 9pm-11pm; arrive no earlier than 8:30pm. Nights not posted, so call 8-11pm to check.",
+      "phone": "9716104291",
+      "url": "agapevillagepdx.org/shelter",
       "noId": false
     },
     {
