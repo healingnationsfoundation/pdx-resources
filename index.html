@@ -178,6 +178,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
   background: var(--bg); color: var(--accent); border: 1px solid var(--border);
 }
 
+/* Dated stops (mobile clinic): each stop is a 44px link to directions */
+.stops { margin-top: 8px; border-top: 1px solid var(--border); }
+.stops-title { font-size: 13px; font-weight: 600; color: var(--fg2); margin-top: 8px; }
+.stop {
+  display: flex; flex-direction: column; justify-content: center; min-height: 44px;
+  padding: 6px 0; border-bottom: 1px solid var(--border);
+  color: var(--fg); text-decoration: none; font-size: 14px; line-height: 1.35;
+}
+.stop .stop-when { font-weight: 600; }
+.stop .stop-where { color: var(--accent); font-size: 13px; }
+.stop.now { background: var(--green-bg); padding-left: 8px; padding-right: 8px; border-radius: var(--radius-sm); }
+.stop.now .stop-when { color: var(--green); }
+
 /* More details: longer notes and the report link stay folded so the list is quick to scan */
 .more { margin-top: 6px; }
 .more summary {
@@ -345,8 +358,53 @@ function isClosedToday(r, now = new Date()) {
   return Array.isArray(r.closed) && r.closed.includes(localDate(now));
 }
 
+// Dated stops for services that move (the county mobile clinic):
+// "stops": [{ "date": "2026-11-23", "time": "11:00-14:00", "place": "...", "addr": "..." }].
+// Stops that have ended drop off on their own.
+function upcomingStops(r, now = new Date()) {
+  if (!Array.isArray(r.stops)) return [];
+  const today = localDate(now);
+  const mins = now.getHours()*60 + now.getMinutes();
+  return r.stops
+    .filter(s => s.date > today || (s.date === today && parseSlot(s.time)[1] > mins))
+    .sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+}
+function atStopNow(r, now = new Date()) {
+  const today = localDate(now);
+  const mins = now.getHours()*60 + now.getMinutes();
+  return upcomingStops(r, now).find(s => {
+    if (s.date !== today) return false;
+    const [o, c] = parseSlot(s.time);
+    return mins >= o && mins < c;
+  });
+}
+function fmtTime(m) {
+  const h = Math.floor(m / 60) % 24, mm = m % 60;
+  return `${h % 12 || 12}${mm ? ':' + String(mm).padStart(2, '0') : ''}${h < 12 ? 'am' : 'pm'}`;
+}
+function stopLabel(s) {
+  const [y, mo, d] = s.date.split('-').map(Number);
+  const day = new Date(y, mo - 1, d).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  const [o, c] = parseSlot(s.time);
+  return `${day}, ${fmtTime(o)}-${fmtTime(c)}`;
+}
+
+function stopsHtml(r, now) {
+  const list = upcomingStops(r, now).slice(0, 6);
+  if (!list.length) return '';
+  const here = atStopNow(r, now);
+  return `<div class="stops"><div class="stops-title">Next stops (tap for directions)</div>${list.map(s =>
+    `<a class="stop${s === here ? ' now' : ''}" href="${mapsUrl(s.addr)}" target="_blank" rel="noopener">
+      <span class="stop-when">${s === here ? 'Here now: ' : ''}${esc(stopLabel(s))}</span>
+      <span class="stop-where">\u{1F4CD} ${esc(s.place)}, ${esc(s.addr)}</span>
+    </a>`).join('')}</div>`;
+}
+
 function isOpenNow(r, now = new Date()) {
-  if (!r.hours) return null;
+  if (!r.hours) {
+    if (!upcomingStops(r, now).length) return null;
+    return Boolean(atStopNow(r, now));
+  }
   if (isClosedToday(r, now)) return false;
   const d = now.getDay();
   const mins = now.getHours()*60 + now.getMinutes();
@@ -411,7 +469,7 @@ function renderCards() {
     if (activeFilter !== 'all' && !r.cat.includes(activeFilter)) return false;
     if (q) {
       const cats = r.cat.map(id => (CATEGORIES.find(c => c.id === id) || {}).label || id).join(' ');
-      const haystack = `${r.name} ${r.sub||''} ${r.desc} ${r.detail||''} ${r.highlight||''} ${r.addr||''} ${r.hoursText||''} ${cats}`.toLowerCase();
+      const haystack = `${r.name} ${r.sub||''} ${r.desc} ${r.detail||''} ${r.highlight||''} ${r.addr||''} ${r.hoursText||''} ${(r.stops||[]).map(s => s.place + ' ' + s.addr).join(' ')} ${cats}`.toLowerCase();
       return haystack.includes(q);
     }
     return true;
@@ -459,6 +517,7 @@ function renderCards() {
       <div class="card-desc">${esc(r.desc)}</div>
       ${r.highlight?`<div class="card-highlight">★ ${esc(r.highlight)}</div>`:''}
       <div class="card-detail">\u{1F552} ${esc(r.hoursText)}</div>
+      ${stopsHtml(r, now)}
       ${r.addr?`<div class="card-detail">\u{1F4CD} ${esc(r.addr)}</div>`:''}
       ${actions?`<div class="card-actions">${actions}</div>`:''}
       <details class="more">

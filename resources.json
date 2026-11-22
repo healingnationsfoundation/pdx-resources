@@ -823,7 +823,33 @@
       "desc": "A medical van that visits sites around the county: illness and injuries, exams, vaccines, pregnancy tests, limited prescriptions, and dental cleanings at some stops.",
       "detail": "Walk-ins welcome while spots last, seen in order of arrival. Pay what you can; if you can't pay, you can still get care. Stops change, so check the calendar on their website. Text or call during clinic hours to check wait times.",
       "highlight": "Walk-ins welcome. Pay what you can.",
-      "hoursText": "Changes by stop. See the calendar on their website.",
+      "stops": [
+        {
+          "date": "2026-11-23",
+          "time": "11:00-14:00",
+          "place": "SnowCap Family Services",
+          "addr": "17805 SE Stark St, Portland, OR 97233"
+        },
+        {
+          "date": "2026-11-24",
+          "time": "11:00-14:00",
+          "place": "PCC Southeast Campus (dental cleanings too)",
+          "addr": "2305 SE 82nd Ave, Portland, OR 97216"
+        },
+        {
+          "date": "2026-11-24",
+          "time": "15:30-18:30",
+          "place": "El Programa Hispano Catolico",
+          "addr": "333 SE 223rd Ave #100, Gresham, OR 97030"
+        },
+        {
+          "date": "2026-11-25",
+          "time": "09:00-12:00",
+          "place": "Behavioral Health Resource Center",
+          "addr": "333 SW Park Ave, Portland, OR 97205"
+        }
+      ],
+      "hoursText": "Stops change by date. Later dates are on the calendar on their website.",
       "phone": "9719403149",
       "url": "healthcenter.multco.us/mobile-clinic",
       "noId": false
