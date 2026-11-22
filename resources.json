@@ -774,9 +774,18 @@
         "health"
       ],
       "desc": "Primary care, an on-site pharmacy, and medication to treat addiction, for ages 13 and up.",
-      "detail": "Call or stop by to ask about same-day appointments. No one is turned away for inability to pay; most insurance accepted. Ages 15-17 can come without a guardian. Second clinic at 16144 E Burnside St.",
+      "detail": "Stop by or call to ask about a same-day visit; spots depend on the day. No one is turned away for inability to pay; most insurance accepted. Ages 15-17 can come without a guardian. Second clinic at 16144 E Burnside St: Mon-Wed 8:30am-5pm, Thu-Fri 8:30am-4:30pm, closed 12-12:45pm.",
       "addr": "1132 SW 13th Ave, Portland, OR 97205",
-      "hoursText": "Downtown: Mon, Thu, Fri 8:30am-5pm; Tue, Wed 8:30am-7pm",
+      "hours": {
+        "mon": "08:30-17:00",
+        "tue": "10:00-19:00",
+        "wed": "08:30-19:00",
+        "thu": "08:30-17:00",
+        "fri": "08:30-17:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Downtown: Mon, Thu, Fri 8:30am-5pm; Tue, Wed 8:30am-7pm (2nd Tuesday of the month from 10am). Same-day visits when available.",
       "phone": "5035353860",
       "url": "outsidein.org/health-services/medical-services",
       "noId": false
@@ -867,9 +876,19 @@
         "health",
         "recovery"
       ],
-      "desc": "Naloxone reverses an opioid overdose. Get it free from the county, by mail from Just in Case Oregon, or at Outside In (1219 SW Main St).",
-      "detail": "Request it online from the county or call its Harm Reduction Program. Pharmacies also sell it without a prescription.",
-      "hoursText": "Call 503-988-3030",
+      "desc": "Naloxone reverses an opioid overdose. Get it free at the county Harm Reduction Clinic, by mail from Just in Case Oregon, or at Outside In (1219 SW Main St).",
+      "detail": "County Harm Reduction Clinic: 12425 NE Glisan St, in Menlo Park Plaza behind Walgreens, (503) 988-0577. Walk-ins accepted. Also syringe exchange, fentanyl test strips, and testing. Holiday and weather closures: (503) 280-1611. Pharmacies also sell naloxone without a prescription.",
+      "addr": "12425 NE Glisan St, Portland, OR 97230",
+      "hours": {
+        "mon": "11:00-14:00,15:00-19:00",
+        "tue": null,
+        "wed": null,
+        "thu": "11:00-14:00,15:00-19:00",
+        "fri": null,
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "County clinic Mon & Thu 11am-2pm and 3-7pm. Outside In Mon-Fri noon-5pm. Or call 503-988-3030.",
       "phone": "5039883030",
       "url": "multco.us/behavioral-health/overdose-prevention",
       "noId": false
