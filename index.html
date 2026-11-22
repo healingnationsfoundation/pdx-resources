@@ -92,8 +92,16 @@ body::before {
 button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
 /* Open now toggle */
-.open-row { display: flex; align-items: center; gap: 10px; margin: 2px 0 4px; }
-.open-row .open-hint { flex: 1; min-width: 0; }
+.open-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 2px 0 4px; }
+p.open-hint { margin: 2px 0 2px; }
+.near-toggle { color: var(--accent); border-color: var(--accent); }
+.near-toggle[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); }
+.dist { font-weight: 700; color: var(--fg); white-space: nowrap; }
+.card.flash { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-light); }
+.share-btn {
+  min-height: 44px; padding: 0 12px; margin-top: 6px; border-radius: var(--radius-sm); cursor: pointer;
+  background: var(--bg); color: var(--accent); border: 1px solid var(--border); font-size: 14px; font-weight: 600; font-family: inherit;
+}
 .open-toggle {
   flex-shrink: 0; white-space: nowrap;
   min-height: 44px; border-radius: 20px; padding: 10px 18px;
@@ -278,8 +286,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
 <div class="filters" id="filters" role="group" aria-labelledby="filters-label"></div>
 <div class="open-row">
   <button type="button" class="open-toggle" id="open-now" aria-pressed="false"><span class="dot" aria-hidden="true"></span>Open now</button>
-  <span class="open-hint" id="open-hint">Show only places open right now</span>
+  <button type="button" class="open-toggle near-toggle" id="near" aria-pressed="false"><span aria-hidden="true">&#x1F4CD;</span>Nearest first</button>
 </div>
+<p class="open-hint" id="open-hint">Open now: only places open right now. Nearest first: closest to you (your location stays on your phone).</p>
 <div class="search-wrap">
   <span class="search-icon" aria-hidden="true">&#x1F50D;</span>
   <input type="search" id="search" placeholder="Search: bed, lunch, blanket, doctor, Burnside..." autocomplete="off" aria-label="Search resources">
@@ -531,6 +540,39 @@ function matchesQuery(r, q) {
   return q.split(/\s+/).filter(Boolean).every(w => hay.includes(w) || (SYNONYMS[w] || []).some(s => hay.includes(s)));
 }
 
+// ---- Nearest first: distance from the phone's location, worked out on the phone. ----
+// The location is never sent anywhere and isn't saved; "geo" is [lat, lon] in resources.json.
+let nearOn = false, here = null;
+function miles(a, b) {
+  const R = 3958.8, rad = x => x * Math.PI / 180;
+  const dLat = rad(b[0] - a[0]), dLon = rad(b[1] - a[1]);
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(rad(a[0])) * Math.cos(rad(b[0])) * Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+function distOf(r) { return here && Array.isArray(r.geo) ? miles(here, r.geo) : null; }
+function fmtMiles(m) { return m < 0.1 ? 'under 0.1 mi' : m < 10 ? `${m.toFixed(1)} mi` : `${Math.round(m)} mi`; }
+
+// Phone shown on the button, so it can be written down or dialed from another phone.
+function phoneLabel(p) {
+  const d = String(p).replace(/\D/g, '');
+  if (d.length === 10) return `${d.slice(0,3)}-${d.slice(3,6)}-${d.slice(6)}`;
+  if (d.length === 11 && d[0] === '1') return `1-${d.slice(1,4)}-${d.slice(4,7)}-${d.slice(7)}`;
+  return d;
+}
+
+// Share a place: a link that opens the guide straight to one listing (#place=name-slug).
+function slug(name) { return name.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+function placeUrl(r) { return `${location.origin}${location.pathname}#place=${slug(r.name)}`; }
+function sharePlace(btn) {
+  const r = RESOURCES.find(x => slug(x.name) === btn.dataset.place);
+  if (!r) return;
+  const url = placeUrl(r);
+  const done = t => { btn.textContent = t; setTimeout(() => { btn.textContent = '\u{1F517} Share this place'; }, 2500); };
+  if (navigator.share) navigator.share({ title: r.name, text: `${r.name}: ${r.hoursText || ''}`, url }).catch(() => {});
+  else if (navigator.clipboard) navigator.clipboard.writeText(url).then(() => done('Link copied'), () => done(url));
+  else done(url);
+}
+
 function mapsUrl(addr) {
   const q = encodeURIComponent(addr);
   return `https://www.google.com/maps/search/?api=1&query=${q}`;
@@ -565,7 +607,20 @@ function saveView() {
   const h = (activeFilter === 'all' ? '' : activeFilter) + (openOnly ? (activeFilter === 'all' ? 'open' : '+open') : '');
   history.replaceState(null, '', h ? '#' + h : location.pathname + location.search);
 }
+// A shared link (#place=slug) opens the full list, scrolled to that place with its details open.
+let pendingPlace = null;
+function showPlace() {
+  if (!pendingPlace) return;
+  const card = document.getElementById('place-' + pendingPlace);
+  pendingPlace = null;
+  if (!card) return;
+  card.querySelector('.more').open = true;
+  card.classList.add('flash');
+  card.scrollIntoView({ block: 'center' });
+}
 function loadView() {
+  const m = location.hash.match(/^#place=([a-z0-9-]+)$/);
+  if (m) { pendingPlace = m[1]; openOnly = false; activeFilter = 'all'; return; }
   const parts = decodeURIComponent(location.hash.slice(1)).split('+');
   openOnly = parts.includes('open');
   const cat = parts.find(p => p && p !== 'open');
@@ -585,7 +640,13 @@ function renderCards() {
   const openCount = matching.filter(r => isOpenNow(r, now) === true).length;
   const noHours = matching.filter(r => isOpenNow(r, now) === null).length;
   const ranks = new Map(matching.map(r => [r, rank(r, now)]));
-  const sorted = matching.map((r, i) => [r, i]).sort((a, b) => {
+  const near = nearOn && here;
+  const sorted = matching.map((r, i) => [r, i, near ? distOf(r) : null]).sort((a, b) => {
+    if (near && (a[2] !== null || b[2] !== null)) {
+      if (a[2] === null) return 1;
+      if (b[2] === null) return -1;
+      if (a[2] !== b[2]) return a[2] - b[2];
+    }
     const [x, y] = [ranks.get(a[0]), ranks.get(b[0])];
     return x[0] - y[0] || x[1] - y[1] || a[1] - b[1];
   }).map(p => p[0]);
@@ -597,7 +658,7 @@ function renderCards() {
       (noHours ? ` ${noHours} more ${noHours!==1?'have':'has'} no set hours: call ahead.` : '');
   } else {
     info.textContent = `${filtered.length} resource${filtered.length!==1?'s':''}${where}` +
-      (openCount ? ` · ${openCount} open now, shown first` : '');
+      (near ? ' · nearest first' : openCount ? ` · ${openCount} open now, shown first` : '');
   }
 
   if (!filtered.length) {
@@ -617,10 +678,11 @@ function renderCards() {
 
     let actions = '';
     if (r.addr) actions += `<a class="card-btn btn-directions" href="${mapsUrl(r.addr)}" target="_blank" rel="noopener">\u{1F4CD} Directions</a>`;
-    if (r.phone) actions += `<a class="card-btn btn-call" href="tel:${esc(String(r.phone).replace(/[^0-9+]/g,''))}">☎ Call</a>`;
+    if (r.phone) actions += `<a class="card-btn btn-call" href="tel:${esc(String(r.phone).replace(/[^0-9+]/g,''))}" aria-label="Call ${esc(r.name)}, ${esc(phoneLabel(r.phone))}">☎ ${esc(phoneLabel(r.phone))}</a>`;
     if (r.url) actions += `<a class="card-btn btn-web" href="https://${esc(r.url)}" target="_blank" rel="noopener">${r.urlLabel ? esc(r.urlLabel) : '\u{1F310} Website'}</a>`;
 
-    return `<div class="card">
+    const dist = near ? distOf(r) : null;
+    return `<div class="card" id="place-${slug(r.name)}">
       <div class="card-header">
         <div><div class="card-name">${esc(r.name)}</div>${r.sub?`<div class="card-org">${esc(r.sub)}</div>`:''}</div>
         <div class="card-tags">${tags}</div>
@@ -629,11 +691,12 @@ function renderCards() {
       ${r.highlight?`<div class="card-highlight">★ ${esc(r.highlight)}</div>`:''}
       <div class="card-detail">\u{1F552} ${esc(r.hoursText)}</div>
       ${stopsHtml(r, now)}
-      ${r.addr?`<div class="card-detail">\u{1F4CD} ${esc(r.addr)}</div>`:''}
+      ${r.addr?`<div class="card-detail">\u{1F4CD} ${dist !== null ? `<span class="dist">${fmtMiles(dist)}</span> · ` : ''}${esc(r.addr)}</div>`:''}
       ${actions?`<div class="card-actions">${actions}</div>`:''}
       <details class="more">
         <summary><span class="lbl-open">More details</span><span class="lbl-close">Less</span></summary>
         ${r.detail?`<div class="card-detail">${esc(r.detail)}</div>`:''}
+        <button type="button" class="share-btn" data-place="${slug(r.name)}">\u{1F517} Share this place</button>
         <div class="card-report">${reportLinks(r)}</div>
       </details>
     </div>`;
@@ -645,12 +708,30 @@ document.getElementById('search').addEventListener('input', e => {
   renderCards();
 });
 
+const HINT = 'Open now: only places open right now. Nearest first: closest to you (your location stays on your phone).';
 function syncOpenButton() {
   document.getElementById('open-now').setAttribute('aria-pressed', openOnly ? 'true' : 'false');
+  document.getElementById('near').setAttribute('aria-pressed', nearOn && here ? 'true' : 'false');
   document.getElementById('open-hint').textContent = openOnly
-    ? 'Showing places open right now. Tap again to see everything.'
-    : 'Show only places open right now';
+    ? 'Showing places open right now. Tap Open now again to see everything.'
+    : nearOn && here ? 'Closest places first. Distances are straight-line, so walking is a bit farther.' : HINT;
 }
+document.getElementById('near').addEventListener('click', () => {
+  const hint = document.getElementById('open-hint');
+  if (nearOn) { nearOn = false; syncOpenButton(); renderCards(); return; }
+  if (!navigator.geolocation) { hint.textContent = 'This phone can’t share its location. Try searching a street or area, like "Burnside" or "82nd".'; return; }
+  hint.textContent = 'Finding your location…';
+  navigator.geolocation.getCurrentPosition(pos => {
+    here = [pos.coords.latitude, pos.coords.longitude]; nearOn = true;
+    syncOpenButton(); renderCards();
+  }, () => {
+    hint.textContent = 'Couldn’t get your location. Turn on location for this site, or search a street or area, like "Burnside" or "82nd".';
+  }, { enableHighAccuracy: false, timeout: 15000, maximumAge: 300000 });
+});
+document.getElementById('cards').addEventListener('click', e => {
+  const b = e.target.closest('.share-btn');
+  if (b) sharePlace(b);
+});
 function setOpenOnly(on) {
   openOnly = on;
   syncOpenButton();
@@ -704,6 +785,7 @@ fetch('resources.json', {cache: 'no-cache'})
     syncOpenButton();
     renderFilters();
     renderCards();
+    showPlace();
   })
   .catch(showLoadError);
 </script>

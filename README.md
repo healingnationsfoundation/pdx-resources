@@ -37,6 +37,7 @@ Each resource object (leave out fields you don't need):
   "detail": "Additional context.",
   "highlight": "Important callout shown in green box",
   "addr": "Plain street address for directions link",
+  "geo": [45.52321, -122.67815],  // optional: lat, lon of addr, for "Nearest first"
   "hours": { "mon": "08:00-16:00", "tue": null },  // walk-in hours only; null = closed; "21:00-06:30" = overnight
   "closed": ["2026-11-26", "2026-12-25"],  // optional: published holiday closures
   "stops": [{ "date": "2026-11-23", "time": "11:00-14:00", "place": "Site name", "addr": "Street address" }],  // optional: dated stops for a service that moves; use instead of hours

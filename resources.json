@@ -57,6 +57,10 @@
       "desc": "A warm place to be in the evening, when other agencies are closed: coffee, a meal, supplies, company, and mental health services.",
       "detail": "At St. Stephen's Episcopal Church. Everyone is welcome just as they are; no faith practice required. Agape Village runs an overnight shelter in the same building (see Agape Village Overnight Shelters).",
       "addr": "1432 SW 13th Ave, Portland, OR 97201",
+      "geo": [
+        45.51592,
+        -122.68774
+      ],
       "hours": {
         "mon": null,
         "tue": null,
@@ -81,6 +85,10 @@
       "detail": "Fastest path to income. Start earning within days of orientation.",
       "highlight": "NO ID REQUIRED",
       "addr": "281 W Burnside St, Portland, OR 97201",
+      "geo": [
+        45.52318,
+        -122.67313
+      ],
       "hours": {
         "mon": "08:30-12:00",
         "tue": null,
@@ -105,6 +113,10 @@
       "detail": "Shifts chosen by lottery, not guaranteed. Mon 9am: Gateway or SE Holgate MAX stop. Tue 9am: SE Holgate or Parkrose MAX stop. Wed 8:30am at Couch St: members only. Thu 8:30am at Couch St: non-members. Won national award Jul 2026.",
       "highlight": "NO ID NEEDED. New? Go Thursday, arrive from 8am.",
       "addr": "624 NW Couch St, Portland, OR 97209",
+      "geo": [
+        45.52371,
+        -122.67674
+      ],
       "hoursText": "New workers: Thursday 8:30am at 624 NW Couch St (arrive from 8am)",
       "url": "groundscoreassociation.org/glitter",
       "noId": true
@@ -118,6 +130,10 @@
       "desc": "Same-day paid work: landscaping, moving, construction, cleaning. $22/hr minimum guaranteed. All pay goes directly to you.",
       "detail": "Nonprofit worker center. ESL classes, safety training, workforce development. New member orientations twice a month.",
       "addr": "3575 NE Broadway St, Portland, OR 97232",
+      "geo": [
+        45.53521,
+        -122.62664
+      ],
       "hours": {
         "mon": "07:00-14:00",
         "tue": "07:00-14:00",
@@ -142,6 +158,10 @@
       "desc": "Paid 9-month trainee program. Sidewalk cleaning, graffiti removal. 40 hrs/wk. Peer mentoring plus housing, healthcare, and recovery services.",
       "detail": "Above minimum wage. Full-time roles are union with benefits. 130+ employees. Majority exit with long-term housing and permanent job.",
       "addr": "208 NW 1st Ave, Portland, OR",
+      "geo": [
+        45.52469,
+        -122.67134
+      ],
       "hoursText": "Email to apply: cleanstart@ccconcern.org",
       "url": "centralcityconcern.org/jobs-location/clean-start",
       "noId": false
@@ -168,6 +188,10 @@
       "desc": "Temporary shifts in construction, warehouse, hospitality, manufacturing, retail. Pick shifts on the JobStack app.",
       "detail": "No resume required. Set your own schedule. W-2 paid employment. Need valid I-9 identification. Branch: 204 N Killingsworth St.",
       "addr": "204 N Killingsworth St, Portland, OR 97217",
+      "geo": [
+        45.56265,
+        -122.66885
+      ],
       "hours": {
         "mon": "09:00-18:00",
         "tue": "09:00-18:00",
@@ -192,6 +216,10 @@
       "detail": "Call for current pay and next orientation. Workforce Hub also has showers and laundry. Call to check if you can use them without joining the program.",
       "highlight": "Paid internship leads to full-time job with benefits",
       "addr": "14625 SE Stark St, Portland, OR 97233",
+      "geo": [
+        45.51919,
+        -122.5129
+      ],
       "hours": {
         "mon": "10:30-15:00",
         "tue": "09:30-14:00",
@@ -227,6 +255,10 @@
       "desc": "Career mapping, resume help, interview prep, job leads. Employer presentations every Wednesday 10-11am. Free computers, copiers, fax, phone.",
       "detail": "Placed 551 people in jobs in 2024. Ask any CCC case manager for referral.",
       "addr": "2 NW 2nd Ave, Portland, OR 97209",
+      "geo": [
+        45.52319,
+        -122.67229
+      ],
       "hoursText": "Mon-Fri 8am-4:30pm, by referral. CCC clients: ask your case manager. Others: call (503) 226-7387.",
       "phone": "5032267387",
       "url": "centralcityconcern.org/jobs-location/employment-access-center",
@@ -242,6 +274,10 @@
       "desc": "Employment specialists plus transportation assistance to get to work. Resume help, career exploration, mock interviews.",
       "detail": "Healthcare, recovery, housing, and employment all under one roof. Great for East Portland residents.",
       "addr": "12121 E Burnside St, Portland, OR",
+      "geo": [
+        45.52267,
+        -122.53834
+      ],
       "hoursText": "TriMet Bus #20",
       "url": "centralcityconcern.org/jobs-location/employment-assistance-at-blackburn-center",
       "noId": false
@@ -257,6 +293,10 @@
       "detail": "Average starting wage $21/hr. 1,300+ graduates placed. Accepts people with criminal history (63% of participants). Need state ID and GED/diploma.",
       "highlight": "Next cohort: January 2027. Apply now.",
       "addr": "405 NE Church St, Portland, OR 97211",
+      "geo": [
+        45.56346,
+        -122.66131
+      ],
       "hoursText": "Info session in person every Monday at 1pm (not holidays). Bring ID and diploma or GED. Classes start Jan, Apr, Jun, Sep.",
       "phone": "5032811234",
       "url": "constructinghope.org/programs",
@@ -272,6 +312,10 @@
       "desc": "Multiple paid training tracks: healthcare certifications, semiconductor/tech (Microchip partnership), outdoor conservation.",
       "detail": "Paid internships available. Free or low-cost industry-recognized certifications. Youth and adult programs.",
       "addr": "717 N Killingsworth Ct, Portland, OR 97217",
+      "geo": [
+        45.56193,
+        -122.67418
+      ],
       "hoursText": "No walk-in hours posted. Call (503) 797-7222.",
       "phone": "5037977222",
       "url": "portlandoic.org/employment-training/programs",
@@ -288,6 +332,10 @@
       "detail": "Funded through Worksystems and Future Ready Oregon. Union apprenticeship means career path plus full benefits.",
       "highlight": "Next cohort starting soon. Check website.",
       "addr": "16790 NE Mason St, Suite 100, Portland, OR 97230",
+      "geo": [
+        45.55343,
+        -122.48971
+      ],
       "hours": {
         "mon": "09:00-16:00",
         "tue": "09:00-16:00",
@@ -312,6 +360,10 @@
       "desc": "GED completion plus construction pre-apprenticeship. Combined education and career training for young adults.",
       "detail": "2026-2027 classes active. For younger guests needing both education credentials and a career path into the trades.",
       "addr": "4816 SE 92nd Ave, Portland, OR 97266",
+      "geo": [
+        45.48765,
+        -122.56853
+      ],
       "hoursText": "Call (503) 286-9350 or email to get started. New classes start every couple of months.",
       "phone": "5032869350",
       "url": "pybpdx.org",
@@ -351,6 +403,10 @@
       "desc": "Full career center plus NewStart Reentry Resource Center for people with criminal history. CDL training, career mapping.",
       "detail": "Reentry services at 8044 SE Harold St. Road-to-success curriculum, career mapping, resume help, WIOA-funded services.",
       "addr": "6401 SE Foster Rd, Portland, OR",
+      "geo": [
+        45.48972,
+        -122.59681
+      ],
       "hours": {
         "mon": "08:00-16:30",
         "tue": "08:00-16:30",
@@ -374,6 +430,10 @@
       "desc": "Job placement assistance and multi-employer job fairs. Goodwill also hires directly and provides vocational opportunities.",
       "detail": "Mission: vocational opportunities for people with disabilities and barriers to employment. Job fairs 3rd Tuesday monthly. Also Powell (9015 SE Powell Blvd) Mon-Fri 9am-5:30pm, Airport Outlet (5950 NE 122nd Ave) Mon-Fri 9am-5:30pm, Halsey (12250 NE Halsey) Mon, Wed, Fri 9am-5:30pm.",
       "addr": "1943 SE 6th Ave, Portland, OR 97214",
+      "geo": [
+        45.50848,
+        -122.65986
+      ],
       "hours": {
         "mon": "08:00-16:30",
         "tue": "08:00-16:30",
@@ -410,6 +470,10 @@
       "desc": "Oregon law waives the $44.50 state ID card fee for people experiencing homelessness. Get a Declaration of Homelessness form first.",
       "detail": "Go to Transition Projects (650 NW Irving St) to get the Declaration form, then take it to the DMV.",
       "addr": "650 NW Irving St, Portland, OR",
+      "geo": [
+        45.528,
+        -122.67631
+      ],
       "hoursText": "Get form from Transition Projects, then visit any DMV",
       "noId": true
     },
@@ -478,6 +542,10 @@
       "desc": "Meals 3 times daily, 6 days a week. Bethanie's Room overnight shelter for women and nonbinary guests. Clothing distributed Mon-Sat.",
       "detail": "Drop-in daily 6am-10pm. Ask about the transitional housing program. Blanchet Farm in Carlton for longer-term recovery.",
       "addr": "310 NW Glisan St, Portland, OR 97209",
+      "geo": [
+        45.52661,
+        -122.67392
+      ],
       "hours": {
         "mon": "06:00-22:00",
         "tue": "06:00-22:00",
@@ -506,6 +574,10 @@
       "detail": "FREE legal services for criminal record expungement. Mobile showers: Wed 9am-12:30pm at the mission; Mon 10am-1:30pm at 1302 SE Ankeny St; Sat 11am-2pm at 9715 SE Powell Blvd. Clothing Wed-Fri 4pm.",
       "highlight": "FREE criminal record expungement services",
       "addr": "15 NW 3rd Ave, Portland, OR",
+      "geo": [
+        45.52326,
+        -122.67346
+      ],
       "hoursText": "To-go meals Wed-Fri 2pm & 8pm, Sat 11am. Showers Wed 9am-12:30pm here. No meals Sun-Tue.",
       "url": "ugmportland.org",
       "noId": true
@@ -519,6 +591,10 @@
       "desc": "Free hot meal every Sunday, rain or shine, 52 weeks a year since 1991. No questions asked.",
       "detail": "North Park Blocks, beside the sculpture on NW Glisan St between 8th Ave and Park Ave. A Portland institution for over 30 years. Everyone welcome.",
       "addr": "NW Park Ave & NW Glisan St, Portland, OR",
+      "geo": [
+        45.5262,
+        -122.67882
+      ],
       "hours": {
         "mon": null,
         "tue": null,
@@ -543,6 +619,10 @@
       "desc": "A hot meal on Thursday nights, plus haircuts, foot washing, and replacement clothing and sleeping bags.",
       "detail": "First come, first served. Now indoors at Liberation Street Church. The schedule changes on Thanksgiving and from mid-December to early January; check the website.",
       "addr": "214 W Burnside St, Portland, OR 97209",
+      "geo": [
+        45.52307,
+        -122.67257
+      ],
       "hours": {
         "mon": null,
         "tue": null,
@@ -568,6 +648,10 @@
       "desc": "A restaurant-style Friday dinner with clothing and hygiene supplies, and a Wednesday and Thursday drop-in with lunch.",
       "detail": "Open to all women, trans, and nonbinary people. Thursdays include medical care. Help with benefits and ID: ask at a Friday gathering. Check the monthly calendar on the website for changes.",
       "addr": "232 SE 80th Ave, Portland, OR 97215",
+      "geo": [
+        45.52083,
+        -122.58139
+      ],
       "hours": {
         "mon": null,
         "tue": null,
@@ -592,6 +676,10 @@
       "desc": "A morning sack lunch Tuesday to Thursday, afternoon hospitality, and a hot Friday evening meal, with some clothing and hygiene supplies.",
       "detail": "Ages 18+. First come, first served. Hours are from 211info; call to confirm.",
       "addr": "601 W Burnside St, Portland, OR 97209",
+      "geo": [
+        45.52312,
+        -122.67656
+      ],
       "hours": {
         "mon": null,
         "tue": "09:30-10:30,13:00-16:00",
@@ -615,6 +703,10 @@
       "desc": "A hot meal twice a week for people who are homeless or low-income, plus groceries, clothing, and toiletries while they last.",
       "detail": "Next to the Central Library, at 11th and Taylor.",
       "addr": "909 SW 11th Ave, Portland, OR 97205",
+      "geo": [
+        45.51887,
+        -122.68397
+      ],
       "hours": {
         "mon": "14:00-16:00",
         "tue": null,
@@ -637,6 +729,10 @@
       ],
       "desc": "A free sit-down dinner every Sunday evening. All are welcome.",
       "addr": "1535 NE 17th Ave, Portland, OR 97232",
+      "geo": [
+        45.53406,
+        -122.64854
+      ],
       "hours": {
         "mon": null,
         "tue": null,
@@ -660,6 +756,10 @@
       "desc": "A hot lunch every Saturday, to eat there or take out. The church also runs the Woodstock Pantry.",
       "detail": "Hours are from 211info; call to confirm.",
       "addr": "4033 SE Woodstock Blvd, Portland, OR 97202",
+      "geo": [
+        45.47925,
+        -122.62127
+      ],
       "hours": {
         "mon": null,
         "tue": null,
@@ -683,6 +783,10 @@
       "desc": "A community breakfast every Sunday morning, and a food pantry twice a month.",
       "detail": "Pantry needs proof of address: 1st and 3rd Friday 9-11am in Nov-Dec, 2nd and 4th Friday Jan-Oct. Hours are from 211info.",
       "addr": "7600 NE Glisan St, Portland, OR 97213",
+      "geo": [
+        45.52638,
+        -122.58462
+      ],
       "hours": {
         "mon": null,
         "tue": null,
@@ -708,6 +812,10 @@
       "desc": "Sit-down or to-go meals four days a week, a walk-up grocery pantry, free showers, and clothing.",
       "detail": "Walk-up pantry Tue & Thu from 11:45am: give first name, last initial, ZIP, and household size; the list fills fast. Showers and clothing Tue-Thu 10am-1pm (15-minute limit; arrive before noon). Mail service available.",
       "addr": "8800 SE 80th Ave, Portland, OR 97206",
+      "geo": [
+        45.46021,
+        -122.58088
+      ],
       "hours": {
         "mon": null,
         "tue": "10:00-14:30",
@@ -738,6 +846,10 @@
       "desc": "Warm meals, showers and laundry, clothing, hygiene kits, phone charging, a place to rest, and peer support.",
       "detail": "Low barrier. Help with ID and birth records, OHP and SNAP forms, housing, and detox or treatment referrals. Haircuts Mondays 10am-2pm. The mobile clinic visits here; see its card for dates.",
       "addr": "247 SE 82nd Ave, Portland, OR 97215",
+      "geo": [
+        45.5208,
+        -122.57914
+      ],
       "hours": {
         "mon": "09:00-14:00",
         "tue": "09:00-14:00",
@@ -765,6 +877,10 @@
       "desc": "A recovery community with a free lunch, espresso bar, recovery circles, and peer support.",
       "detail": "Visit as a guest first. Members stay drug- and alcohol-free in the space and join a weekly Recovery Circle. Lunch about 12:15-1:30pm.",
       "addr": "3516 NE 71st Ave, Portland, OR 97213",
+      "geo": [
+        45.54838,
+        -122.59015
+      ],
       "hours": {
         "mon": null,
         "tue": "11:00-16:00",
@@ -790,6 +906,10 @@
       "desc": "A weekday drop-in with lunch, coffee, showers, laundry, phone and voicemail, a mailing address, and computers.",
       "detail": "For women 25 and older experiencing homelessness who are not parenting. Well-behaved pets allowed. Hours are from 211info; call to confirm.",
       "addr": "2740 SE Powell Blvd, Suite 5, Portland, OR 97202",
+      "geo": [
+        45.49778,
+        -122.63823
+      ],
       "hours": {
         "mon": "10:00-13:00",
         "tue": "10:00-13:00",
@@ -816,6 +936,10 @@
       "desc": "Hot breakfast and lunch on weekdays, plus phone and mail service, computers, showers, laundry, and clothing.",
       "detail": "For low-income people living with HIV/AIDS. Self-referral welcome.",
       "addr": "2941 NE Ainsworth St, Portland, OR 97211",
+      "geo": [
+        45.56585,
+        -122.63561
+      ],
       "hoursText": "Weekdays from 9am. Call for hours.",
       "phone": "5034603822",
       "url": "hivdaycenter.org",
@@ -830,6 +954,10 @@
       "desc": "A weekly community lunch for individuals and families experiencing homelessness, at St. Henry Catholic Church.",
       "detail": "Not held in July or August. Hours are from 211info.",
       "addr": "346 NW 1st St, Gresham, OR 97030",
+      "geo": [
+        45.49849,
+        -122.4353
+      ],
       "hours": {
         "mon": null,
         "tue": null,
@@ -852,6 +980,10 @@
       "desc": "A hot lunch Monday, Wednesday, and Friday, and a grocery pantry with staples, meat, produce, and dairy.",
       "detail": "Enter through the church parking lot off Ava Ave, or from Eastman Pkwy north of Powell. Thanksgiving week: lunch Mon, Thanksgiving dinner Wed 11am-1pm; pantry Tue Nov 24 3-5pm and Wed Nov 25 10am-12:30pm; no pantry Thu or Fri.",
       "addr": "59 NW Ava Ave, Gresham, OR 97030",
+      "geo": [
+        45.49807,
+        -122.43683
+      ],
       "hours": {
         "mon": "11:00-13:00",
         "tue": null,
@@ -878,6 +1010,10 @@
       "desc": "Free groceries you choose yourself, like a store, at two markets.",
       "detail": "By appointment on the website or by phone. Bring photo ID if you have one; no one is turned away without it. SE market: 12436 SE Stark St, Mon-Fri 9am-noon and 1-4pm, 971-325-8810.",
       "addr": "2121 NW Front Ave, Portland, OR 97209",
+      "geo": [
+        45.53811,
+        -122.689
+      ],
       "closed": [
         "2026-11-26",
         "2026-11-27",
@@ -898,6 +1034,10 @@
       "desc": "A shopping-style pantry with meat, eggs, produce, dairy, and dry goods, up to twice a month.",
       "detail": "No ID or proof of income needed, but income must meet guidelines. Thu and Fri shopping order is by lottery; arrive no earlier than 2pm. Enter at the rear of First United Methodist Church, by the playground.",
       "addr": "1838 SW Jefferson St, Portland, OR 97201",
+      "geo": [
+        45.51873,
+        -122.69588
+      ],
       "hours": {
         "mon": null,
         "tue": null,
@@ -922,6 +1062,10 @@
       "desc": "Free food, plus clothing, hygiene items, and blankets when available. No appointment or documents needed.",
       "detail": "Unhoused guests can come once a week. Bring bags.",
       "addr": "6535 SE 82nd Ave, Portland, OR 97266",
+      "geo": [
+        45.47561,
+        -122.57914
+      ],
       "hours": {
         "mon": "10:00-13:30",
         "tue": "10:00-13:30",
@@ -950,6 +1094,10 @@
       "desc": "Food every weekday plus some evenings, up to twice a month.",
       "detail": "New clients apply online or call. Food is handed out outside: dress for the weather and bring bags. Behind The Rockwood Center; use the west driveway off Stark. The mobile clinic visits here; see its card.",
       "addr": "17805 SE Stark St, Portland, OR 97233",
+      "geo": [
+        45.51921,
+        -122.48009
+      ],
       "hours": {
         "mon": "10:00-14:00,18:00-20:00",
         "tue": "10:00-14:00",
@@ -973,6 +1121,10 @@
       "desc": "Food boxes at two Salvation Army centers. Proof of address is not needed if you are homeless.",
       "detail": "N Williams (5325 N Williams Ave): Wed & Fri 9am-1pm, one box a week. Gresham Corps (473 SE 194th Ave): Mon-Thu 9am-noon, one box every 30 days. Each serves certain ZIP codes.",
       "addr": "5325 N Williams Ave, Portland, OR 97217",
+      "geo": [
+        45.56181,
+        -122.667
+      ],
       "hours": {
         "mon": null,
         "tue": null,
@@ -996,6 +1148,10 @@
       "desc": "Fruit, vegetables, bread, meat, and dairy, shopping style, weekly.",
       "detail": "Arrive within 30 minutes of opening to get a number. In the basement of the Luther Memorial building.",
       "addr": "4800 NE 72nd Ave, Portland, OR 97218",
+      "geo": [
+        45.55804,
+        -122.58852
+      ],
       "hours": {
         "mon": null,
         "tue": "16:00-18:30",
@@ -1020,6 +1176,10 @@
       "desc": "Pre-made food bags once a week, and a clothing and hygiene pantry every 14 days.",
       "detail": "Low barrier. Bring bags. Closed on holidays and when Portland Public Schools close for weather.",
       "addr": "3500 NE 82nd Ave, Portland, OR 97220",
+      "geo": [
+        45.5482,
+        -122.57865
+      ],
       "hours": {
         "mon": null,
         "tue": "10:00-13:00",
@@ -1051,6 +1211,10 @@
       ],
       "desc": "A shopping-style grocery pantry open to everyone in need of food.",
       "addr": "1314 SW Park Ave, Portland, OR 97201",
+      "geo": [
+        45.51545,
+        -122.68276
+      ],
       "hoursText": "4th Thursday of the month, 11am-noon. November falls on Thanksgiving: call first.",
       "phone": "5034494969",
       "url": "claystreettable.org/food-pantry",
@@ -1079,6 +1243,10 @@
       "desc": "Hot lunch plus pre-packaged snacks, new socks, gloves, and hand warmers. Prayer and conversation.",
       "detail": "Served under the west side of the Hawthorne Bridge, not at the church. No signup needed.",
       "addr": "Hawthorne Bridge west end, SW Naito Pkwy, Portland, OR",
+      "geo": [
+        45.5132,
+        -122.673
+      ],
       "hoursText": "Thursday & Friday at 12:30pm, all year",
       "url": "stmichaelportland.org",
       "noId": true
@@ -1094,6 +1262,10 @@
       "detail": "Book at williamtemple.simplybook.me or at the front desk. A few walk-in slots each pantry day; same-day wait can be 20 minutes to 2 hours. Twice a month per household. Pantry is in the basement; the side door off the parking lot avoids stairs.",
       "highlight": "Transportation assistance for interviews",
       "addr": "2023 NW Hoyt St, Portland, OR 97209",
+      "geo": [
+        45.5271,
+        -122.69292
+      ],
       "hours": {
         "mon": null,
         "tue": null,
@@ -1128,6 +1300,10 @@
       "desc": "Shelter plus employment navigation plus mail receipt services. Declaration of Homelessness forms for free DMV ID.",
       "detail": "Showers and laundry Mon-Fri 9am-noon (last shower 11:30, last laundry 11:00). Free haircuts Wed-Fri noon-2pm. Clothing closet Mon, Wed, Fri 1:30-2:30pm. Lockers daily. Staff can sign the form for a free Oregon ID.",
       "addr": "650 NW Irving St, Portland, OR 97209",
+      "geo": [
+        45.528,
+        -122.67631
+      ],
       "hours": {
         "mon": "08:30-15:30",
         "tue": "08:30-15:30",
@@ -1153,6 +1329,10 @@
       "desc": "Shelter, meals, mail services, addiction recovery programs. Crisis care and resource referrals since 1949.",
       "detail": "Burnside Shelter offers free, 24/7 drop-in emergency services, including restrooms and two meals a day. Overnight shelter is for men.",
       "addr": "111 W Burnside St, Portland, OR 97209",
+      "geo": [
+        45.52316,
+        -122.67149
+      ],
       "hours": {
         "mon": "00:00-24:00",
         "tue": "00:00-24:00",
@@ -1177,6 +1357,10 @@
       "desc": "Housing navigation, showers, food, and day center. Outreach teams meet you where you are. Direct pathway from streets to housing.",
       "detail": "Day Space for people experiencing homelessness. Housing services are not accessed through walk-ins at the Day Space; ask about referrals.",
       "addr": "1435 NE 81st Ave, Portland, OR 97213",
+      "geo": [
+        45.53314,
+        -122.58008
+      ],
       "hours": {
         "mon": "09:00-17:00",
         "tue": "10:00-16:00",
@@ -1201,6 +1385,10 @@
       ],
       "desc": "Rehabilitation, shelter, food. Women's showers Mon/Wed/Fri 1-3pm. 100-bed overnight shelter 9pm-6:30am nightly. Pets welcome (leashed or crated).",
       "addr": "526 SE Grand Ave, Portland, OR",
+      "geo": [
+        45.51915,
+        -122.66065
+      ],
       "hours": {
         "mon": "21:00-06:30",
         "tue": "21:00-06:30",
@@ -1223,6 +1411,10 @@
       "desc": "Housing navigation and rent/deposit assistance focused on older adults 55+ experiencing or at risk of homelessness.",
       "detail": "If you're 55+ and homeless, this is your first call. They focus exclusively on older adult housing.",
       "addr": "1430 SW Broadway, Suite 200, Portland, OR 97201",
+      "geo": [
+        45.51443,
+        -122.68219
+      ],
       "hours": {
         "mon": "09:00-12:00,13:00-16:00",
         "tue": "09:00-12:00,13:00-16:00",
@@ -1268,6 +1460,10 @@
       "desc": "City-funded overnight shelter for adults who want an alcohol- and drug-free place to sleep.",
       "detail": "Arrive sober. Your bed from last night is held for tonight; new people get the beds that are left. Don't line up more than 30 minutes before 9pm.",
       "addr": "636 SE Grand Ave, Portland, OR 97214",
+      "geo": [
+        45.51837,
+        -122.66066
+      ],
       "hoursText": "Nightly 9pm-7am. New people get leftover beds.",
       "phone": "5032804766",
       "url": "portland.gov/shelter-services/overnight-emergency-shelters/se-grand-recovery-636-se-grand-ave",
@@ -1305,6 +1501,10 @@
       "desc": "A large 24/7 shelter for men, women, and families, with up to 30 days of emergency shelter and a longer reentry program.",
       "detail": "By referral. Call the center to ask about open beds and how to get a referral. You must commit to sobriety. The mobile clinic visits here; see its card for dates.",
       "addr": "14355 N Bybee Lake Ct, Portland, OR 97203",
+      "geo": [
+        45.62957,
+        -122.75561
+      ],
       "hoursText": "Open 24/7 by referral. Call to ask about beds.",
       "phone": "9713335070",
       "url": "helpinghandsreentry.org/hope-centers",
@@ -1356,6 +1556,10 @@
       "desc": "Young people 16-24 who are homeless start here to get screened for youth shelter, drop-in centers, and housing.",
       "detail": "Call to talk with a screener, or leave your name and a callback number. After 5pm, go to Porch Light shelter at 8:45pm.",
       "addr": "1635 SW Alder St, Portland, OR 97205",
+      "geo": [
+        45.52244,
+        -122.68813
+      ],
       "hours": {
         "mon": "09:00-17:00",
         "tue": "09:00-17:00",
@@ -1381,6 +1585,10 @@
       "desc": "Nightly shelter for youth 16-24 with meals, bunk beds, and showers. LGBTQ affirming.",
       "detail": "Come to the door any time between 9pm and 5am; beds are first come, first served. An intake worker meets with you in the morning.",
       "addr": "1635 SW Alder St, Portland, OR 97205",
+      "geo": [
+        45.52244,
+        -122.68813
+      ],
       "hours": {
         "mon": "21:00-05:00",
         "tue": "21:00-05:00",
@@ -1408,6 +1616,10 @@
       "desc": "Daytime drop-in with meals six days a week, showers, laundry, clothes, computers, and advocates for jobs, school, and housing.",
       "detail": "Get screened first through the Janus Youth Access Center (503-432-3986). Meals are served in the first hour of each session. East County drop-in: 470 SE 165th Ave, Mon-Fri 10am-6pm.",
       "addr": "820 SW Oak St, Portland, OR 97205",
+      "geo": [
+        45.52228,
+        -122.67941
+      ],
       "hoursText": "Downtown Mon-Fri 9-10am, 1-3pm, 3:30-6pm; Sat 1-3pm, 4-6:30pm. Screening needed.",
       "phone": "5032244339",
       "url": "newavenues.org/drop-in-day",
@@ -1424,6 +1636,10 @@
       "desc": "Meals, a health clinic, counseling, school and job help, and housing connections for young people.",
       "detail": "For ages 16-24 screened into youth services. You can start the screening here, or call the Janus Youth Access Center at 503-432-3986.",
       "addr": "1132 SW 13th Ave, Portland, OR 97205",
+      "geo": [
+        45.51788,
+        -122.68663
+      ],
       "hoursText": "Come in or call to start screening",
       "phone": "5035353800",
       "url": "outsidein.org/young-adult-services",
@@ -1439,6 +1655,10 @@
       ],
       "desc": "A drop-in for young people experiencing homelessness with food, mentoring, art and education programs, and mail pickup.",
       "addr": "338 NW 6th Ave, Portland, OR 97209",
+      "geo": [
+        45.52549,
+        -122.67643
+      ],
       "hours": {
         "mon": null,
         "tue": "09:00-14:00",
@@ -1521,6 +1741,10 @@
       "desc": "Safety planning, restraining orders, and connections to DV shelter for survivors of partner abuse, sexual assault, and trafficking.",
       "detail": "Waits can be long and it sometimes fills for the day, so call first. Calls are returned from a blocked number. After hours, call Call to Safety at 503-235-5333.",
       "addr": "10305 E Burnside St, Portland, OR 97216",
+      "geo": [
+        45.5228,
+        -122.55713
+      ],
       "hours": {
         "mon": "09:00-16:00",
         "tue": "09:00-16:00",
@@ -1566,6 +1790,10 @@
       "desc": "Overnight shelter for adults in the same building as Operation Nightwatch: a safe night of sleep. Pets welcome if on a leash or in a crate.",
       "detail": "Open 9pm-7am; arrive no earlier than 8:30pm, doors close 11pm. Phone answered 8-11pm only, no voicemail. Once you arrive, if you leave you can't come back until the next night. Last night's guests get in first, then recent guests, then first-timers in order of arrival. Your photo is taken for a badge at check-in. No showers, no drug use, no weapons. Agape's second shelter is at Central Nazarene, 9715 SE Powell Blvd.",
       "addr": "1432 SW 13th Ave, Portland, OR 97201",
+      "geo": [
+        45.51592,
+        -122.68774
+      ],
       "hoursText": "Doors 9pm-11pm. Nights not posted, so call 8-11pm to check.",
       "phone": "9716104291",
       "url": "agapevillagepdx.org/shelter",
@@ -1580,6 +1808,10 @@
       "desc": "City-funded overnight shelter for adults in a church in outer SE Portland. Pets welcome if on a leash or in a crate.",
       "detail": "Line up no earlier than 8:30pm. Open 9pm-6:30am; doors close 11pm. Phone answered 8-11pm only, no voicemail. Once you arrive, if you leave you can't come back until the next night. Your photo is taken for a badge at check-in. No showers, no drug use, no weapons.",
       "addr": "9715 SE Powell Blvd, Portland, OR 97266",
+      "geo": [
+        45.49684,
+        -122.56294
+      ],
       "hours": {
         "mon": "21:00-23:00",
         "tue": "21:00-23:00",
@@ -1606,6 +1838,10 @@
       "desc": "Drop-in day center with shower, laundry, shelter, and bridge housing. Mental health and substance use support.",
       "detail": "Multnomah County run. Bridge housing while you stabilize. No appointment needed for day center.",
       "addr": "333 SW Park Ave, Portland, OR 97205",
+      "geo": [
+        45.52205,
+        -122.67935
+      ],
       "hours": {
         "mon": "08:00-20:00",
         "tue": "08:00-20:00",
@@ -1630,6 +1866,10 @@
       "desc": "Clothing, supplies, meals, showers, laundry, and case management for women, children, and gender-diverse people.",
       "detail": "Showers and laundry are for registered guests. Sign up during service hours. Showers first come, first served.",
       "addr": "1740 NW Glisan St, Portland, OR 97209",
+      "geo": [
+        45.52635,
+        -122.68876
+      ],
       "hours": {
         "mon": "08:00-12:00",
         "tue": "08:00-15:30",
@@ -1652,6 +1892,10 @@
       "desc": "Primary care doctor visits and an on-site pharmacy in Old Town. Visits in person, by phone, or by video.",
       "detail": "Sliding-fee scale. Takes OHP, Medicare, and self-pay. They don't turn anyone away for lack of insurance or inability to pay. Call to schedule.",
       "addr": "727 W Burnside St, Portland, OR 97209",
+      "geo": [
+        45.52321,
+        -122.67815
+      ],
       "hoursText": "By appointment. Mon, Tue, Thu, Fri 8am-5pm; Wed 9am-5pm.",
       "phone": "5032284533",
       "url": "centralcityconcern.org/health-care-location/old-town-clinic-health-care",
@@ -1668,6 +1912,10 @@
       "detail": "Admission depends on need and open beds, not first come, first served. If you aren't admitted, ask about a standby spot or an afternoon admission. Outpatient help Mon-Fri 1-4pm, walk-in or by appointment. Bring a state ID or driver's license, and your insurance card if you have one.",
       "highlight": "Walk in by 7:30am, Monday to Friday",
       "addr": "1535 N Williams Ave, Portland, OR 97232",
+      "geo": [
+        45.5339,
+        -122.66681
+      ],
       "hours": {
         "mon": "06:45-07:45,13:00-16:00",
         "tue": "06:45-07:45,13:00-16:00",
@@ -1699,6 +1947,10 @@
       "desc": "Medically supported detox from alcohol and drugs. Walk in by 7:30am any day of the week.",
       "detail": "Admission depends on beds and a medical check. Weekends: OHP only. Private insurance or outside Multnomah, Washington, or Clackamas County: call first, Mon-Fri 7:30am-4:30pm. No one is denied for inability to pay. Medications for addiction: walk in Mon-Fri 9am-4pm or call 503-713-9156.",
       "addr": "10230 SE Cherry Blossom Dr, Portland, OR 97216",
+      "geo": [
+        45.51608,
+        -122.55696
+      ],
       "hoursText": "Detox: arrive by 7:30am, every day. Addiction medication walk-in Mon-Fri 9am-4pm.",
       "phone": "5035351151",
       "url": "forahealth.org/walk-in-process",
@@ -1714,6 +1966,10 @@
       "desc": "Outpatient mental health care and addiction treatment, including Suboxone, counseling, peer support, and an on-site pharmacy.",
       "detail": "Walk in or call to start care. Takes OHP and self-pay; no one turned away for inability to pay.",
       "addr": "33 NW Broadway, Portland, OR 97209",
+      "geo": [
+        45.52329,
+        -122.67751
+      ],
       "hours": {
         "mon": "09:00-17:00",
         "tue": "09:00-17:00",
@@ -1738,6 +1994,10 @@
       "desc": "Medication treatment for opioid use disorder, including methadone.",
       "detail": "Call for a short phone screening; most people get an appointment the same or next day. Sliding scale if you have no insurance. Buses 12, 19, 20, 70.",
       "addr": "1030 NE Couch St, Portland, OR 97232",
+      "geo": [
+        45.52357,
+        -122.65529
+      ],
       "hoursText": "Call to schedule",
       "phone": "8557332632",
       "url": "codainc.org",
@@ -1818,6 +2078,10 @@
       "desc": "A recovery community center hosting over 100 free recovery meetings a week, plus classes.",
       "detail": "Open to anyone in or seeking recovery. Meeting schedule on the website.",
       "addr": "909 NW 24th Ave, Portland, OR 97210",
+      "geo": [
+        45.52914,
+        -122.7007
+      ],
       "hoursText": "Office open daily 11am-7pm; meetings at many times",
       "phone": "5032225756",
       "url": "portlandalano.org",
@@ -1832,6 +2096,10 @@
       "desc": "Free peer recovery mentors, meetings, and help connecting to housing, treatment, jobs, and health care.",
       "detail": "Call or apply for services on the website. Second site: Miracles Central, 1306 NE 2nd Ave.",
       "addr": "4200 NE Martin Luther King Jr Blvd, Portland, OR 97211",
+      "geo": [
+        45.55395,
+        -122.66146
+      ],
       "hoursText": "Call or apply online",
       "phone": "5032498559",
       "url": "miraclesclub.org",
@@ -1845,6 +2113,10 @@
       ],
       "desc": "Young people in or seeking recovery get peer mentors, help with housing, jobs, and OHP, and nightly meetings and sober events.",
       "addr": "11010 SE Division St, Suite 200, Portland, OR 97266",
+      "geo": [
+        45.50416,
+        -122.55006
+      ],
       "hoursText": "Call or use the referral form on the website",
       "phone": "9717034623",
       "url": "4drecovery.org",
@@ -1877,6 +2149,10 @@
       "desc": "Native-led center with a food pantry, clothing closet, rent and utility help, family shelter, youth housing and recovery support, and job programs.",
       "detail": "For Native American people and families, from infants to Elders. Call first.",
       "addr": "5135 NE Columbia Blvd, Portland, OR 97218",
+      "geo": [
+        45.57025,
+        -122.61062
+      ],
       "hoursText": "Mon-Fri 9am-4:30pm. Call first.",
       "phone": "5032888177",
       "url": "nayapdx.org",
@@ -1892,6 +2168,10 @@
       "desc": "Family medicine, mental health, HIV/STI and hepatitis C testing, and addiction treatment for Native American and Alaska Native people.",
       "detail": "Call for an appointment. Sliding-scale fees. Bring a tribal or Native ID if you have one. Also: NARA Wellness Center, 12360 E Burnside St, 971-279-4800.",
       "addr": "703 NE Hancock St, Portland, OR 97212",
+      "geo": [
+        45.53655,
+        -122.65851
+      ],
       "hoursText": "By appointment",
       "phone": "5032309875",
       "url": "naranorthwest.org",
@@ -1905,6 +2185,10 @@
       ],
       "desc": "Drop-in recovery support with Wellbriety and Native-based AA and NA meetings, skill groups, and culture nights. Open to anyone seeking recovery.",
       "addr": "10209 SE Division St, Portland, OR 97266",
+      "geo": [
+        45.50436,
+        -122.55809
+      ],
       "hours": {
         "mon": "13:00-21:00",
         "tue": "13:00-21:00",
@@ -1928,6 +2212,10 @@
       "desc": "Primary care, an on-site pharmacy, and medication to treat addiction, for ages 13 and up.",
       "detail": "Stop by or call to ask about a same-day visit; spots depend on the day. No one is turned away for inability to pay; most insurance accepted. Ages 15-17 can come without a guardian. Second clinic at 16144 E Burnside St: Mon-Wed 8:30am-5pm, Thu-Fri 8:30am-4:30pm, closed 12-12:45pm.",
       "addr": "1132 SW 13th Ave, Portland, OR 97205",
+      "geo": [
+        45.51788,
+        -122.68663
+      ],
       "hours": {
         "mon": "08:30-17:00",
         "tue": "10:00-19:00",
@@ -1952,6 +2240,10 @@
       "desc": "Free naloxone (Narcan) and overdose-prevention training, HIV, hepatitis C, and syphilis testing, and drug checking.",
       "detail": "For adults 18 and up. Free.",
       "addr": "1219 SW Main St, Portland, OR 97205",
+      "geo": [
+        45.518,
+        -122.68578
+      ],
       "hours": {
         "mon": "12:00-17:00",
         "tue": "12:00-17:00",
@@ -2153,6 +2445,10 @@
       "desc": "Dental care: X-rays, cleanings, fillings, and more.",
       "detail": "Cost is based on what you can pay. If you can't pay, you can still get care. Suite 380. For severe tooth pain or a broken tooth, call right away.",
       "addr": "33 NW Broadway, Portland, OR 97209",
+      "geo": [
+        45.52329,
+        -122.67751
+      ],
       "hoursText": "Call to schedule and check hours",
       "phone": "5039885558",
       "url": "healthcenter.multco.us/current-patients/our-services/dental",
@@ -2213,6 +2509,10 @@
       ],
       "desc": "Walk in for immediate, in-person help with a mental health or substance use crisis. Free for anyone.",
       "addr": "4212 SE Division St, Portland, OR 97206",
+      "geo": [
+        45.50514,
+        -122.61871
+      ],
       "hours": {
         "mon": "07:00-22:30",
         "tue": "07:00-22:30",
@@ -2236,6 +2536,10 @@
       "desc": "A 24-hour mental health emergency center. Adults can walk in or be dropped off.",
       "detail": "Youth 9-17 need a referral and cannot walk in.",
       "addr": "1225 NE 2nd Ave, Portland, OR 97232",
+      "geo": [
+        45.53162,
+        -122.66378
+      ],
       "hours": {
         "mon": "00:00-24:00",
         "tue": "00:00-24:00",
@@ -2327,6 +2631,10 @@
       ],
       "desc": "Free, confidential HIV testing. Walk in, no appointment.",
       "addr": "520 NW Davis St, Suite 215, Portland, OR 97209",
+      "geo": [
+        45.52445,
+        -122.67571
+      ],
       "hours": {
         "mon": "10:00-16:00",
         "tue": null,
@@ -2350,6 +2658,10 @@
       "desc": "Testing and treatment for HIV, syphilis, gonorrhea, and chlamydia, plus PrEP.",
       "detail": "By appointment, no walk-ins. For an urgent need, call to get seen. No ID or insurance needed; no one turned away for inability to pay.",
       "addr": "619 NW 6th Ave, 2nd Floor, Portland, OR 97209",
+      "geo": [
+        45.52751,
+        -122.67667
+      ],
       "hoursText": "Mon-Fri 9am-5pm, by appointment",
       "phone": "5039883700",
       "url": "multco.us/health/std-services",
@@ -2377,6 +2689,10 @@
       "desc": "Primary care clinic in East Portland. Treats patients regardless of ability to pay, with a sliding fee based on income.",
       "detail": "Appointments only, no walk-ins. Takes OHP. For help signing up for insurance, ask for ext. 4750. Dental care at the same address.",
       "addr": "18633 SE Stark St, Portland, OR 97233",
+      "geo": [
+        45.5192,
+        -122.47176
+      ],
       "hoursText": "By appointment. Mon-Thu 7:45am-7:30pm, Fri 7:45am-5pm.",
       "phone": "5034891760",
       "url": "mywallace.org",
@@ -2392,6 +2708,10 @@
       "desc": "Naloxone reverses an opioid overdose. Get it free at the county Harm Reduction Clinic, by mail from Just in Case Oregon, or at Outside In (1219 SW Main St).",
       "detail": "County Harm Reduction Clinic: 12425 NE Glisan St, in Menlo Park Plaza behind Walgreens, (503) 988-0577. Walk-ins accepted. Also syringe exchange, fentanyl test strips, and testing. Holiday and weather closures: (503) 280-1611. Pharmacies also sell naloxone without a prescription.",
       "addr": "12425 NE Glisan St, Portland, OR 97230",
+      "geo": [
+        45.52638,
+        -122.53512
+      ],
       "hours": {
         "mon": "11:00-14:00,15:00-19:00",
         "tue": null,
@@ -2439,6 +2759,10 @@
       ],
       "desc": "Free showers under the Morrison Bridge. Soap, towels, hygiene supplies, clean clothing, first aid, and device charging.",
       "addr": "SE MLK & Belmont, Portland, OR (under Morrison Bridge)",
+      "geo": [
+        45.51704,
+        -122.66171
+      ],
       "hours": {
         "mon": null,
         "tue": "15:00-21:00",
@@ -2461,6 +2785,10 @@
       ],
       "desc": "Free laundry service. Drop off one bag (up to 40 lbs), pick up same day or next day.",
       "addr": "2609 SE 6th Ave, Portland, OR",
+      "geo": [
+        45.50406,
+        -122.6599
+      ],
       "hours": {
         "mon": null,
         "tue": "09:00-16:00",
@@ -2483,6 +2811,10 @@
       "desc": "Free showers and clean clothing, open to anyone who wants a shower. First come, first served.",
       "detail": "You don't need to belong to the church. ADA accessible. Lower level of the Buchan building at SW 13th & Salmon.",
       "addr": "1034 SW 13th Ave, Portland, OR 97205",
+      "geo": [
+        45.51855,
+        -122.68626
+      ],
       "hours": {
         "mon": null,
         "tue": null,
@@ -2508,6 +2840,10 @@
       "desc": "An open-air City day center with showers, washers and dryers, a clothing closet, phone charging, and a place to warm up or cool down.",
       "detail": "Anyone can use it. First aid, transit help, and bike repair. A mobile health clinic comes Fridays 10am-5pm. Run by Urban Alchemy. The City warns budget cuts may change City-funded sites.",
       "addr": "601 NW Glisan St, Portland, OR 97209",
+      "geo": [
+        45.52667,
+        -122.67662
+      ],
       "hours": {
         "mon": "06:00-22:00",
         "tue": "06:00-22:00",
@@ -2531,6 +2867,10 @@
       "desc": "Store your things safely for the day, overnight, or up to 30 days. Free.",
       "detail": "Everything must fit in a 32-gallon bin with the lid closed. No carts, weapons, food, or liquids. Items left 30 days are thrown away; daily check-in preferred. First come, first served.",
       "addr": "435 NW Glisan St, Portland, OR 97209",
+      "geo": [
+        45.52671,
+        -122.6749
+      ],
       "hours": {
         "mon": "07:00-19:45",
         "tue": "07:00-19:45",
@@ -2554,6 +2894,10 @@
       "desc": "Locked daytime storage for up to 3 containers, with free coffee, snacks, and phone charging.",
       "detail": "New members sign a short agreement. Email hello@groundscoreassociation.org.",
       "addr": "624 NW Couch St, Portland, OR 97209",
+      "geo": [
+        45.52371,
+        -122.67674
+      ],
       "hours": {
         "mon": "08:00-15:00",
         "tue": "08:00-15:00",
@@ -2577,6 +2921,10 @@
       "desc": "A day center for LGBTQIA2S+ people, especially low-income and unhoused: peer support, mail, computers, harm reduction, and help with housing and benefits.",
       "detail": "Hours are from the County day center list; call to confirm.",
       "addr": "4434 SE 25th Ave, Portland, OR 97202",
+      "geo": [
+        45.49067,
+        -122.64049
+      ],
       "hours": {
         "mon": "10:00-16:00",
         "tue": "10:00-16:00",
@@ -2599,6 +2947,10 @@
       "desc": "Free vet care for pets of people experiencing homelessness, and a Pet Food and Supply Bank.",
       "detail": "Vet clinic by appointment: fill out the pre-screening form on the website first. No emergency care. Pet Supply Bank once a month.",
       "addr": "1718 NE 82nd Ave, Portland, OR 97220",
+      "geo": [
+        45.53517,
+        -122.57891
+      ],
       "hours": {
         "mon": null,
         "tue": "10:00-15:00",
@@ -2639,6 +2991,10 @@
       "desc": "Free computer access (no library card needed), restrooms, warmth, quiet space. Use for job applications, email, and resume work.",
       "detail": "Open daily. All branches across Portland have free computers and Wi-Fi.",
       "addr": "801 SW 10th Ave, Portland, OR 97205",
+      "geo": [
+        45.51928,
+        -122.68258
+      ],
       "hours": {
         "mon": "10:00-20:00",
         "tue": "10:00-20:00",
@@ -2661,6 +3017,10 @@
       "desc": "Free help with court forms and procedures for family, landlord-tenant, and small claims cases.",
       "detail": "Free for anyone without a lawyer. Staff explain procedures but cannot give legal advice. A limited number of walk-in spots each day.",
       "addr": "1200 SW 1st Ave, Room 02307, Portland, OR 97204",
+      "geo": [
+        45.51432,
+        -122.67536
+      ],
       "hours": {
         "mon": "08:30-12:00,13:00-16:00",
         "tue": "08:30-12:00,13:00-16:00",
@@ -2697,6 +3057,10 @@
       "desc": "Free legal help to clear criminal records and eviction records, plus some immigration help.",
       "detail": "Walk-in clinics at locations around Portland; see the drop-in calendar on the website. No appointment needed at drop-ins.",
       "addr": "537 SE Ash St, Suite 202, Portland, OR 97214",
+      "geo": [
+        45.52156,
+        -122.66032
+      ],
       "hoursText": "See the drop-in calendar on the website",
       "phone": "5033895919",
       "url": "clear-clinic.org",
@@ -2816,6 +3180,10 @@
       "desc": "Walk-in center for veterans and their families who are homeless or at risk: housing, health care, and benefits help in one place.",
       "detail": "Moved in September 2026 from SW 1st Ave. No emergency services on site.",
       "addr": "1919 SE Belmont St, Portland, OR 97214",
+      "geo": [
+        45.51652,
+        -122.64632
+      ],
       "hours": {
         "mon": "08:00-14:30",
         "tue": "08:00-14:30",
@@ -2839,6 +3207,10 @@
       ],
       "desc": "Healthcare, mental health, housing programs, and employment assistance for eligible veterans.",
       "addr": "3710 SW U.S. Veterans Hospital Rd, Portland, OR",
+      "geo": [
+        45.49642,
+        -122.68445
+      ],
       "hoursText": "Call (503) 220-8262",
       "phone": "5032208262",
       "noId": false

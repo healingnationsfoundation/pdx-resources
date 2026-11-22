@@ -27,6 +27,8 @@ Category ids (defined in `resources.json` under `categories`): "work", "food", "
 - The "Open now" button shows only listings whose `hours` say they are open this minute; listings without `hours` are counted as "no set hours: call ahead", never shown as open. So set `hours` whenever walk-in hours are confirmed.
 - The page view lives in the URL hash, so links and QR codes can open straight to a category: `#food`, `#shelter+open`, `#open`. Category ids are the hash names; don't rename them.
 - `addr` is used for the Directions link, so keep it a plain street address. Put notes in `detail`.
+- `geo` is [latitude, longitude] for `addr`, used only for "Nearest first" (distance is worked out on the phone; the location is never sent or saved). When you add or change an address, look it up with the US Census geocoder (geocoding.geo.census.gov, onelineaddress) and check the matched address is the same street, not SE vs NE. For intersections or landmarks, place it by hand. Round to 5 decimals.
+- Each card has "Share this place": a link ending in `#place=<name-slug>` opens the guide to that listing. Renaming a listing changes its slug, so old shared links stop finding it.
 - Every field is shown as plain text. Don't put HTML in the data.
 
 ## How to update donation recipients
