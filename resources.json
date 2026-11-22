@@ -136,8 +136,19 @@
         "work"
       ],
       "desc": "Temporary shifts in construction, warehouse, hospitality, manufacturing, retail. Pick shifts on the JobStack app.",
-      "detail": "No resume required. Set your own schedule. W-2 paid employment. Multiple Portland locations. Need valid I-9 identification.",
-      "hoursText": "Download the JobStack app to get started",
+      "detail": "No resume required. Set your own schedule. W-2 paid employment. Need valid I-9 identification. Branch: 204 N Killingsworth St.",
+      "addr": "204 N Killingsworth St, Portland, OR 97217",
+      "hours": {
+        "mon": "09:00-18:00",
+        "tue": "09:00-18:00",
+        "wed": "09:00-18:00",
+        "thu": "09:00-18:00",
+        "fri": "09:00-18:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Branch Mon-Fri 9am-6pm. Or pick shifts on the JobStack app.",
+      "phone": "5032894616",
       "url": "peopleready.com/jobstack",
       "noId": false
     },
@@ -216,7 +227,7 @@
       "detail": "Average starting wage $21/hr. 1,300+ graduates placed. Accepts people with criminal history (63% of participants). Need state ID and GED/diploma.",
       "highlight": "Next cohort: January 2027. Apply now.",
       "addr": "405 NE Church St, Portland, OR 97211",
-      "hoursText": "Classes quarterly: Jan, Apr, Jun, Sep",
+      "hoursText": "Info session in person every Monday at 1pm (not holidays). Bring ID and diploma or GED. Classes start Jan, Apr, Jun, Sep.",
       "phone": "5032811234",
       "url": "constructinghope.org/programs",
       "noId": false
@@ -230,7 +241,9 @@
       ],
       "desc": "Multiple paid training tracks: healthcare certifications, semiconductor/tech (Microchip partnership), outdoor conservation.",
       "detail": "Paid internships available. Free or low-cost industry-recognized certifications. Youth and adult programs.",
-      "hoursText": "See portlandoic.org for current programs",
+      "addr": "717 N Killingsworth Ct, Portland, OR 97217",
+      "hoursText": "No walk-in hours posted. Call (503) 797-7222.",
+      "phone": "5037977222",
       "url": "portlandoic.org/employment-training/programs",
       "noId": false
     },
@@ -244,7 +257,18 @@
       "desc": "Free skilled trades training for women and gender-diverse people. Construction, electrical, welding. Leads to union apprenticeships with full benefits.",
       "detail": "Funded through Worksystems and Future Ready Oregon. Union apprenticeship means career path plus full benefits.",
       "highlight": "Next cohort starting soon. Check website.",
-      "hoursText": "Visit oregontradeswomen.org for application window",
+      "addr": "16790 NE Mason St, Suite 100, Portland, OR 97230",
+      "hours": {
+        "mon": "09:00-16:00",
+        "tue": "09:00-16:00",
+        "wed": "09:00-16:00",
+        "thu": "09:00-16:00",
+        "fri": null,
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Office Mon-Thu 9am-4pm; other days by appointment. Request an info session on the website.",
+      "phone": "5033358200",
       "url": "oregontradeswomen.org",
       "noId": false
     },
@@ -257,8 +281,10 @@
       ],
       "desc": "GED completion plus construction pre-apprenticeship. Combined education and career training for young adults.",
       "detail": "2026-2027 classes active. For younger guests needing both education credentials and a career path into the trades.",
-      "hoursText": "Visit portlandyouthbuilders.org",
-      "url": "portlandyouthbuilders.org",
+      "addr": "4816 SE 92nd Ave, Portland, OR 97266",
+      "hoursText": "Call (503) 286-9350 or email to get started. New classes start every couple of months.",
+      "phone": "5032869350",
+      "url": "pybpdx.org",
       "noId": false
     },
     {
@@ -268,9 +294,9 @@
         "work",
         "training"
       ],
-      "desc": "Peer Wellness Specialist certification, a paid career pathway into behavioral health work. Also day center with lunch, shower, and housing support.",
+      "desc": "Peer Wellness Specialist certification, a paid career pathway into behavioral health work. Also runs Club Hope, a drop-in recovery center in Gresham with showers, laundry, and food.",
       "detail": "Turn your lived experience into a career helping others. Growing field with strong demand.",
-      "hoursText": "Visit bridgestochange.com",
+      "hoursText": "Check bridgestochange.com for Club Hope hours",
       "url": "bridgestochange.com",
       "noId": false
     },
@@ -281,8 +307,8 @@
         "work"
       ],
       "desc": "Free resume workshops, interview prep, job leads, training scholarships. Veterans get priority services. Register in iMatchSkills.",
-      "detail": "Part of the American Job Center network. Workshops on soft skills, Excel, Word, computer basics, and state jobs. All services free.",
-      "hoursText": "Multiple Portland locations. worksourceportlandmetro.org",
+      "detail": "Part of the American Job Center network. Workshops on soft skills, Excel, Word, computer basics, and state jobs. All services free. Centers: 30 N Webster St, Suite E, (503) 280-6046; 6401 SE Foster Rd, (503) 934-0630; 18633 SE Stark St, Suite 201, Gresham, (503) 669-7112.",
+      "hoursText": "Walk in without an appointment, or call a center. Closed Nov 26-27, 2026.",
       "url": "worksourceportlandmetro.org",
       "noId": false
     },
@@ -316,8 +342,19 @@
         "work"
       ],
       "desc": "Job placement assistance and multi-employer job fairs. Goodwill also hires directly and provides vocational opportunities.",
-      "detail": "Mission: vocational opportunities for people with disabilities and barriers to employment. Job fairs 3rd Tuesday monthly.",
-      "hoursText": "meetgoodwill.org/job-connection",
+      "detail": "Mission: vocational opportunities for people with disabilities and barriers to employment. Job fairs 3rd Tuesday monthly. Also Powell (9015 SE Powell Blvd) Mon-Fri 9am-5:30pm, Airport Outlet (5950 NE 122nd Ave) Mon-Fri 9am-5:30pm, Halsey (12250 NE Halsey) Mon, Wed, Fri 9am-5:30pm.",
+      "addr": "1943 SE 6th Ave, Portland, OR 97214",
+      "hours": {
+        "mon": "08:00-16:30",
+        "tue": "08:00-16:30",
+        "wed": "08:00-16:30",
+        "thu": "08:00-16:30",
+        "fri": "08:00-16:30",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Portland Job Connection (1943 SE 6th Ave) Mon-Fri 8am-4:30pm",
+      "phone": "5032386165",
       "url": "meetgoodwill.org/job-connection-home",
       "noId": false
     },
@@ -373,7 +410,17 @@
         "id"
       ],
       "desc": "Call SSA to request a replacement Social Security card. You need your SSN for most employment.",
-      "hoursText": "Call 1-800-772-1213",
+      "detail": "Portland offices, Mon-Fri 9am-4pm: 1538 SW Yamhill St and 17925 SE Division St. Make an appointment to skip the line.",
+      "hours": {
+        "mon": "08:00-19:00",
+        "tue": "08:00-19:00",
+        "wed": "08:00-19:00",
+        "thu": "08:00-19:00",
+        "fri": "08:00-19:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Call 1-800-772-1213, Mon-Fri 8am-7pm",
       "phone": "18007721213",
       "noId": false
     },
@@ -460,10 +507,29 @@
         "food",
         "more"
       ],
-      "desc": "Food pantry plus transportation assistance plus clothing plus counseling. Thrift store on site.",
-      "detail": "Transportation assistance helps you get to job interviews and work.",
+      "desc": "Food pantry where you choose your own groceries: staples, produce, meat, dairy. Resource navigation by appointment. Thrift store on site.",
+      "detail": "Book at williamtemple.simplybook.me or at the front desk. A few walk-in slots each pantry day; same-day wait can be 20 minutes to 2 hours. Twice a month per household. Pantry is in the basement; the side door off the parking lot avoids stairs.",
       "highlight": "Transportation assistance for interviews",
-      "hoursText": "Visit williamtemple.org for hours",
+      "addr": "2023 NW Hoyt St, Portland, OR 97209",
+      "hours": {
+        "mon": null,
+        "tue": null,
+        "wed": "09:30-12:30",
+        "thu": "13:00-16:00",
+        "fri": null,
+        "sat": null,
+        "sun": null
+      },
+      "closed": [
+        "2026-11-26",
+        "2026-12-25",
+        "2027-01-01",
+        "2027-01-18",
+        "2027-06-19",
+        "2027-07-04",
+        "2027-11-25"
+      ],
+      "hoursText": "Pantry Wed 9:30am-12:30pm, Thu 1-4pm, by appointment (some walk-in slots). Closed MLK Day, Juneteenth, July 4, Thanksgiving, Christmas, New Year's Day.",
       "url": "williamtemple.org",
       "noId": false
     },
@@ -571,7 +637,18 @@
       ],
       "desc": "Housing navigation and rent/deposit assistance focused on older adults 55+ experiencing or at risk of homelessness.",
       "detail": "If you're 55+ and homeless, this is your first call. They focus exclusively on older adult housing.",
-      "hoursText": "Visit nwpilotproject.org",
+      "addr": "1430 SW Broadway, Suite 200, Portland, OR 97201",
+      "hours": {
+        "mon": "09:00-12:00,13:00-16:00",
+        "tue": "09:00-12:00,13:00-16:00",
+        "wed": "09:00-12:00,13:00-16:00",
+        "thu": "13:00-16:00",
+        "fri": null,
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Office: Mon-Wed 9am-noon and 1-4pm; Thu 1-4pm; Fri by appointment only",
+      "phone": "5032275605",
       "url": "nwpilotproject.org",
       "noId": false
     },
@@ -581,9 +658,19 @@
       "cat": [
         "shelter"
       ],
-      "desc": "Emergency shelter. Part of Portland's shelter network.",
-      "hoursText": "Call for current availability",
-      "url": "portland.salvationarmy.org",
+      "desc": "Two first-come, first-served overnight shelters: Burnside Shelter (30 SW 2nd Ave) for women, and Moore Street Shelter (5325 N Williams Ave) for adult women and men.",
+      "detail": "Burnside: 8pm-8am nightly, (503) 227-0810. Moore Street: 8pm-6am nightly, (971) 230-5313. The City warns that budget cuts may change City-funded shelters; City Shelter Services: (503) 823-1340.",
+      "hours": {
+        "mon": "20:00-06:00",
+        "tue": "20:00-06:00",
+        "wed": "20:00-06:00",
+        "thu": "20:00-06:00",
+        "fri": "20:00-06:00",
+        "sat": "20:00-06:00",
+        "sun": "20:00-06:00"
+      },
+      "hoursText": "Nightly from 8pm. Burnside until 8am, Moore Street until 6am.",
+      "url": "portland.gov/shelter-services/emergency-shelters",
       "noId": false
     },
     {
@@ -883,7 +970,16 @@
       ],
       "desc": "If you receive OHP (Medicaid), SNAP, or TANF, you qualify for $1.25 fare (normally $2.50). Hop Fastpass daily cap: $5.",
       "detail": "Age 65+ or Medicare/disability = $1.00 fare. Trip planner: trimet.org/tripplanner",
-      "hoursText": "Apply at trimet.org/reducedfare or call (503) 238-7433",
+      "hours": {
+        "mon": "08:00-16:00",
+        "tue": "08:00-16:00",
+        "wed": "08:00-16:00",
+        "thu": "08:00-16:00",
+        "fri": "08:00-16:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Apply at trimet.org/reducedfare, or call (503) 238-7433 Mon-Fri 8am-4pm",
       "phone": "5032387433",
       "url": "trimet.org/reducedfare",
       "noId": false
