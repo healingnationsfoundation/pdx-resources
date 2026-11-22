@@ -2444,11 +2444,11 @@
         "tue": "15:00-21:00",
         "wed": null,
         "thu": "15:00-21:00",
-        "fri": "15:00-19:00",
+        "fri": null,
         "sat": null,
         "sun": "15:00-19:00"
       },
-      "hoursText": "Tue & Thu 3-9pm, Sun & Fri 3-7pm",
+      "hoursText": "Tue & Thu 3-9pm, Sun 3-7pm. Last shower 45 min before close.",
       "phone": "9712362524",
       "url": "h4apdx.org/services",
       "noId": true
