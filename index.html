@@ -94,8 +94,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
 /* Open now toggle */
 .open-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 2px 0 4px; }
 p.open-hint { margin: 2px 0 2px; }
-.near-toggle { color: var(--accent); border-color: var(--accent); }
-.near-toggle[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); }
+.open-toggle.near-toggle { color: var(--accent); border-color: var(--accent); }
+.open-toggle.later-toggle { color: var(--fg); border-color: var(--fg2); }
+.open-toggle.later-toggle[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.suggest { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 12px 0; }
+.suggest .btn-show-all { margin-top: 0; }
+.open-toggle.near-toggle[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); }
 .dist { font-weight: 700; color: var(--fg); white-space: nowrap; }
 .card.flash { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-light); }
 .share-btn {
@@ -286,15 +290,16 @@ p.open-hint { margin: 2px 0 2px; }
 <div class="filters" id="filters" role="group" aria-labelledby="filters-label"></div>
 <div class="open-row">
   <button type="button" class="open-toggle" id="open-now" aria-pressed="false"><span class="dot" aria-hidden="true"></span>Open now</button>
+  <button type="button" class="open-toggle later-toggle" id="later" aria-pressed="false"><span aria-hidden="true">&#x1F319;</span>Later today</button>
   <button type="button" class="open-toggle near-toggle" id="near" aria-pressed="false"><span aria-hidden="true">&#x1F4CD;</span>Nearest first</button>
 </div>
-<p class="open-hint" id="open-hint">Open now: only places open right now. Nearest first: closest to you (your location stays on your phone).</p>
+<p class="open-hint" id="open-hint">Open now: open this minute. Later today: open now or opening later today. Nearest first: closest to you (your location stays on your phone).</p>
 <div class="search-wrap">
   <span class="search-icon" aria-hidden="true">&#x1F50D;</span>
   <input type="search" id="search" placeholder="Search: bed, lunch, blanket, doctor, Burnside..." autocomplete="off" aria-label="Search resources">
 </div>
 <div class="offline-note" id="offline-note" hidden>&#x1F4F6; <strong>No connection.</strong> Showing the list saved on this phone. Hours may have changed, so call ahead if you can.</div>
-<div class="results-info" id="results-info"></div>
+<div class="results-info" id="results-info" aria-live="polite"></div>
 <div class="cards" id="cards"></div>
 
 <div class="report-box">
@@ -366,6 +371,16 @@ let searchQuery = '';
 // "Open now" shows only listings whose walk-in hours say they are open this minute.
 // Listings without set hours can't be confirmed, so they are counted, not shown.
 let openOnly = false;
+// "Later today": open now, or opening later today (evening shelters, night meals, today's clinic stops).
+let laterToday = false;
+function isLaterToday(r, now) {
+  const open = isOpenNow(r, now);
+  if (open === true) return true;
+  if (open === null) return false;
+  const n = nextOpening(r, now);
+  if (n && n.days === 0) return true;
+  return upcomingStops(r, now).some(x => x.date === localDate(now));
+}
 
 // Hours are "HH:MM-HH:MM". A close time earlier than the open time means
 // the slot runs past midnight (e.g. "21:00-06:30" overnight shelter).
@@ -604,7 +619,8 @@ function renderFilters() {
 // The view lives in the address, so a QR code or link can open straight to it
 // (for example #food or #shelter+open), and Back works as expected.
 function saveView() {
-  const h = (activeFilter === 'all' ? '' : activeFilter) + (openOnly ? (activeFilter === 'all' ? 'open' : '+open') : '');
+  const t = openOnly ? 'open' : laterToday ? 'today' : '';
+  const h = [activeFilter === 'all' ? '' : activeFilter, t].filter(Boolean).join('+');
   history.replaceState(null, '', h ? '#' + h : location.pathname + location.search);
 }
 // A shared link (#place=slug) opens the full list, scrolled to that place with its details open.
@@ -620,10 +636,11 @@ function showPlace() {
 }
 function loadView() {
   const m = location.hash.match(/^#place=([a-z0-9-]+)$/);
-  if (m) { pendingPlace = m[1]; openOnly = false; activeFilter = 'all'; return; }
+  if (m) { pendingPlace = m[1]; openOnly = false; laterToday = false; activeFilter = 'all'; return; }
   const parts = decodeURIComponent(location.hash.slice(1)).split('+');
   openOnly = parts.includes('open');
-  const cat = parts.find(p => p && p !== 'open');
+  laterToday = !openOnly && parts.includes('today');
+  const cat = parts.find(p => p && p !== 'open' && p !== 'today');
   activeFilter = CATEGORIES.some(c => c.id === cat) ? cat : 'all';
 }
 
@@ -650,11 +667,12 @@ function renderCards() {
     const [x, y] = [ranks.get(a[0]), ranks.get(b[0])];
     return x[0] - y[0] || x[1] - y[1] || a[1] - b[1];
   }).map(p => p[0]);
-  const filtered = openOnly ? sorted.filter(r => isOpenNow(r, now) === true) : sorted;
+  const filtered = openOnly ? sorted.filter(r => isOpenNow(r, now) === true)
+    : laterToday ? sorted.filter(r => isLaterToday(r, now)) : sorted;
 
   const where = `${activeFilter!=='all'?' in '+CATEGORIES.find(c=>c.id===activeFilter).label:''}${q?' matching "'+searchQuery+'"':''}`;
-  if (openOnly) {
-    info.textContent = `${filtered.length} open now${where}.` +
+  if (openOnly || laterToday) {
+    info.textContent = `${filtered.length} ${openOnly ? 'open now' : 'open now or later today'}${where}.` +
       (noHours ? ` ${noHours} more ${noHours!==1?'have':'has'} no set hours: call ahead.` : '');
   } else {
     info.textContent = `${filtered.length} resource${filtered.length!==1?'s':''}${where}` +
@@ -662,11 +680,17 @@ function renderCards() {
   }
 
   if (!filtered.length) {
-    el.innerHTML = openOnly && matching.length
-      ? `<div class="empty"><div class="icon">\u{1F552}</div><p>Nothing here shows as open right now.${noHours ? ' Some places have no set hours, so call ahead.' : ''}<br>Need help now? Call <a href="tel:211">2-1-1</a>.</p><button type="button" class="btn-show-all" id="show-all">Show everything${where}</button></div>`
-      : `<div class="empty"><div class="icon">\u{1F50D}</div><p>No resources found. Try a different category or search.</p></div>`;
+    el.innerHTML = (openOnly || laterToday) && matching.length
+      ? `<div class="empty"><div class="icon">\u{1F552}</div><p>Nothing here shows as open ${openOnly ? 'right now' : 'for the rest of today'}.${noHours ? ' Some places have no set hours, so call ahead.' : ''}<br>Need help now? Call <a href="tel:211">2-1-1</a>.</p><button type="button" class="btn-show-all" id="show-all">Show everything${where}</button></div>`
+      : `<div class="empty"><div class="icon">\u{1F50D}</div><p>Nothing matches${q ? ` "${esc(searchQuery)}"` : ''}${activeFilter !== 'all' ? ' in this category' : ''}. Try a simple word:</p>` +
+        `<div class="suggest">${['bed', 'food', 'shower', 'blanket', 'doctor', 'detox', 'ID', 'job'].map(w => `<button type="button" class="btn-show-all" data-q="${w}">${w}</button>`).join('')}</div>` +
+        `<p>Or call <a href="tel:211">2-1-1</a> and ask.</p></div>`;
     const showAll = document.getElementById('show-all');
-    if (showAll) showAll.addEventListener('click', () => setOpenOnly(false));
+    if (showAll) showAll.addEventListener('click', () => setTime(null));
+    el.querySelectorAll('[data-q]').forEach(b => b.addEventListener('click', () => {
+      activeFilter = 'all'; renderFilters();
+      document.getElementById('search').value = searchQuery = b.dataset.q; renderCards(); saveView();
+    }));
     return;
   }
 
@@ -708,12 +732,14 @@ document.getElementById('search').addEventListener('input', e => {
   renderCards();
 });
 
-const HINT = 'Open now: only places open right now. Nearest first: closest to you (your location stays on your phone).';
+const HINT = 'Open now: open this minute. Later today: open now or opening later today. Nearest first: closest to you (your location stays on your phone).';
 function syncOpenButton() {
   document.getElementById('open-now').setAttribute('aria-pressed', openOnly ? 'true' : 'false');
+  document.getElementById('later').setAttribute('aria-pressed', laterToday ? 'true' : 'false');
   document.getElementById('near').setAttribute('aria-pressed', nearOn && here ? 'true' : 'false');
   document.getElementById('open-hint').textContent = openOnly
     ? 'Showing places open right now. Tap Open now again to see everything.'
+    : laterToday ? 'Open now or opening later today, soonest first. Tap Later today again to see everything.'
     : nearOn && here ? 'Closest places first. Distances are straight-line, so walking is a bit farther.' : HINT;
 }
 document.getElementById('near').addEventListener('click', () => {
@@ -732,13 +758,17 @@ document.getElementById('cards').addEventListener('click', e => {
   const b = e.target.closest('.share-btn');
   if (b) sharePlace(b);
 });
-function setOpenOnly(on) {
-  openOnly = on;
+// One time filter at a time: 'now', 'today', or null for everything.
+function setTime(which) {
+  openOnly = which === 'now';
+  laterToday = which === 'today';
   syncOpenButton();
   renderCards();
   saveView();
 }
-document.getElementById('open-now').addEventListener('click', () => setOpenOnly(!openOnly));
+function setOpenOnly(on) { setTime(on ? 'now' : null); }
+document.getElementById('open-now').addEventListener('click', () => setTime(openOnly ? null : 'now'));
+document.getElementById('later').addEventListener('click', () => setTime(laterToday ? null : 'today'));
 
 // Keep Open Now / Closed current while the page stays open, but don't
 // fold up a card someone is reading.
