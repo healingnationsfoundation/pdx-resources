@@ -821,7 +821,7 @@
         "health"
       ],
       "desc": "A medical van that visits sites around the county: illness and injuries, exams, vaccines, pregnancy tests, limited prescriptions, and dental cleanings at some stops.",
-      "detail": "Walk-ins welcome while spots last, seen in order of arrival. Pay what you can; if you can't pay, you can still get care. Stops change, so check the calendar on their website. Text or call during clinic hours to check wait times.",
+      "detail": "Walk-ins welcome while spots last, seen in order of arrival. Pay what you can; if you can't pay, you can still get care. Some stops are at shelters or women's centers that may only serve their own guests: text or call 971-940-3149 during clinic hours to check before you go, and to ask about wait times.",
       "highlight": "Walk-ins welcome. Pay what you can.",
       "stops": [
         {
@@ -833,7 +833,7 @@
         {
           "date": "2026-11-24",
           "time": "11:00-14:00",
-          "place": "PCC Southeast Campus (dental cleanings too)",
+          "place": "Portland Community College SE Campus (dental cleanings too)",
           "addr": "2305 SE 82nd Ave, Portland, OR 97216"
         },
         {
@@ -847,9 +847,147 @@
           "time": "09:00-12:00",
           "place": "Behavioral Health Resource Center",
           "addr": "333 SW Park Ave, Portland, OR 97205"
+        },
+        {
+          "date": "2026-11-30",
+          "time": "11:00-14:00",
+          "place": "SnowCap Family Services",
+          "addr": "17805 SE Stark St, Portland, OR 97233"
+        },
+        {
+          "date": "2026-12-01",
+          "time": "11:00-14:00",
+          "place": "Bybee Lakes Hope Center",
+          "addr": "14355 N Bybee Lake Ct, Portland, OR 97203"
+        },
+        {
+          "date": "2026-12-01",
+          "time": "15:30-18:30",
+          "place": "Cathedral Village",
+          "addr": "6520 N Salem Ave, Portland, OR 97203"
+        },
+        {
+          "date": "2026-12-02",
+          "time": "09:00-12:00",
+          "place": "TPI Naito Village",
+          "addr": "2185 SW Naito Pkwy, Portland, OR 97201"
+        },
+        {
+          "date": "2026-12-02",
+          "time": "13:30-16:30",
+          "place": "Vera South Waterfront (dental cleanings too)",
+          "addr": "2045 S River Pkwy, Portland, OR 97201"
+        },
+        {
+          "date": "2026-12-03",
+          "time": "09:00-16:00",
+          "place": "Rose Haven",
+          "addr": "1740 NW Glisan St, Portland, OR 97209"
+        },
+        {
+          "date": "2026-12-08",
+          "time": "11:00-14:00",
+          "place": "Portland Community College SE Campus (dental cleanings too)",
+          "addr": "2305 SE 82nd Ave, Portland, OR 97216"
+        },
+        {
+          "date": "2026-12-08",
+          "time": "15:30-18:30",
+          "place": "El Programa Hispano Catolico",
+          "addr": "333 SE 223rd Ave #100, Gresham, OR 97030"
+        },
+        {
+          "date": "2026-12-09",
+          "time": "09:00-12:00",
+          "place": "Behavioral Health Resource Center (dental cleanings too)",
+          "addr": "333 SW Park Ave, Portland, OR 97205"
+        },
+        {
+          "date": "2026-12-10",
+          "time": "13:30-15:30",
+          "place": "Rosewood Initiative",
+          "addr": "14127 SE Stark St, Portland, OR 97233"
+        },
+        {
+          "date": "2026-12-14",
+          "time": "11:00-14:00",
+          "place": "PDX Saints Love",
+          "addr": "247 SE 82nd Ave, Portland, OR 97215"
+        },
+        {
+          "date": "2026-12-14",
+          "time": "15:30-18:30",
+          "place": "TPI Clark Center",
+          "addr": "1431 SE Martin Luther King Jr Blvd, Portland, OR 97214"
+        },
+        {
+          "date": "2026-12-15",
+          "time": "11:00-14:00",
+          "place": "Bybee Lakes Hope Center",
+          "addr": "14355 N Bybee Lake Ct, Portland, OR 97203"
+        },
+        {
+          "date": "2026-12-15",
+          "time": "15:30-18:30",
+          "place": "Kenton",
+          "addr": "2250 N Columbia Blvd, Portland, OR 97217"
+        },
+        {
+          "date": "2026-12-16",
+          "time": "09:00-12:00",
+          "place": "SnowCap Family Services (dental cleanings too)",
+          "addr": "17805 SE Stark St, Portland, OR 97233"
+        },
+        {
+          "date": "2026-12-16",
+          "time": "13:30-16:30",
+          "place": "TPI Mt. Scott (dental cleanings too)",
+          "addr": "7916 SE Foster Rd, Portland, OR 97206"
+        },
+        {
+          "date": "2026-12-17",
+          "time": "09:00-16:00",
+          "place": "Rose Haven",
+          "addr": "1740 NW Glisan St, Portland, OR 97209"
+        },
+        {
+          "date": "2026-12-22",
+          "time": "11:00-14:00",
+          "place": "Beacon - Impact NW",
+          "addr": "7600 NE Glisan St, Portland, OR 97213"
+        },
+        {
+          "date": "2026-12-22",
+          "time": "15:30-18:30",
+          "place": "El Programa Hispano Catolico",
+          "addr": "333 SE 223rd Ave #100, Gresham, OR 97030"
+        },
+        {
+          "date": "2026-12-23",
+          "time": "09:00-12:00",
+          "place": "Behavioral Health Resource Center (dental cleanings too)",
+          "addr": "333 SW Park Ave, Portland, OR 97205"
+        },
+        {
+          "date": "2026-12-23",
+          "time": "13:30-16:30",
+          "place": "TPI Willamette (dental cleanings too)",
+          "addr": "5120 SE Milwaukie Ave, Portland, OR 97202"
+        },
+        {
+          "date": "2026-12-28",
+          "time": "11:00-14:00",
+          "place": "SnowCap Family Services",
+          "addr": "17805 SE Stark St, Portland, OR 97233"
+        },
+        {
+          "date": "2026-12-29",
+          "time": "11:00-14:00",
+          "place": "Bybee Lakes Hope Center",
+          "addr": "14355 N Bybee Lake Ct, Portland, OR 97203"
         }
       ],
-      "hoursText": "Stops change by date. Later dates are on the calendar on their website.",
+      "hoursText": "Stops change by date. The next stops are below; this list updates every week from the county calendar.",
       "phone": "9719403149",
       "url": "healthcenter.multco.us/mobile-clinic",
       "noId": false

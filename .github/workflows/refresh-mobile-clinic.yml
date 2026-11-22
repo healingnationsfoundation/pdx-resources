@@ -1,0 +1,44 @@
+name: Refresh mobile clinic stops
+
+# Every Sunday and Wednesday morning (Portland time), read the county's mobile
+# clinic calendar and update the stops in resources.json. Pushing to main
+# republishes the site. If the calendar can't be read, the run fails and
+# changes nothing; GitHub emails a failure notice.
+on:
+  schedule:
+    - cron: '0 14 * * 0'   # Sunday 6-7am Pacific
+    - cron: '0 14 * * 3'   # Wednesday 6-7am Pacific, catches mid-week changes
+  workflow_dispatch:        # "Run workflow" button on the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-mobile-clinic
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Read the county calendar
+        run: node scripts/refresh-mobile-clinic.mjs
+
+      - name: Publish if the stops changed
+        run: |
+          if git diff --quiet -- resources.json; then
+            echo "No change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add resources.json
+          git commit -m "Mobile clinic stops from the county calendar ($(TZ=America/Los_Angeles date +%Y-%m-%d))"
+          git push
