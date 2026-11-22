@@ -62,7 +62,7 @@ A QR code or link can open straight to a category, or to what's open right now: 
 
 ## Verified
 
-All 53 resources verified active as of November 21, 2026.
+All 54 resources verified active as of November 21, 2026.
 
 ## Contributing
 

@@ -331,19 +331,21 @@ function parseSlot(slot) {
   return [o, c];
 }
 
+// A day can hold several windows separated by commas: "06:45-07:45,13:00-16:00".
+function slotsFor(r, day) {
+  const v = r.hours[day];
+  return v ? v.split(',').map(s => s.trim()).filter(Boolean).map(parseSlot) : [];
+}
+
 function isOpenNow(r, now = new Date()) {
   if (!r.hours) return null;
   const d = now.getDay();
   const mins = now.getHours()*60 + now.getMinutes();
-  const today = r.hours[DAYS[d]];
-  if (today) {
-    const [o, c] = parseSlot(today);
+  for (const [o, c] of slotsFor(r, DAYS[d])) {
     if (c > o ? (mins >= o && mins < c) : mins >= o) return true;
   }
   // Still inside last night's slot that runs past midnight?
-  const yesterday = r.hours[DAYS[(d + 6) % 7]];
-  if (yesterday) {
-    const [o, c] = parseSlot(yesterday);
+  for (const [o, c] of slotsFor(r, DAYS[(d + 6) % 7])) {
     if (c <= o && mins < c) return true;
   }
   return false;

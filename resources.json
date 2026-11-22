@@ -51,7 +51,17 @@
       "detail": "Fastest path to income. Start earning within days of orientation.",
       "highlight": "NO ID REQUIRED",
       "addr": "281 W Burnside St, Portland, OR 97201",
-      "hoursText": "Orientation: Wed & Fri at 2:15pm",
+      "hours": {
+        "mon": "08:30-12:00",
+        "tue": null,
+        "wed": "08:00-14:00",
+        "thu": "08:30-12:00",
+        "fri": "08:30-14:00",
+        "sat": "08:30-12:00",
+        "sun": null
+      },
+      "hoursText": "Office: Mon, Thu, Sat 8:30am-noon; Wed 8am-2pm; Fri 8:30am-2pm. New vendor orientation Wed & Fri at 2:15pm.",
+      "phone": "5032285657",
       "url": "streetroots.org/vendors",
       "noId": true
     },
@@ -175,8 +185,9 @@
       ],
       "desc": "Career mapping, resume help, interview prep, job leads. Employer presentations every Wednesday 10-11am. Free computers, copiers, fax, phone.",
       "detail": "Placed 551 people in jobs in 2024. Ask any CCC case manager for referral.",
-      "addr": "Old Town Chinatown, Portland, OR",
-      "hoursText": "Mon, Tue, Thu. See centralcityconcern.org for hours.",
+      "addr": "2 NW 2nd Ave, Portland, OR 97209",
+      "hoursText": "Mon-Fri 8am-4:30pm, by referral. CCC clients: ask your case manager. Others: call (503) 226-7387.",
+      "phone": "5032267387",
       "url": "centralcityconcern.org/jobs-location/employment-access-center",
       "noId": false
     },
@@ -318,8 +329,8 @@
       ],
       "desc": "Free drop-in clinics to replace birth certificates (all 50 states), driver's licenses, and ID cards. Paul Susi pays the fees himself.",
       "detail": "Without an ID, most employment programs are out of reach. Get your ID first, everything else gets easier.",
-      "highlight": "Free. No appointment needed for clinics.",
-      "hoursText": "Email: pdx.id.assistance@protonmail.com",
+      "highlight": "Paused as of Nov 3, 2026. Check the website for new dates.",
+      "hoursText": "Paused. New dates and locations will be posted on the website.",
       "url": "paulsusi.wordpress.com/pdx-id-assistance",
       "noId": true
     },
@@ -330,8 +341,8 @@
         "id"
       ],
       "desc": "Oregon law waives the $44.50 state ID card fee for people experiencing homelessness. Get a Declaration of Homelessness form first.",
-      "detail": "Go to Transition Projects (650 NE Irving St) to get the Declaration form, then take it to the DMV.",
-      "addr": "650 NE Irving St, Portland, OR",
+      "detail": "Go to Transition Projects (650 NW Irving St) to get the Declaration form, then take it to the DMV.",
+      "addr": "650 NW Irving St, Portland, OR",
       "hoursText": "Get form from Transition Projects, then visit any DMV",
       "noId": true
     },
@@ -342,7 +353,16 @@
         "more"
       ],
       "desc": "Free wireless phone service through Access Wireless if you receive Medicaid, SNAP, TANF, or SSI. One phone per household.",
-      "hoursText": "Call 1-800-848-4442 or visit lifeline.oregon.gov",
+      "hours": {
+        "mon": "09:00-16:00",
+        "tue": "09:00-16:00",
+        "wed": "09:00-16:00",
+        "thu": "09:00-16:00",
+        "fri": "09:00-16:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Call 1-800-848-4442, Mon-Fri 9am-4pm",
       "phone": "18008484442",
       "noId": false
     },
@@ -387,13 +407,14 @@
       "cat": [
         "food",
         "shelter",
+        "hygiene",
         "more"
       ],
       "desc": "200,000+ meals per year. Clothing, hygiene, showers. 100-bed shelter nightly. Search and Rescue van visits camps 5 nights per week.",
-      "detail": "FREE legal services for criminal record expungement. A cleared record opens doors to jobs, housing, and education.",
+      "detail": "FREE legal services for criminal record expungement. Mobile showers: Wed 9am-12:30pm at the mission; Mon 10am-1:30pm at 1302 SE Ankeny St; Sat 11am-2pm at 9715 SE Powell Blvd. Clothing Wed-Fri 4pm.",
       "highlight": "FREE criminal record expungement services",
       "addr": "15 NW 3rd Ave, Portland, OR",
-      "hoursText": "To-go meals Wed-Fri 2pm & 8pm, Sat 11am. No meals Sun-Tue.",
+      "hoursText": "To-go meals Wed-Fri 2pm & 8pm, Sat 11am. Showers Wed 9am-12:30pm here. No meals Sun-Tue.",
       "url": "ugmportland.org",
       "noId": true
     },
@@ -455,8 +476,18 @@
       ],
       "desc": "Shelter plus employment navigation plus mail receipt services. Declaration of Homelessness forms for free DMV ID.",
       "detail": "One of Portland's largest homeless services providers. Multiple shelter locations citywide. Rent Well program.",
-      "addr": "650 NE Irving St, Portland, OR",
-      "hoursText": "Call 211 for intake",
+      "addr": "650 NW Irving St, Portland, OR 97209",
+      "hours": {
+        "mon": "08:30-15:30",
+        "tue": "08:30-15:30",
+        "wed": "08:30-15:30",
+        "thu": "08:30-15:30",
+        "fri": "08:30-15:30",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Resource Center Mon-Fri 8:30am-3:30pm. Mail Mon-Fri 8:30-10:30am and 12:30-3:30pm. Shelter referrals Mon-Fri 8:30-9:30am.",
+      "phone": "5032804700",
       "url": "tprojects.org",
       "noId": false
     },
@@ -469,7 +500,19 @@
         "recovery"
       ],
       "desc": "Shelter, meals, mail services, addiction recovery programs. Crisis care and resource referrals since 1949.",
-      "hoursText": "Visit portlandrescuemission.org",
+      "detail": "Burnside Shelter offers free, 24/7 drop-in emergency services, including restrooms and two meals a day. Overnight shelter is for men.",
+      "addr": "111 W Burnside St, Portland, OR 97209",
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      },
+      "hoursText": "Burnside Shelter drop-in: open 24/7. Two meals a day; ask for meal times.",
+      "phone": "5039067690",
       "url": "portlandrescuemission.org",
       "noId": false
     },
@@ -481,8 +524,19 @@
         "hygiene"
       ],
       "desc": "Housing navigation, showers, food, and day center. Outreach teams meet you where you are. Direct pathway from streets to housing.",
-      "detail": "One of Portland's most effective housing-focused organizations. Great first step toward stable housing.",
-      "hoursText": "Visit joinpdx.org or call for intake",
+      "detail": "Day Space for people experiencing homelessness. Housing services are not accessed through walk-ins at the Day Space; ask about referrals.",
+      "addr": "1435 NE 81st Ave, Portland, OR 97213",
+      "hours": {
+        "mon": "09:00-17:00",
+        "tue": "10:00-16:00",
+        "wed": "09:00-17:00",
+        "thu": "10:00-16:00",
+        "fri": "09:00-17:00",
+        "sat": "09:00-17:00",
+        "sun": "09:00-17:00"
+      },
+      "hoursText": "Day Space: Mon, Wed, Fri 9am-5pm; Tue, Thu 10am-4pm; Sat-Sun 9am-5pm",
+      "phone": "5032322031",
       "url": "joinpdx.org",
       "noId": false
     },
@@ -543,8 +597,17 @@
       ],
       "desc": "Drop-in day center with shower, laundry, shelter, and bridge housing. Mental health and substance use support.",
       "detail": "Multnomah County run. Bridge housing while you stabilize. No appointment needed for day center.",
-      "addr": "Downtown Portland",
-      "hoursText": "Walk-in. No appointment needed.",
+      "addr": "333 SW Park Ave, Portland, OR 97205",
+      "hours": {
+        "mon": "08:00-20:00",
+        "tue": "08:00-20:00",
+        "wed": "08:00-20:00",
+        "thu": "08:00-20:00",
+        "fri": "08:00-20:00",
+        "sat": "08:00-20:00",
+        "sun": "08:00-20:00"
+      },
+      "hoursText": "Day center open daily 8am-8pm. Closed 11am-3pm on the 4th Friday of each month.",
       "noId": true
     },
     {
@@ -596,6 +659,15 @@
       "detail": "Admission depends on need and open beds, not first come, first served. If you aren't admitted, ask about a standby spot or an afternoon admission. Outpatient help Mon-Fri 1-4pm, walk-in or by appointment. Bring a state ID or driver's license, and your insurance card if you have one.",
       "highlight": "Walk in by 7:30am, Monday to Friday",
       "addr": "1535 N Williams Ave, Portland, OR 97232",
+      "hours": {
+        "mon": "06:45-07:45,13:00-16:00",
+        "tue": "06:45-07:45,13:00-16:00",
+        "wed": "06:45-07:45,13:00-16:00",
+        "thu": "06:45-07:45,13:00-16:00",
+        "fri": "06:45-07:45,13:00-16:00",
+        "sat": null,
+        "sun": null
+      },
       "hoursText": "Admission triage Mon-Fri 6:45-7:45am. Outpatient Mon-Fri 1-4pm. Closed July 4, Thanksgiving, and Christmas.",
       "phone": "5032382067",
       "url": "centralcityconcern.org/recovery-location/hooper-detoxification-stabilization-center",
@@ -717,7 +789,16 @@
       ],
       "desc": "Free health coverage for people with low income. Most clinics in this guide take it.",
       "detail": "Apply online at ONE.Oregon.gov, by phone, at an ODHS office, or with a free certified helper. You don't need a permanent address; give a phone number, email, or a temporary mailing address.",
-      "hoursText": "Call ONE Customer Service at 1-800-699-9075",
+      "hours": {
+        "mon": "07:00-18:00",
+        "tue": "07:00-18:00",
+        "wed": "07:00-18:00",
+        "thu": "07:00-18:00",
+        "fri": "07:00-18:00",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Call ONE Customer Service at 1-800-699-9075, Mon-Fri 7am-6pm",
       "phone": "18006999075",
       "url": "one.oregon.gov",
       "urlLabel": "Apply online",
@@ -809,6 +890,15 @@
       "desc": "A guided 120-day recovery practice on your phone: a daily check-in, short lessons, a journal, and a toolkit for cravings and hard nights. Crisis help is one tap away.",
       "detail": "Free on the App Store for iPhone and iPad, with no ads. Android is coming soon. Your journal never leaves your phone.",
       "highlight": "Free. Try it whenever you are ready.",
+      "hours": {
+        "mon": "00:00-24:00",
+        "tue": "00:00-24:00",
+        "wed": "00:00-24:00",
+        "thu": "00:00-24:00",
+        "fri": "00:00-24:00",
+        "sat": "00:00-24:00",
+        "sun": "00:00-24:00"
+      },
       "hoursText": "Any time, on your phone",
       "url": "apps.apple.com/app/id6797066668",
       "urlLabel": "Get the app (iPhone)",
@@ -836,6 +926,31 @@
         "sat": "00:00-24:00",
         "sun": "00:00-24:00"
       }
+    },
+    {
+      "name": "VA Community Resource and Referral Center",
+      "sub": "Walk-in help for veterans",
+      "cat": [
+        "shelter",
+        "health",
+        "work"
+      ],
+      "desc": "Walk-in center for veterans and their families who are homeless or at risk: housing, health care, and benefits help in one place.",
+      "detail": "Moved in September 2026 from SW 1st Ave. No emergency services on site. Closed federal holidays.",
+      "addr": "1919 SE Belmont St, Portland, OR 97214",
+      "hours": {
+        "mon": "08:00-14:30",
+        "tue": "08:00-14:30",
+        "wed": "08:00-14:30",
+        "thu": "10:00-14:30",
+        "fri": "08:00-14:30",
+        "sat": null,
+        "sun": null
+      },
+      "hoursText": "Walk in Mon, Tue, Wed, Fri 8am-2:30pm; Thu 10am-2:30pm",
+      "phone": "5038081256",
+      "url": "va.gov/portland-health-care/locations/portland-va-clinic",
+      "noId": false
     },
     {
       "name": "VA Portland",
