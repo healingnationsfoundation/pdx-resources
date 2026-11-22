@@ -337,8 +337,17 @@ function slotsFor(r, day) {
   return v ? v.split(',').map(s => s.trim()).filter(Boolean).map(parseSlot) : [];
 }
 
+// Holiday closures an organization has published: "closed": ["2026-11-26", ...].
+function localDate(now) {
+  return `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+}
+function isClosedToday(r, now = new Date()) {
+  return Array.isArray(r.closed) && r.closed.includes(localDate(now));
+}
+
 function isOpenNow(r, now = new Date()) {
   if (!r.hours) return null;
+  if (isClosedToday(r, now)) return false;
   const d = now.getDay();
   const mins = now.getHours()*60 + now.getMinutes();
   for (const [o, c] of slotsFor(r, DAYS[d])) {
@@ -432,7 +441,8 @@ function renderCards() {
   el.innerHTML = filtered.map(r => {
     const open = isOpenNow(r, now);
     let tags = '';
-    if (open === true) tags += '<span class="tag tag-open">Open Now</span>';
+    if (isClosedToday(r, now)) tags += '<span class="tag tag-closed">Closed today (holiday)</span>';
+    else if (open === true) tags += '<span class="tag tag-open">Open Now</span>';
     else if (open === false) tags += '<span class="tag tag-closed">Closed</span>';
     if (r.noId) tags += '<span class="tag tag-noid">No ID Needed</span>';
 

@@ -668,6 +668,13 @@
         "sat": null,
         "sun": null
       },
+      "closed": [
+        "2026-11-26",
+        "2026-12-25",
+        "2027-07-04",
+        "2027-11-25",
+        "2027-12-25"
+      ],
       "hoursText": "Admission triage Mon-Fri 6:45-7:45am. Outpatient Mon-Fri 1-4pm. Closed July 4, Thanksgiving, and Christmas.",
       "phone": "5032382067",
       "url": "centralcityconcern.org/recovery-location/hooper-detoxification-stabilization-center",
@@ -936,7 +943,7 @@
         "work"
       ],
       "desc": "Walk-in center for veterans and their families who are homeless or at risk: housing, health care, and benefits help in one place.",
-      "detail": "Moved in September 2026 from SW 1st Ave. No emergency services on site. Closed federal holidays.",
+      "detail": "Moved in September 2026 from SW 1st Ave. No emergency services on site.",
       "addr": "1919 SE Belmont St, Portland, OR 97214",
       "hours": {
         "mon": "08:00-14:30",
