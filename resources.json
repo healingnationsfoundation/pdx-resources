@@ -2269,24 +2269,6 @@
       "highlight": "Walk-ins welcome. Pay what you can.",
       "stops": [
         {
-          "date": "2026-11-23",
-          "time": "11:00-14:00",
-          "place": "SnowCap Family Services",
-          "addr": "17805 SE Stark St, Portland, OR 97233"
-        },
-        {
-          "date": "2026-11-24",
-          "time": "11:00-14:00",
-          "place": "Portland Community College SE Campus (dental cleanings too)",
-          "addr": "2305 SE 82nd Ave, Portland, OR 97216"
-        },
-        {
-          "date": "2026-11-24",
-          "time": "15:30-18:30",
-          "place": "El Programa Hispano Catolico",
-          "addr": "333 SE 223rd Ave #100, Gresham, OR 97030"
-        },
-        {
           "date": "2026-11-25",
           "time": "09:00-12:00",
           "place": "Behavioral Health Resource Center",
@@ -2309,12 +2291,6 @@
           "time": "15:30-18:30",
           "place": "Cathedral Village",
           "addr": "6520 N Salem Ave, Portland, OR 97203"
-        },
-        {
-          "date": "2026-12-02",
-          "time": "09:00-12:00",
-          "place": "TPI Naito Village",
-          "addr": "2185 SW Naito Pkwy, Portland, OR 97201"
         },
         {
           "date": "2026-12-02",
@@ -2411,12 +2387,6 @@
           "time": "09:00-12:00",
           "place": "Behavioral Health Resource Center (dental cleanings too)",
           "addr": "333 SW Park Ave, Portland, OR 97205"
-        },
-        {
-          "date": "2026-12-23",
-          "time": "13:30-16:30",
-          "place": "TPI Willamette (dental cleanings too)",
-          "addr": "5120 SE Milwaukie Ave, Portland, OR 97202"
         },
         {
           "date": "2026-12-28",
