@@ -350,6 +350,22 @@ p.status-msg:empty { display: none; }
   font-family: inherit; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
 .toggle-chip .ic { width: 18px; height: 18px; color: var(--orange); }
 .toggle-chip[aria-pressed="true"] { background: var(--orange-bg); border-color: var(--orange); }
+.soon { margin: 16px 0 4px; }
+.soon[hidden] { display: none; }
+.soon-list { display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg2); overflow: hidden; }
+.soon-row { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 8px 14px; border: 0; background: transparent;
+  color: var(--fg); font-family: inherit; text-align: left; cursor: pointer; width: 100%; -webkit-tap-highlight-color: transparent; }
+.soon-row + .soon-row { border-top: 1px solid var(--border); }
+.soon-row:active { background: var(--accent-light); }
+.soon-row > .ic { width: 22px; height: 22px; color: var(--accent); flex-shrink: 0; }
+.soon-row .s-main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.soon-row .s-name { font-size: 15px; font-weight: 700; line-height: 1.25; }
+.soon-row .s-sub { font-size: 13px; color: var(--fg2); line-height: 1.3; }
+.soon-row .s-when { font-size: 14px; font-weight: 700; color: var(--green); white-space: nowrap; text-align: right; }
+.soon-row .s-when small { display: block; font-size: 12px; font-weight: 600; color: var(--fg2); }
+.empty .soon-list { text-align: left; margin: 6px 0 14px; }
+.empty .soon-title { font-size: 14px; font-weight: 700; margin: 4px 0 0; text-align: left; }
+.tag-opening { background: var(--bg2); color: var(--green); box-shadow: inset 0 0 0 1px var(--green); }
 .install { margin: 14px auto 0; }
 .install[hidden] { display: none; }
 @media (min-width: 600px) { .tiles { grid-template-columns: repeat(3, 1fr); } }
@@ -388,6 +404,10 @@ p.status-msg:empty { display: none; }
   <button type="button" class="near-now" id="near-now"><svg class="ic" aria-hidden="true"><use href="#i-locate"/></svg>What's open near me</button>
   <h2 class="section-label" id="needs-label">What do you need?</h2>
   <div class="tiles" id="tiles"></div>
+  <div class="soon" id="soon" hidden>
+    <h2 class="section-label">Opening soon</h2>
+    <div class="soon-list" id="soon-list"></div>
+  </div>
   <div class="chips" id="chips"></div>
   <div class="search-wrap">
     <span class="search-icon"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-search"/></svg></span>
@@ -660,6 +680,8 @@ function statusBadge(r, now) {
   }
   if (open === false) {
     const n = nextOpening(r, now);
+    const m = now.getHours()*60 + now.getMinutes();
+    if (n && n.days === 0 && n.at - m <= 60) return { cls: 'tag-opening', text: `Opens ${inMins(n.at - m)} · ${fmtTime(n.at)}` };
     if (n) return { cls: 'tag-closed', text: `Closed · opens ${dayWord(n.days, now)}${fmtTime(n.at)}` };
     const s = upcomingStops(r, now)[0];
     if (s) {
@@ -718,6 +740,8 @@ function miles(a, b) {
   return 2 * R * Math.asin(Math.sqrt(h));
 }
 function distOf(r) { return here && Array.isArray(r.geo) ? miles(here, r.geo) : null; }
+// About 20 minutes a mile, plus a little for streets not being a straight line.
+function walkMins(m) { return Math.max(1, Math.round(m * 1.25 * 20)); }
 function fmtMiles(m) { return m < 0.1 ? 'under 0.1 mi' : m < 10 ? `${m.toFixed(1)} mi` : `${Math.round(m)} mi`; }
 
 // Phone shown on the button, so it can be written down or dialed from another phone.
@@ -764,6 +788,31 @@ function esc(v) {
   return String(v ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 }
 
+// Places that open within the next few hours today, soonest first.
+function openingSoon(list, now, within = 180) {
+  const m = now.getHours() * 60 + now.getMinutes();
+  return list.filter(r => isOpenNow(r, now) === false)
+    .map(r => [r, nextOpening(r, now)])
+    .filter(([, n]) => n && n.days === 0 && n.at - m <= within)
+    .sort((a, b) => a[1].at - b[1].at);
+}
+function inMins(d) { return d < 60 ? `in ${d} min` : `in ${Math.floor(d / 60)} hr${d % 60 ? ` ${d % 60} min` : ''}`; }
+// One tappable row: what it is, where, and when it opens.
+function soonRow(r, n, now, cat) {
+  const m = now.getHours() * 60 + now.getMinutes();
+  const c = cat || r.cat.find(id => ESSENTIALS.some(e => e[0] === id)) || r.cat[0];
+  const dist = nearOn && here ? distOf(r) : null;
+  const where = dist !== null ? fmtMiles(dist) : (r.addr || '').split(',')[0];
+  return `<button type="button" class="soon-row" data-place="${slug(r.name)}" data-cat="${esc(c)}">${icon(CATEGORY_ICON[c] || 'grid')}` +
+    `<span class="s-main"><span class="s-name">${esc(r.name)}</span>${where ? `<span class="s-sub">${esc(where)}</span>` : ''}</span>` +
+    `<span class="s-when">${fmtTime(n.at)}<small>${inMins(n.at - m)}</small></span></button>`;
+}
+// Open the list a row belongs to, with that place shown and its details open.
+function goPlace(slugName, cat) {
+  if (view === 'list') { openOnly = false; laterToday = false; syncOpenButton(); renderFilters(); renderCards(); saveView(); }
+  else openList(cat);
+  pendingPlace = slugName; showPlace();
+}
 function tileStatus(id, now) {
   const list = id === 'all' ? RESOURCES : RESOURCES.filter(r => r.cat.includes(id));
   let open = 0, next = null;
@@ -788,6 +837,10 @@ function renderHome() {
     const n = id === 'all' ? RESOURCES.length : RESOURCES.filter(r => r.cat.includes(id)).length;
     return `<button type="button" class="chip" data-cat="${id}">${icon(CATEGORY_ICON[id])}${esc(id === 'all' ? 'Everything' : label(id))} <span class="n">${n}</span></button>`;
   }).join('');
+  const ess = RESOURCES.filter(r => r.cat.some(id => ESSENTIALS.some(e => e[0] === id)));
+  const soon = openingSoon(ess, now).slice(0, 4);
+  document.getElementById('soon').hidden = !soon.length;
+  document.getElementById('soon-list').innerHTML = soon.map(([r, n]) => soonRow(r, n, now)).join('');
   const openN = RESOURCES.filter(r => isOpenNow(r, now) === true).length;
   const when = now.toLocaleString('en-US', { weekday: 'long', hour: 'numeric', minute: '2-digit' });
   document.getElementById('now-line').innerHTML = `${icon('clock', 'ic ic-sm')}<span>${esc(when)} · <strong>${openN} open now</strong></span>`;
@@ -841,6 +894,7 @@ function applyView() {
 document.getElementById('tiles').addEventListener('click', e => { const b = e.target.closest('[data-cat]'); if (b) openList(b.dataset.cat); });
 document.getElementById('chips').addEventListener('click', e => { const b = e.target.closest('[data-cat]'); if (b) openList(b.dataset.cat); });
 document.getElementById('back').addEventListener('click', goHome);
+document.getElementById('soon-list').addEventListener('click', e => { const b = e.target.closest('.soon-row'); if (b) goPlace(b.dataset.place, b.dataset.cat); });
 document.getElementById('home-search').addEventListener('input', e => {
   const q = e.target.value;
   if (!q.trim()) return;
@@ -917,8 +971,10 @@ function renderCards() {
   }
 
   if (!filtered.length) {
+    const next = openOnly ? openingSoon(matching.filter(r => !noIdOnly || r.noId === true), now, 720).slice(0, 3) : [];
     el.innerHTML = (openOnly || laterToday) && matching.length
-      ? `<div class="empty">${icon('clock')}<p>Nothing here shows as open ${openOnly ? 'right now' : 'for the rest of today'}.${noHours ? ' Some places have no set hours, so call ahead.' : ''}<br>Need help now? Call <a href="tel:211">2-1-1</a>.</p><button type="button" class="btn-show-all" id="show-all">Show everything${where}</button></div>`
+      ? `<div class="empty">${icon('clock')}<p>Nothing here shows as open ${openOnly ? 'right now' : 'for the rest of today'}.${noHours ? ' Some places have no set hours, so call ahead.' : ''}<br>Need help now? Call <a href="tel:211">2-1-1</a>.</p>` +
+        (next.length ? `<p class="soon-title">Opens next</p><div class="soon-list">${next.map(([r, n]) => soonRow(r, n, now, activeFilter !== 'all' ? activeFilter : null)).join('')}</div>` : '') + `<button type="button" class="btn-show-all" id="show-all">Show everything${where}</button></div>`
       : `<div class="empty">${icon('search')}<p>Nothing matches${q ? ` "${esc(searchQuery)}"` : ''}${activeFilter !== 'all' ? ' in this category' : ''}. Try a simple word:</p>` +
         `<div class="suggest">${['bed', 'food', 'shower', 'blanket', 'doctor', 'detox', 'ID', 'job'].map(w => `<button type="button" class="btn-show-all" data-q="${w}">${w}</button>`).join('')}</div>` +
         `<p>Or call <a href="tel:211">2-1-1</a> and ask.</p></div>`;
@@ -953,7 +1009,7 @@ function renderCards() {
       ${r.highlight?`<div class="card-highlight">${icon('check')}${esc(r.highlight)}</div>`:''}
       <div class="card-detail">${icon('clock', 'ic ic-sm')}${esc(r.hoursText)}</div>
       ${stopsHtml(r, now)}
-      ${r.addr?`<div class="card-detail">${icon('pin', 'ic ic-sm')}${dist !== null ? `<span class="dist">${fmtMiles(dist)}</span> · ` : ''}${esc(r.addr)}</div>`:''}
+      ${r.addr?`<div class="card-detail">${icon('pin', 'ic ic-sm')}${dist !== null ? `<span class="dist">${fmtMiles(dist)}${dist < 3 ? ` · ${walkMins(dist)} min walk` : ''}</span> · ` : ''}${esc(r.addr)}</div>`:''}
       ${actions?`<div class="card-actions">${actions}</div>`:''}
       <details class="more"${shared ? ' open' : ''}>
         <summary><span class="lbl-open">More details</span><span class="lbl-close">Less</span></summary>
@@ -1014,6 +1070,8 @@ document.getElementById('install').addEventListener('click', () => {
 document.getElementById('cards').addEventListener('click', e => {
   const b = e.target.closest('.share-btn');
   if (b) sharePlace(b);
+  const row = e.target.closest('.soon-row');
+  if (row) goPlace(row.dataset.place, row.dataset.cat);
 });
 // One time filter at a time: 'now', 'today', or null for everything.
 function setTime(which) {
