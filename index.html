@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1B4F72">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="PDX Help">
 <title>Portland Resource Guide</title>
 <meta name="description" content="Free food, shelter, health care, showers, work, ID help, and recovery services in Portland, with what is open right now. From Healing Nations Foundation.">
 <style>
@@ -336,6 +341,17 @@ p.status-msg:empty { display: none; }
 .weather-alert .ic { width: 22px; height: 22px; margin-top: 1px; }
 .offline-note .ic { color: var(--orange); margin-right: 4px; }
 .to-top { display: inline-flex; align-items: center; gap: 6px; }
+.near-now { width: 100%; min-height: 52px; margin: 12px 0 2px; border: 0; border-radius: var(--radius); cursor: pointer;
+  background: var(--accent); color: var(--accent-fg); font-family: inherit; font-size: 16px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; gap: 10px; -webkit-tap-highlight-color: transparent; }
+.near-now .ic { width: 22px; height: 22px; }
+.filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 8px; }
+.toggle-chip { min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid var(--border); background: var(--bg2); color: var(--fg);
+  font-family: inherit; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.toggle-chip .ic { width: 18px; height: 18px; color: var(--orange); }
+.toggle-chip[aria-pressed="true"] { background: var(--orange-bg); border-color: var(--orange); }
+.install { margin: 14px auto 0; }
+.install[hidden] { display: none; }
 @media (min-width: 600px) { .tiles { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 900px) {
   #home, #list, .crisis, .weather-alert, .notice, .offline-note, .report-box, .footer { max-width: 1040px; margin-inline: auto; }
@@ -369,6 +385,7 @@ p.status-msg:empty { display: none; }
 <section id="home">
   <div class="now-line" id="now-line" aria-live="polite"></div>
   <div class="notice" id="holiday" hidden></div>
+  <button type="button" class="near-now" id="near-now"><svg class="ic" aria-hidden="true"><use href="#i-locate"/></svg>What's open near me</button>
   <h2 class="section-label" id="needs-label">What do you need?</h2>
   <div class="tiles" id="tiles"></div>
   <div class="chips" id="chips"></div>
@@ -376,6 +393,7 @@ p.status-msg:empty { display: none; }
     <span class="search-icon"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-search"/></svg></span>
     <input type="search" id="home-search" placeholder="Search: bed, lunch, blanket, doctor..." autocomplete="off" aria-label="Search all places">
   </div>
+  <button type="button" class="chip install" id="install" hidden><svg class="ic" aria-hidden="true"><use href="#i-up"/></svg>Add to home screen</button>
 </section>
 
 <section id="list" hidden>
@@ -390,6 +408,9 @@ p.status-msg:empty { display: none; }
       <button type="button" id="t-today" aria-pressed="false">Later today</button>
     </div>
     <button type="button" class="icon-btn" id="near" aria-pressed="false" aria-label="Nearest first" title="Nearest first (your location stays on your phone)"><svg class="ic" aria-hidden="true"><use href="#i-locate"/></svg></button>
+  </div>
+  <div class="filter-row">
+    <button type="button" class="toggle-chip" id="noid" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-idcard"/></svg>No ID needed</button>
   </div>
   <p class="status-msg" id="open-hint"></p>
   <div class="search-wrap">
@@ -503,6 +524,8 @@ function loadAlerts() {
 }
 // "Later today": open now, or opening later today (evening shelters, night meals, today's clinic stops).
 let laterToday = false;
+// Only places marked noId (no ID needed). Kept across lists: if you have no ID, it applies everywhere.
+let noIdOnly = false;
 function isLaterToday(r, now) {
   const open = isOpenNow(r, now);
   if (open === true) return true;
@@ -777,7 +800,8 @@ function renderHome() {
 function renderFilters() {
   renderHome();
   const c = CATEGORIES.find(x => x.id === activeFilter) || CATEGORIES[0];
-  document.getElementById('list-title').innerHTML = `${icon(CATEGORY_ICON[c.id] || 'grid')}<span>${esc(c.id === 'all' ? (searchQuery ? 'Search' : 'Everything') : c.label)}</span>`;
+  const allTitle = searchQuery ? 'Search' : openOnly && nearOn && here ? 'Open near you' : openOnly ? 'Open now' : 'Everything';
+  document.getElementById('list-title').innerHTML = `${icon(c.id === 'all' && nearOn && here ? 'locate' : CATEGORY_ICON[c.id] || 'grid')}<span>${esc(c.id === 'all' ? allTitle : c.label)}</span>`;
 }
 function showView(v) {
   view = v;
@@ -805,7 +829,7 @@ function goHome() {
 }
 function listHash() {
   const t = openOnly ? 'open' : laterToday ? 'today' : '';
-  return [activeFilter, t].filter(Boolean).join('+');
+  return [activeFilter, t, noIdOnly ? 'noid' : ''].filter(Boolean).join('+');
 }
 addEventListener('popstate', () => { loadView(); applyView(); });
 function applyView() {
@@ -852,7 +876,8 @@ function loadView() {
   const parts = decodeURIComponent(location.hash.slice(1)).split('+');
   openOnly = parts.includes('open');
   laterToday = !openOnly && parts.includes('today');
-  const cat = parts.find(p => p && p !== 'open' && p !== 'today');
+  noIdOnly = parts.includes('noid');
+  const cat = parts.find(p => p && p !== 'open' && p !== 'today' && p !== 'noid');
   activeFilter = CATEGORIES.some(c => c.id === cat) ? cat : 'all';
 }
 
@@ -867,7 +892,7 @@ function renderCards() {
     return q ? matchesQuery(r, q.trim()) : true;
   });
   const openCount = matching.filter(r => isOpenNow(r, now) === true).length;
-  const noHours = matching.filter(r => isOpenNow(r, now) === null).length;
+  const noHours = matching.filter(r => isOpenNow(r, now) === null && (!noIdOnly || r.noId === true)).length;
   const ranks = new Map(matching.map(r => [r, rank(r, now)]));
   const near = nearOn && here;
   const sorted = matching.map((r, i) => [r, i, near ? distOf(r) : null]).sort((a, b) => {
@@ -879,10 +904,10 @@ function renderCards() {
     const [x, y] = [ranks.get(a[0]), ranks.get(b[0])];
     return x[0] - y[0] || x[1] - y[1] || a[1] - b[1];
   }).map(p => p[0]);
-  const filtered = openOnly ? sorted.filter(r => isOpenNow(r, now) === true)
-    : laterToday ? sorted.filter(r => isLaterToday(r, now)) : sorted;
+  const filtered = (openOnly ? sorted.filter(r => isOpenNow(r, now) === true)
+    : laterToday ? sorted.filter(r => isLaterToday(r, now)) : sorted).filter(r => !noIdOnly || r.noId === true);
 
-  const where = `${activeFilter!=='all'?' in '+CATEGORIES.find(c=>c.id===activeFilter).label:''}${q?' matching "'+searchQuery+'"':''}`;
+  const where = `${activeFilter!=='all'?' in '+CATEGORIES.find(c=>c.id===activeFilter).label:''}${q?' matching "'+searchQuery+'"':''}${noIdOnly?', no ID needed':''}`;
   if (openOnly || laterToday) {
     info.textContent = `${filtered.length} ${openOnly ? 'open now' : 'open now or later today'}${where}.` +
       (noHours ? ` ${noHours} more ${noHours!==1?'have':'has'} no set hours: call ahead.` : '');
@@ -951,19 +976,40 @@ function syncOpenButton() {
   document.getElementById('t-now').setAttribute('aria-pressed', openOnly ? 'true' : 'false');
   document.getElementById('t-today').setAttribute('aria-pressed', laterToday ? 'true' : 'false');
   document.getElementById('near').setAttribute('aria-pressed', nearOn && here ? 'true' : 'false');
+  document.getElementById('noid').setAttribute('aria-pressed', noIdOnly ? 'true' : 'false');
   document.getElementById('open-hint').textContent = nearOn && here ? 'Nearest first. Straight-line distance; your location stays on your phone.' : '';
 }
-document.getElementById('near').addEventListener('click', () => {
+function requestNear() {
   const hint = document.getElementById('open-hint');
-  if (nearOn) { nearOn = false; syncOpenButton(); renderCards(); return; }
   if (!navigator.geolocation) { hint.textContent = 'This phone can’t share its location. Try searching a street or area, like "Burnside" or "82nd".'; return; }
   hint.textContent = 'Finding your location…';
   navigator.geolocation.getCurrentPosition(pos => {
     here = [pos.coords.latitude, pos.coords.longitude]; nearOn = true;
-    syncOpenButton(); renderCards();
+    syncOpenButton(); renderFilters(); renderCards();
   }, () => {
     hint.textContent = 'Couldn’t get your location. Turn on location for this site, or search a street or area, like "Burnside" or "82nd".';
   }, { enableHighAccuracy: false, timeout: 15000, maximumAge: 300000 });
+}
+document.getElementById('near').addEventListener('click', () => {
+  if (nearOn) { nearOn = false; syncOpenButton(); renderFilters(); renderCards(); return; }
+  requestNear();
+});
+// Home: everything open right now, closest first.
+document.getElementById('near-now').addEventListener('click', () => {
+  openList('all');
+  setTime('now');
+  if (nearOn && here) { renderFilters(); renderCards(); } else requestNear();
+});
+document.getElementById('noid').addEventListener('click', () => {
+  noIdOnly = !noIdOnly; syncOpenButton(); renderCards(); saveView();
+});
+// Install: Android/desktop Chrome offer it; iPhone users use Share, Add to Home Screen.
+let installEvt = null;
+addEventListener('beforeinstallprompt', e => { e.preventDefault(); installEvt = e; document.getElementById('install').hidden = false; });
+document.getElementById('install').addEventListener('click', () => {
+  if (!installEvt) return;
+  installEvt.prompt();
+  installEvt.userChoice.finally(() => { installEvt = null; document.getElementById('install').hidden = true; });
 });
 document.getElementById('cards').addEventListener('click', e => {
   const b = e.target.closest('.share-btn');
@@ -974,6 +1020,7 @@ function setTime(which) {
   openOnly = which === 'now';
   laterToday = which === 'today';
   syncOpenButton();
+  renderFilters();
   renderCards();
   saveView();
 }
