@@ -3,7 +3,7 @@
 // last saved copy is used, marked with X-PDX-Offline so the page can say so.
 // Only same-origin files are handled; nothing is sent anywhere.
 const CACHE = 'pdx-guide-v1';
-const CORE = ['./', 'index.html', 'resources.json'];
+const CORE = ['./', 'index.html', 'resources.json', 'manifest.json', 'icons/icon-192.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));

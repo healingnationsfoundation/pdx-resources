@@ -4,7 +4,7 @@ Mobile resource finder for Operation Nightwatch guests. Jobs, food, shelter, hea
 
 ## What this is
 
-A single-page web app that helps people experiencing homelessness find services in Portland. No login, no tracking, no data collection. Scan a QR code, tap a category, find what's open right now.
+A single-page web app that helps people experiencing homelessness find services in Portland. No login, no tracking, no data collection (saved places and the text size stay on the phone). Scan a QR code, tap a category, find what's open right now.
 
 ## Deploy
 

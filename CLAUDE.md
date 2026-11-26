@@ -47,7 +47,7 @@ Edit `donations.json`. `kinds` are the "What do you have?" choices: "hot" (prepa
 ## Constraints
 - Must work on old phones with slow connections. No heavy libraries.
 - Should eventually work with JavaScript disabled. Today the app needs JavaScript to render; progressive enhancement is a future goal.
-- No login, no accounts, no tracking, no cookies, no analytics.
+- No login, no accounts, no tracking, no cookies, no analytics. The only things stored are on the phone itself, in localStorage, and never sent: `pdx-saved` (saved place slugs, shown as "Your saved places" on the home screen) and `pdx-text` (larger text, the AA button in the header). Renaming a place changes its slug, so anyone who saved it will lose it from their list.
 - No requests to outside servers (no web fonts, CDNs, or third-party scripts). Use system fonts. Plain links out (maps, phone, websites, the App Store) are fine.
 - All resources must be individually verified before updating.
 - Touch targets minimum 44px.
