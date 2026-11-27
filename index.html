@@ -403,6 +403,10 @@ html.big body { zoom: 1.2; }
   .tag { border: 1px solid #999; }
   .card-print { font-size: 13px; margin-top: 4px; font-weight: 600; }
 }
+@media (max-width: 599px) { .tiles .tile:last-child:nth-child(odd) { grid-column: 1 / -1; min-height: 0; } }
+@media (min-width: 600px) { .tiles .tile:last-child:nth-child(3n+1) { grid-column: 1 / -1; min-height: 0; } }
+.kind-row[hidden], .toggle-chip[hidden] { display: none; }
+.water-near { margin: 0 0 10px; }
 .install { margin: 14px auto 0; }
 .install[hidden] { display: none; }
 @media (min-width: 600px) { .tiles { grid-template-columns: repeat(3, 1fr); } }
@@ -414,7 +418,7 @@ html.big body { zoom: 1.2; }
 </head>
 <body>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-food" viewBox="0 0 24 24"><path d="M7 3v7a2 2 0 0 0 4 0V3M9 3v18"/><path d="M17 21V3c-2 1.2-3 3.4-3 6.5V13h3"/></symbol><symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 19V6M3 15h18v4M21 15v-3a3 3 0 0 0-3-3h-7v6"/><circle cx="7" cy="11.5" r="1.8"/></symbol><symbol id="i-health" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></symbol><symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><path d="M9 3 4 5.5 2.5 10l3 1.2V21h13v-9.8l3-1.2L20 5.5 15 3a3 3 0 0 1-6 0z"/></symbol><symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 12C12 8 9.5 6 5 6c0 4 2.5 6 7 6zM12 10c0-3 2-5 6.5-5 0 3-2 5-6.5 5z"/></symbol><symbol id="i-idcard" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.6-1.4 1.7-2 3-2s2.4.6 3 2M15 10h3M15 13h2"/></symbol><symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></symbol><symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h3.5l2 5-2.5 1.5a11 11 0 0 0 6.5 6.5L16 13.5l5 2V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol><symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></symbol><symbol id="i-back" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol><symbol id="i-locate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol><symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2v20M4.9 7l14.2 10M4.9 17 19.1 7"/><path d="m9 4 3 2 3-2M9 20l3-2 3 2"/></symbol><symbol id="i-offline" viewBox="0 0 24 24"><path d="m3 3 18 18M8.5 16.4a5 5 0 0 1 6.2-.6M5 12.6a10 10 0 0 1 4-2.4M15.5 10.4A10 10 0 0 1 19 12.6M2 8.8a15 15 0 0 1 4.3-2.7M10.5 5.1A15 15 0 0 1 22 8.8M12 20h.01"/></symbol><symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol><symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4.5L6 21z"/></symbol><symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a1 1 0 0 1-1-1v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1h-2"/><rect x="6" y="14" width="12" height="7"/></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol></defs></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-food" viewBox="0 0 24 24"><path d="M7 3v7a2 2 0 0 0 4 0V3M9 3v18"/><path d="M17 21V3c-2 1.2-3 3.4-3 6.5V13h3"/></symbol><symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 19V6M3 15h18v4M21 15v-3a3 3 0 0 0-3-3h-7v6"/><circle cx="7" cy="11.5" r="1.8"/></symbol><symbol id="i-health" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></symbol><symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><path d="M9 3 4 5.5 2.5 10l3 1.2V21h13v-9.8l3-1.2L20 5.5 15 3a3 3 0 0 1-6 0z"/></symbol><symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 12C12 8 9.5 6 5 6c0 4 2.5 6 7 6zM12 10c0-3 2-5 6.5-5 0 3-2 5-6.5 5z"/></symbol><symbol id="i-idcard" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.6-1.4 1.7-2 3-2s2.4.6 3 2M15 10h3M15 13h2"/></symbol><symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></symbol><symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h3.5l2 5-2.5 1.5a11 11 0 0 0 6.5 6.5L16 13.5l5 2V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol><symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></symbol><symbol id="i-back" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol><symbol id="i-locate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol><symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2v20M4.9 7l14.2 10M4.9 17 19.1 7"/><path d="m9 4 3 2 3-2M9 20l3-2 3 2"/></symbol><symbol id="i-offline" viewBox="0 0 24 24"><path d="m3 3 18 18M8.5 16.4a5 5 0 0 1 6.2-.6M5 12.6a10 10 0 0 1 4-2.4M15.5 10.4A10 10 0 0 1 19 12.6M2 8.8a15 15 0 0 1 4.3-2.7M10.5 5.1A15 15 0 0 1 22 8.8M12 20h.01"/></symbol><symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol><symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4.5L6 21z"/></symbol><symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a1 1 0 0 1-1-1v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1h-2"/><rect x="6" y="14" width="12" height="7"/></symbol><symbol id="i-cup" viewBox="0 0 24 24"><path d="M5 4h14l-1.6 15.2a2 2 0 0 1-2 1.8H8.6a2 2 0 0 1-2-1.8z"/><path d="M5.6 9.5h12.8"/></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol></defs></svg>
 
 <div class="header"><div class="head-in">
   <div><h1>Portland Resource Guide</h1>
@@ -472,6 +476,7 @@ html.big body { zoom: 1.2; }
     <button type="button" class="icon-btn" id="near" aria-pressed="false" aria-label="Nearest first" title="Nearest first (your location stays on your phone)"><svg class="ic" aria-hidden="true"><use href="#i-locate"/></svg></button>
   </div>
   <div class="filter-row">
+    <span class="kind-row" id="kind-row" hidden><button type="button" class="toggle-chip" data-kind="water" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-cup"/></svg>Water</button> <button type="button" class="toggle-chip" data-kind="restroom" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Restrooms</button></span>
     <button type="button" class="toggle-chip" id="noid" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-idcard"/></svg>No ID needed</button>
   </div>
   <p class="status-msg" id="open-hint"></p>
@@ -514,12 +519,18 @@ html.big body { zoom: 1.2; }
 // Resource data lives in resources.json so other HNF apps (Honest Day) can read
 // the same verified list. Edit resources.json, not this file.
 let RESOURCES = [];
+// Public drinking fountains and restrooms (public.json). Kept apart from RESOURCES so they only show
+// in Water & Restrooms (and searches for water or a restroom), not in every list and open-now count.
+let POINTS = [];
+const ALL = () => RESOURCES.concat(POINTS);
+const WATER_Q = /water|drink|fountain|bubbler|thirst|restroom|toilet|bathroom|\bloo\b|potty|\bpee\b|hygiene station/;
+let kindFilter = '';   // '', 'water' or 'restroom', inside Water & Restrooms
 let CATEGORIES = [{id:"all",label:"All"}];
 // Icons are <symbol>s in the sprite at the top of <body>.
-const CATEGORY_ICON = {all:'grid', work:'briefcase', food:'food', shelter:'bed', health:'health', hygiene:'drop', supplies:'shirt', recovery:'sprout', id:'idcard', training:'tool', more:'phone'};
+const CATEGORY_ICON = {water:'cup', all:'grid', work:'briefcase', food:'food', shelter:'bed', health:'health', hygiene:'drop', supplies:'shirt', recovery:'sprout', id:'idcard', training:'tool', more:'phone'};
 function icon(k, cls = 'ic') { return `<svg class="${cls}" aria-hidden="true"><use href="#i-${k}"/></svg>`; }
 // The essentials on the home screen, with short labels; the rest are chips below them.
-const ESSENTIALS = [['food', 'Food'], ['shelter', 'Shelter'], ['health', 'Health care'], ['supplies', 'Clothes & supplies'], ['hygiene', 'Showers & laundry'], ['more', 'Phone & help']];
+const ESSENTIALS = [['food', 'Food'], ['shelter', 'Shelter'], ['health', 'Health care'], ['supplies', 'Clothes & supplies'], ['hygiene', 'Showers & laundry'], ['more', 'Phone & help'], ['water', 'Water & restrooms']];
 const SECONDARY = ['recovery', 'work', 'id', 'training', 'all'];
 let view = 'home';
 
@@ -754,11 +765,13 @@ const SYNONYMS = {
   blanket: ['blankets', 'clothes & supplies', 'sleeping bag'], blankets: ['clothes & supplies'], socks: ['clothes & supplies'], tent: ['gear', 'clothes & supplies'],
   doctor: ['health', 'clinic', 'medical'], sick: ['health', 'clinic', 'medical'], clinic: ['health'], nurse: ['health', 'medical'], medicine: ['health', 'pharmacy'],
   dentist: ['dental'], teeth: ['dental'], tooth: ['dental'],
-  wash: ['shower', 'laundry'], showers: ['shower'], bathroom: ['restroom', 'shower'],
+  wash: ['shower', 'laundry'], showers: ['shower'], bathroom: ['restroom', 'shower'], toilet: ['restroom', 'toilet'], pee: ['restroom'], potty: ['restroom'],
+  water: ['water', 'fountain'], drink: ['drinking', 'water'], thirsty: ['water', 'fountain'], fountain: ['fountain'], bubbler: ['bubbler'],
   detox: ['withdrawal', 'recovery'], sober: ['recovery', 'sobriety'], drugs: ['recovery', 'substance', 'drug'], alcohol: ['recovery', 'drinking'], addiction: ['recovery'],
   narcan: ['naloxone'], suicide: ['988', 'crisis'], crisis: ['988'],
   lawyer: ['legal', 'law'], court: ['legal', 'court'], warrant: ['legal', 'court', 'record'], record: ['expunge', 'record'], fines: ['fines', 'fees'],
   job: ['work', 'jobs'], jobs: ['work'], money: ['work', 'pay'], cash: ['work', 'pay'],
+  print: ['printing', 'print'], printer: ['printing'], library: ['library'], internet: ['wi-fi', 'computer'],
   charge: ['charging', 'phone'], charger: ['charging'], wifi: ['wi-fi', 'internet', 'computer'],
   dog: ['pet'], cat: ['pet'], pets: ['pet'], storage: ['store', 'locker'], locker: ['locker', 'storage'],
   kids: ['children', 'famil'], family: ['famil'], youth: ['youth', 'young'], teen: ['youth', 'young', 'teen'],
@@ -766,8 +779,9 @@ const SYNONYMS = {
   native: ['native', 'indigenous'], women: ['women', 'woman'],
 };
 function searchText(r) {
-  const cats = r.cat.map(id => (CATEGORIES.find(c => c.id === id) || {}).label || id).join(' ');
-  return `${r.name} ${r.sub||''} ${r.desc} ${r.detail||''} ${r.highlight||''} ${r.addr||''} ${r.hoursText||''} ${(r.stops||[]).map(s => s.place + ' ' + s.addr).join(' ')} ${cats}`.toLowerCase();
+  // Fountains and restrooms share one category, so search them by what they are, not the category name.
+  const cats = r.point ? (r.kind === 'water' ? 'water drinking' : 'restroom toilet') : r.cat.map(id => (CATEGORIES.find(c => c.id === id) || {}).label || id).join(' ');
+  return `${r.name} ${r.sub||''} ${r.desc} ${r.detail||''} ${r.highlight||''} ${r.addr||''} ${r.where||''} ${r.hoursText||''} ${(r.stops||[]).map(s => s.place + ' ' + s.addr).join(' ')} ${cats}`.toLowerCase();
 }
 // Words people might type: every word in the listings plus the everyday words above.
 let VOCAB = null;
@@ -845,7 +859,7 @@ function phoneLabel(p) {
 function slug(name) { return name.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
 function placeUrl(r) { return `${location.origin}${location.pathname}#place=${slug(r.name)}`; }
 function sharePlace(btn) {
-  const r = RESOURCES.find(x => slug(x.name) === btn.dataset.place);
+  const r = ALL().find(x => slug(x.name) === btn.dataset.place);
   if (!r) return;
   const url = placeUrl(r);
   const done = t => { btn.textContent = t; setTimeout(() => { btn.innerHTML = icon('share', 'ic ic-sm') + ' Share this place'; }, 2500); };
@@ -912,10 +926,10 @@ function toggleSaved(btn) {
 function savedRow(r, now) {
   const c = r.cat.find(id => ESSENTIALS.some(e => e[0] === id)) || r.cat[0];
   const b = weatherOpen && r.name === 'Severe Weather Shelters' ? { cls: 'tag-open', text: 'Open tonight' } : statusBadge(r, now);
-  const [main, rest] = b ? b.text.split(' · ') : ['Call ahead', 'no set hours'];
+  const [main, rest] = b ? b.text.split(' · ') : r.point ? ['Free', r.kind === 'water' ? 'water' : 'restroom'] : ['Call ahead', 'no set hours'];
   const cls = !b ? 'st-none' : b.cls === 'tag-open' ? '' : b.cls === 'tag-soon' ? 'st-soon' : b.cls === 'tag-opening' ? '' : 'st-closed';
   const dist = nearOn && here ? distOf(r) : null;
-  const where = dist !== null ? fmtMiles(dist) : (r.addr || r.sub || '').split(',')[0];
+  const where = dist !== null ? fmtMiles(dist) : (r.addr || r.where || r.sub || '').split(',')[0];
   return `<button type="button" class="soon-row" data-place="${slug(r.name)}" data-cat="${esc(c)}">${icon(CATEGORY_ICON[c] || 'grid')}` +
     `<span class="s-main"><span class="s-name">${esc(r.name)}</span>${where ? `<span class="s-sub">${esc(where)}</span>` : ''}</span>` +
     `<span class="s-when ${cls}">${esc(main)}${rest ? `<small>${esc(rest)}</small>` : ''}</span></button>`;
@@ -927,6 +941,12 @@ function goPlace(slugName, cat) {
   pendingPlace = slugName; showPlace();
 }
 function tileStatus(id, now) {
+  if (id === 'water') {
+    if (!POINTS.length) return { on: false, text: 'Not loaded' };
+    const d = here ? Math.min(...POINTS.map(distOf).filter(x => x !== null)) : null;
+    const nw = POINTS.filter(r => r.kind === 'water').length;
+    return d !== null && isFinite(d) ? { on: true, text: `Closest ${fmtMiles(d)}` } : { on: false, text: `${nw} fountains · ${POINTS.length - nw} restrooms` };
+  }
   const list = id === 'all' ? RESOURCES : RESOURCES.filter(r => r.cat.includes(id));
   let open = 0, next = null;
   for (const r of list) {
@@ -950,7 +970,8 @@ function renderHome() {
     const n = id === 'all' ? RESOURCES.length : RESOURCES.filter(r => r.cat.includes(id)).length;
     return `<button type="button" class="chip" data-cat="${id}">${icon(CATEGORY_ICON[id])}${esc(id === 'all' ? 'Everything' : label(id))} <span class="n">${n}</span></button>`;
   }).join('');
-  const mine = getSaved().map(id => RESOURCES.find(r => slug(r.name) === id)).filter(Boolean);
+  const all = ALL();
+  const mine = getSaved().map(id => all.find(r => slug(r.name) === id)).filter(Boolean);
   document.getElementById('mine').hidden = !mine.length;
   document.getElementById('mine-list').innerHTML = mine.map(r => savedRow(r, now)).join('');
   const ess = RESOURCES.filter(r => r.cat.some(id => ESSENTIALS.some(e => e[0] === id)));
@@ -983,6 +1004,7 @@ function showView(v) {
 // Open a list from the home screen; Back (or the phone's back button) returns home.
 function openList(cat, opts = {}) {
   sharedPlace = null;
+  kindFilter = '';
   activeFilter = cat;
   openOnly = false; laterToday = false;
   searchQuery = opts.q || '';
@@ -1062,7 +1084,7 @@ function showPlace() {
 }
 function loadView() {
   const m = location.hash.match(/^#place=([a-z0-9-]+)$/);
-  if (m) { pendingPlace = m[1]; openOnly = false; laterToday = false; activeFilter = 'all'; searchQuery = ''; view = 'list'; return; }
+  if (m) { pendingPlace = m[1]; openOnly = false; laterToday = false; activeFilter = POINTS.some(r => slug(r.name) === m[1]) ? 'water' : 'all'; searchQuery = ''; view = 'list'; return; }
   if (!location.hash || location.hash === '#') { view = 'home'; openOnly = false; laterToday = false; searchQuery = ''; return; }
   view = 'list';
   const parts = decodeURIComponent(location.hash.slice(1)).split('+');
@@ -1079,13 +1101,14 @@ function renderCards() {
   const q = searchQuery.toLowerCase();
 
   const now = new Date();
-  const inCat = r => activeFilter === 'all' || r.cat.includes(activeFilter);
-  let matching = RESOURCES.filter(r => inCat(r) && (q ? matchesQuery(r, q.trim()) : true));
+  const inCat = r => (activeFilter === 'all' || r.cat.includes(activeFilter)) && (!kindFilter || activeFilter !== 'water' || r.kind === kindFilter);
+  const pool = qq => activeFilter === 'water' ? POINTS : qq && WATER_Q.test(qq) ? ALL() : RESOURCES;
+  let matching = pool(q).filter(r => inCat(r) && (q ? matchesQuery(r, q.trim()) : true));
   // Nothing found? Try the search with spelling fixed ("sheter" finds shelter).
   let fixed = null;
   if (q.trim() && !matching.length) {
     fixed = correctQuery(q.trim());
-    if (fixed) matching = RESOURCES.filter(r => inCat(r) && matchesQuery(r, fixed));
+    if (fixed) matching = pool(fixed).filter(r => inCat(r) && matchesQuery(r, fixed));
     if (!matching.length) fixed = null;
   }
   const openCount = matching.filter(r => isOpenNow(r, now) === true).length;
@@ -1109,6 +1132,8 @@ function renderCards() {
   if (openOnly || laterToday) {
     info.textContent = fixNote + `${filtered.length} ${openOnly ? 'open now' : 'open now or later today'}${where}.` +
       (noHours ? ` ${noHours} more ${noHours!==1?'have':'has'} no set hours: call ahead.` : '');
+  } else if (activeFilter === 'water') {
+    info.textContent = `${filtered.length} place${filtered.length!==1?'s':''}` + (near ? ' · nearest first' : '') + '. From City of Portland data.';
   } else {
     info.textContent = fixNote + `${filtered.length} resource${filtered.length!==1?'s':''}${where}` +
       (near ? ' · nearest first' : openCount ? ` · ${openCount} open now, shown first` : '');
@@ -1134,16 +1159,18 @@ function renderCards() {
 
   const savedSet = new Set(getSaved());
   document.getElementById('print-list').hidden = !filtered.length;
-  el.innerHTML = filtered.map(r => {
+  const askNear = activeFilter === 'water' && !near ? `<button type="button" class="near-now water-near" id="water-near">${icon('locate')}Show the closest to me</button>` : '';
+  el.innerHTML = askNear + filtered.map(r => {
     let tags = '';
     const badge = weatherOpen && r.name === 'Severe Weather Shelters' ? { cls: 'tag-open', text: 'Open tonight' } : statusBadge(r, now);
     if (badge) tags += `<span class="tag ${badge.cls}">${esc(badge.text)}</span>`;
-    if (r.noId) tags += '<span class="tag tag-noid">No ID Needed</span>';
+    if (r.noId && !r.point) tags += '<span class="tag tag-noid">No ID Needed</span>';
 
     let actions = '';
-    if (r.addr) actions += `<a class="card-btn btn-directions" href="${mapsUrl(r.addr, near ? distOf(r) : null)}" target="_blank" rel="noopener">${icon('pin')}Directions</a>`;
+    const dest = r.addr || (r.geo ? r.geo.join(',') : '');
+    if (dest) actions += `<a class="card-btn btn-directions" href="${mapsUrl(dest, r.point ? 0 : near ? distOf(r) : null)}" target="_blank" rel="noopener">${icon('pin')}Directions</a>`;
     if (r.phone) actions += `<a class="card-btn btn-call" href="tel:${esc(String(r.phone).replace(/[^0-9+]/g,''))}" aria-label="Call ${esc(r.name)}, ${esc(phoneLabel(r.phone))}">${icon('phone')}${esc(phoneLabel(r.phone))}</a>`;
-    if (r.url) actions += `<a class="card-btn btn-web" href="https://${esc(r.url)}" target="_blank" rel="noopener">${r.urlLabel ? esc(r.urlLabel) : icon('globe') + 'Website'}</a>`;
+    if (r.url && !r.point) actions += `<a class="card-btn btn-web" href="https://${esc(r.url)}" target="_blank" rel="noopener">${r.urlLabel ? esc(r.urlLabel) : icon('globe') + 'Website'}</a>`;
     const isSaved = savedSet.has(slug(r.name));
     actions += `<button type="button" class="card-btn btn-save" data-save="${slug(r.name)}" aria-pressed="${isSaved}">${icon('bookmark')}${isSaved ? 'Saved' : 'Save'}</button>`;
 
@@ -1158,13 +1185,14 @@ function renderCards() {
       ${r.highlight?`<div class="card-highlight">${icon('check')}${esc(r.highlight)}</div>`:''}
       <div class="card-detail">${icon('clock', 'ic ic-sm')}${esc(r.hoursText)}</div>
       ${stopsHtml(r, now)}
-      ${r.addr?`<div class="card-detail">${icon('pin', 'ic ic-sm')}${dist !== null ? `<span class="dist">${fmtMiles(dist)}${dist < 3 ? ` · ${walkMins(dist)} min walk` : ''}</span> · ` : ''}${esc(r.addr)}</div>`:''}
+      ${r.addr || r.where?`<div class="card-detail">${icon('pin', 'ic ic-sm')}${dist !== null ? `<span class="dist">${fmtMiles(dist)}${dist < 3 ? ` · ${walkMins(dist)} min walk` : ''}</span> · ` : ''}${esc(r.addr || r.where)}</div>`:''}
       ${actions?`<div class="card-actions">${actions}</div>`:''}
       ${r.phone || r.url ? `<div class="print-only card-print">${[r.phone ? phoneLabel(r.phone) : '', r.url ? esc(r.url) : ''].filter(Boolean).join(' · ')}</div>` : ''}
       <details class="more"${shared ? ' open' : ''}>
         <summary><span class="lbl-open">More details</span><span class="lbl-close">Less</span></summary>
         ${weekHtml(r, now)}
         ${r.detail?`<div class="card-detail">${esc(r.detail)}</div>`:''}
+        ${r.point && r.url ? `<div class="card-detail">Source: <a href="https://${esc(r.url)}" target="_blank" rel="noopener">${esc(r.urlLabel || r.url)}</a></div>` : ''}
         <button type="button" class="share-btn" data-place="${slug(r.name)}">${icon('share', 'ic ic-sm')} Share this place</button>
         <div class="card-report">${reportLinks(r)}</div>
       </details>
@@ -1183,6 +1211,10 @@ function syncOpenButton() {
   document.getElementById('t-today').setAttribute('aria-pressed', laterToday ? 'true' : 'false');
   document.getElementById('near').setAttribute('aria-pressed', nearOn && here ? 'true' : 'false');
   document.getElementById('noid').setAttribute('aria-pressed', noIdOnly ? 'true' : 'false');
+  const isWater = activeFilter === 'water';
+  document.getElementById('noid').hidden = isWater;          // every public fountain and restroom is open to anyone
+  document.getElementById('kind-row').hidden = !isWater;
+  document.querySelectorAll('[data-kind]').forEach(b => b.setAttribute('aria-pressed', kindFilter === b.dataset.kind ? 'true' : 'false'));
   document.getElementById('open-hint').textContent = nearOn && here ? 'Nearest first. Straight-line distance; your location stays on your phone.' : '';
 }
 function requestNear() {
@@ -1206,6 +1238,10 @@ document.getElementById('near-now').addEventListener('click', () => {
   setTime('now');
   if (nearOn && here) { renderFilters(); renderCards(); } else requestNear();
 });
+document.getElementById('kind-row').addEventListener('click', e => {
+  const b = e.target.closest('[data-kind]'); if (!b) return;
+  kindFilter = kindFilter === b.dataset.kind ? '' : b.dataset.kind; syncOpenButton(); renderCards();
+});
 document.getElementById('noid').addEventListener('click', () => {
   noIdOnly = !noIdOnly; syncOpenButton(); renderCards(); saveView();
 });
@@ -1222,6 +1258,7 @@ document.getElementById('cards').addEventListener('click', e => {
   if (b) sharePlace(b);
   const sv = e.target.closest('.btn-save');
   if (sv) toggleSaved(sv);
+  if (e.target.closest('#water-near')) requestNear();
   const row = e.target.closest('.soon-row');
   if (row) goPlace(row.dataset.place, row.dataset.cat);
 });
@@ -1281,6 +1318,10 @@ fetch('resources.json', {cache: 'no-cache'})
       ' (saved ' + saved.toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) + ')';
     return res.json();
   })
+  .then(data => fetch('public.json', {cache: 'no-cache'}).then(r => r.ok ? r.json() : null).catch(() => null).then(pub => {
+    if (pub) { POINTS = pub.resources; data.categories = data.categories.concat(pub.categories); }
+    return data;
+  }))
   .then(data => {
     RESOURCES = data.resources;
     CATEGORIES = [{id:'all', label:'All'}, ...data.categories];

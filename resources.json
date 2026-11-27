@@ -2958,24 +2958,320 @@
       "cat": [
         "more"
       ],
-      "desc": "Free computer access (no library card needed), restrooms, warmth, quiet space. Use for job applications, email, and resume work.",
-      "detail": "Open daily. All branches across Portland have free computers and Wi-Fi.",
+      "desc": "Free computers (4 hours a day), Wi-Fi, and up to 100 pages of free printing a day, plus free copying, fax and scanning. Restrooms, warmth, quiet space.",
+      "detail": "No library card needed to print. No card for computers? Ask at the desk for a daily guest pass with photo ID, or just your name and birthdate. Wi-Fi here works only while the library is open. 13 more library branches across Portland offer the same free services.",
       "addr": "801 SW 10th Ave, Portland, OR 97205",
       "geo": [
         45.51928,
         -122.68258
       ],
-      "hours": {
-        "mon": "10:00-20:00",
-        "tue": "10:00-20:00",
-        "wed": "10:00-20:00",
-        "thu": "10:00-20:00",
-        "fri": "10:00-18:00",
-        "sat": "10:00-18:00",
-        "sun": "10:00-17:00"
-      },
-      "hoursText": "Mon-Thu 10am-8pm, Fri-Sat 10am-6pm, Sun 10am-5pm",
-      "url": "multcolib.org",
+      "hoursText": "Call 503-988-5123 or check multcolib.org for today's hours. Closed Dec 24, Dec 25 and Jan 1.",
+      "url": "multcolib.org/hours-and-locations/central-library",
+      "noId": true,
+      "closed": [
+        "2026-12-24",
+        "2026-12-25",
+        "2027-01-01"
+      ],
+      "phone": "5039885123"
+    },
+    {
+      "name": "Albina Library",
+      "sub": "Multnomah County Library: free computers + Wi-Fi",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free Wi-Fi, computers (4 hours a day), and up to 100 pages of free printing a day, plus free copying, fax and scanning. Restrooms inside.",
+      "detail": "No library card needed to print. No card for computers? Ask at the desk for a daily guest pass with photo ID, or just your name and birthdate. Wi-Fi \"Library_WiFi\" (no password) works 5am to midnight, even outside after closing. Outlets are limited, so come charged.",
+      "addr": "205 NE Russell St, Portland, OR 97212",
+      "geo": [
+        45.54098,
+        -122.66323
+      ],
+      "hoursText": "Call 503-988-5123 or check multcolib.org for today's hours. Closed Dec 24, Dec 25 and Jan 1.",
+      "closed": [
+        "2026-12-24",
+        "2026-12-25",
+        "2027-01-01"
+      ],
+      "phone": "5039885123",
+      "url": "multcolib.org/hours-and-locations/albina-library",
+      "noId": true
+    },
+    {
+      "name": "Belmont Library",
+      "sub": "Multnomah County Library: free computers + Wi-Fi",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free Wi-Fi, computers (4 hours a day), and up to 100 pages of free printing a day, plus free copying, fax and scanning. Restrooms inside.",
+      "detail": "No library card needed to print. No card for computers? Ask at the desk for a daily guest pass with photo ID, or just your name and birthdate. Wi-Fi \"Library_WiFi\" (no password) works 5am to midnight, even outside after closing. Outlets are limited, so come charged.",
+      "addr": "1038 SE César E. Chávez Blvd, Portland, OR 97214",
+      "geo": [
+        45.51548,
+        -122.62284
+      ],
+      "hoursText": "Call 503-988-5123 or check multcolib.org for today's hours. Closed Dec 24, Dec 25 and Jan 1.",
+      "closed": [
+        "2026-12-24",
+        "2026-12-25",
+        "2027-01-01"
+      ],
+      "phone": "5039885123",
+      "url": "multcolib.org/hours-and-locations/belmont-library",
+      "noId": true
+    },
+    {
+      "name": "Capitol Hill Library",
+      "sub": "Multnomah County Library: free computers + Wi-Fi",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free Wi-Fi, computers (4 hours a day), and up to 100 pages of free printing a day, plus free copying, fax and scanning. Restrooms inside.",
+      "detail": "No library card needed to print. No card for computers? Ask at the desk for a daily guest pass with photo ID, or just your name and birthdate. Wi-Fi \"Library_WiFi\" (no password) works 5am to midnight, even outside after closing. Outlets are limited, so come charged.",
+      "addr": "10723 SW Capitol Hwy, Portland, OR 97219",
+      "geo": [
+        45.44802,
+        -122.72502
+      ],
+      "hoursText": "Call 503-988-5123 or check multcolib.org for today's hours. Closed Dec 24, Dec 25 and Jan 1.",
+      "closed": [
+        "2026-12-24",
+        "2026-12-25",
+        "2027-01-01"
+      ],
+      "phone": "5039885123",
+      "url": "multcolib.org/hours-and-locations/capitol-hill-library",
+      "noId": true
+    },
+    {
+      "name": "Gregory Heights Library",
+      "sub": "Multnomah County Library: free computers + Wi-Fi",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free Wi-Fi, computers (4 hours a day), and up to 100 pages of free printing a day, plus free copying, fax and scanning. Restrooms inside.",
+      "detail": "No library card needed to print. No card for computers? Ask at the desk for a daily guest pass with photo ID, or just your name and birthdate. Wi-Fi \"Library_WiFi\" (no password) works 5am to midnight, even outside after closing. Outlets are limited, so come charged.",
+      "addr": "7921 NE Sandy Blvd, Portland, OR 97213",
+      "geo": [
+        45.55133,
+        -122.58152
+      ],
+      "hoursText": "Call 503-988-5123 or check multcolib.org for today's hours. Closed Dec 24, Dec 25 and Jan 1.",
+      "closed": [
+        "2026-12-24",
+        "2026-12-25",
+        "2027-01-01"
+      ],
+      "phone": "5039885123",
+      "url": "multcolib.org/hours-and-locations/gregory-heights-library",
+      "noId": true
+    },
+    {
+      "name": "Holgate Library",
+      "sub": "Multnomah County Library: free computers + Wi-Fi",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free Wi-Fi, computers (4 hours a day), and up to 100 pages of free printing a day, plus free copying, fax and scanning. Restrooms inside.",
+      "detail": "No library card needed to print. No card for computers? Ask at the desk for a daily guest pass with photo ID, or just your name and birthdate. Wi-Fi \"Library_WiFi\" (no password) works 5am to midnight, even outside after closing. Outlets are limited, so come charged.",
+      "addr": "7905 SE Holgate Blvd, Portland, OR 97206",
+      "geo": [
+        45.49031,
+        -122.58212
+      ],
+      "hoursText": "Call 503-988-5123 or check multcolib.org for today's hours. Closed Dec 24, Dec 25 and Jan 1.",
+      "closed": [
+        "2026-12-24",
+        "2026-12-25",
+        "2027-01-01"
+      ],
+      "phone": "5039885123",
+      "url": "multcolib.org/hours-and-locations/holgate-library",
+      "noId": true
+    },
+    {
+      "name": "Hollywood Library",
+      "sub": "Multnomah County Library: free computers + Wi-Fi",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free Wi-Fi, computers (4 hours a day), and up to 100 pages of free printing a day, plus free copying, fax and scanning. Restrooms inside.",
+      "detail": "No library card needed to print. No card for computers? Ask at the desk for a daily guest pass with photo ID, or just your name and birthdate. Wi-Fi \"Library_WiFi\" (no password) works 5am to midnight, even outside after closing. Outlets are limited, so come charged.",
+      "addr": "4040 NE Tillamook St, Portland, OR 97212",
+      "geo": [
+        45.53772,
+        -122.62152
+      ],
+      "hoursText": "Call 503-988-5123 or check multcolib.org for today's hours. Closed Dec 24, Dec 25 and Jan 1.",
+      "closed": [
+        "2026-12-24",
+        "2026-12-25",
+        "2027-01-01"
+      ],
+      "phone": "5039885123",
+      "url": "multcolib.org/hours-and-locations/hollywood-library",
+      "noId": true
+    },
+    {
+      "name": "Kenton Library",
+      "sub": "Multnomah County Library: free computers + Wi-Fi",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free Wi-Fi, computers (4 hours a day), and up to 100 pages of free printing a day, plus free copying, fax and scanning. Restrooms inside.",
+      "detail": "No library card needed to print. No card for computers? Ask at the desk for a daily guest pass with photo ID, or just your name and birthdate. Wi-Fi \"Library_WiFi\" (no password) works 5am to midnight, even outside after closing. Outlets are limited, so come charged.",
+      "addr": "8226 N Denver Ave, Portland, OR 97217",
+      "geo": [
+        45.58256,
+        -122.68681
+      ],
+      "hoursText": "Call 503-988-5123 or check multcolib.org for today's hours. Closed Dec 24, Dec 25 and Jan 1.",
+      "closed": [
+        "2026-12-24",
+        "2026-12-25",
+        "2027-01-01"
+      ],
+      "phone": "5039885123",
+      "url": "multcolib.org/hours-and-locations/kenton-library",
+      "noId": true
+    },
+    {
+      "name": "Midland Library",
+      "sub": "Multnomah County Library: free computers + Wi-Fi",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free Wi-Fi, computers (4 hours a day), and up to 100 pages of free printing a day, plus free copying, fax and scanning. Restrooms inside.",
+      "detail": "No library card needed to print. No card for computers? Ask at the desk for a daily guest pass with photo ID, or just your name and birthdate. Wi-Fi \"Library_WiFi\" (no password) works 5am to midnight, even outside after closing. Outlets are limited, so come charged.",
+      "addr": "805 SE 122nd Ave, Portland, OR 97233",
+      "geo": [
+        45.51687,
+        -122.53782
+      ],
+      "hoursText": "Call 503-988-5123 or check multcolib.org for today's hours. Closed Dec 24, Dec 25 and Jan 1.",
+      "closed": [
+        "2026-12-24",
+        "2026-12-25",
+        "2027-01-01"
+      ],
+      "phone": "5039885123",
+      "url": "multcolib.org/hours-and-locations/midland-library",
+      "noId": true
+    },
+    {
+      "name": "North Portland Library",
+      "sub": "Multnomah County Library: free computers + Wi-Fi",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free Wi-Fi, computers (4 hours a day), and up to 100 pages of free printing a day, plus free copying, fax and scanning. Restrooms inside.",
+      "detail": "No library card needed to print. No card for computers? Ask at the desk for a daily guest pass with photo ID, or just your name and birthdate. Wi-Fi \"Library_WiFi\" (no password) works 5am to midnight, even outside after closing. Outlets are limited, so come charged.",
+      "addr": "512 N Killingsworth St, Portland, OR 97217",
+      "geo": [
+        45.56264,
+        -122.67133
+      ],
+      "hoursText": "Call 503-988-5123 or check multcolib.org for today's hours. Closed Dec 24, Dec 25 and Jan 1.",
+      "closed": [
+        "2026-12-24",
+        "2026-12-25",
+        "2027-01-01"
+      ],
+      "phone": "5039885123",
+      "url": "multcolib.org/hours-and-locations/north-portland-library",
+      "noId": true
+    },
+    {
+      "name": "Northwest Library",
+      "sub": "Multnomah County Library: free computers + Wi-Fi",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free Wi-Fi, computers (4 hours a day), and up to 100 pages of free printing a day, plus free copying, fax and scanning. Restrooms inside.",
+      "detail": "No library card needed to print. No card for computers? Ask at the desk for a daily guest pass with photo ID, or just your name and birthdate. Wi-Fi \"Library_WiFi\" (no password) works 5am to midnight, even outside after closing. Outlets are limited, so come charged.",
+      "addr": "2030 NW Pettygrove St, Portland, OR 97209",
+      "geo": [
+        45.53269,
+        -122.69328
+      ],
+      "hoursText": "Call 503-988-5123 or check multcolib.org for today's hours. Closed Dec 24, Dec 25 and Jan 1.",
+      "closed": [
+        "2026-12-24",
+        "2026-12-25",
+        "2027-01-01"
+      ],
+      "phone": "5039885123",
+      "url": "multcolib.org/hours-and-locations/northwest-library",
+      "noId": true
+    },
+    {
+      "name": "Sellwood-Moreland Library",
+      "sub": "Multnomah County Library: free computers + Wi-Fi",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free Wi-Fi, computers (4 hours a day), and up to 100 pages of free printing a day, plus free copying, fax and scanning. Restrooms inside.",
+      "detail": "No library card needed to print. No card for computers? Ask at the desk for a daily guest pass with photo ID, or just your name and birthdate. Wi-Fi \"Library_WiFi\" (no password) works 5am to midnight, even outside after closing. Outlets are limited, so come charged.",
+      "addr": "7860 SE 13th Ave, Portland, OR 97202",
+      "geo": [
+        45.46771,
+        -122.65291
+      ],
+      "hoursText": "Call 503-988-5123 or check multcolib.org for today's hours. Closed Dec 24, Dec 25 and Jan 1.",
+      "closed": [
+        "2026-12-24",
+        "2026-12-25",
+        "2027-01-01"
+      ],
+      "phone": "5039885123",
+      "url": "multcolib.org/hours-and-locations/sellwood-moreland-library",
+      "noId": true
+    },
+    {
+      "name": "St. Johns Library",
+      "sub": "Multnomah County Library: free computers + Wi-Fi",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free Wi-Fi, computers (4 hours a day), and up to 100 pages of free printing a day, plus free copying, fax and scanning. Restrooms inside.",
+      "detail": "No library card needed to print. No card for computers? Ask at the desk for a daily guest pass with photo ID, or just your name and birthdate. Wi-Fi \"Library_WiFi\" (no password) works 5am to midnight, even outside after closing. Outlets are limited, so come charged.",
+      "addr": "7510 N Charleston Ave, Portland, OR 97203",
+      "geo": [
+        45.58966,
+        -122.75167
+      ],
+      "hoursText": "Call 503-988-5123 or check multcolib.org for today's hours. Closed Dec 24, Dec 25 and Jan 1.",
+      "closed": [
+        "2026-12-24",
+        "2026-12-25",
+        "2027-01-01"
+      ],
+      "phone": "5039885123",
+      "url": "multcolib.org/hours-and-locations/st-johns-library",
+      "noId": true
+    },
+    {
+      "name": "Woodstock Library",
+      "sub": "Multnomah County Library: free computers + Wi-Fi",
+      "cat": [
+        "more"
+      ],
+      "desc": "Free Wi-Fi, computers (4 hours a day), and up to 100 pages of free printing a day, plus free copying, fax and scanning. Restrooms inside.",
+      "detail": "No library card needed to print. No card for computers? Ask at the desk for a daily guest pass with photo ID, or just your name and birthdate. Wi-Fi \"Library_WiFi\" (no password) works 5am to midnight, even outside after closing. Outlets are limited, so come charged.",
+      "addr": "6008 SE 49th Ave, Portland, OR 97206",
+      "geo": [
+        45.47906,
+        -122.61232
+      ],
+      "hoursText": "Call 503-988-5123 or check multcolib.org for today's hours. Closed Dec 24, Dec 25 and Jan 1.",
+      "closed": [
+        "2026-12-24",
+        "2026-12-25",
+        "2027-01-01"
+      ],
+      "phone": "5039885123",
+      "url": "multcolib.org/hours-and-locations/woodstock-library",
       "noId": true
     },
     {

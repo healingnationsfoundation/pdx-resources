@@ -1,0 +1,3096 @@
+{
+ "about": "Public drinking water and restrooms in Portland, from City of Portland data. Built by build_public.py; separate from resources.json so that file's categories stay unchanged.",
+ "verified": "2026-11-27",
+ "sources": [
+  "www.portlandmaps.com/od/rest/services/COP_OpenData_Utilities/MapServer/84",
+  "www.portlandmaps.com/arcgis/rest/services/Public/Portland_Public_Restrooms/MapServer/0",
+  "www.portland.gov/parks/restrooms",
+  "www.portland.gov/parks/loo",
+  "www.portland.gov/united/hygienestations",
+  "www.portland.gov/water/about-portlands-water-system/bubblers"
+ ],
+ "categories": [
+  {
+   "id": "water",
+   "label": "Water & Restrooms"
+  }
+ ],
+ "resources": [
+  {
+   "name": "Benson Bubbler, NW 2nd & Davis",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NW 2nd & Davis",
+   "geo": [
+    45.52467,
+    -122.67233
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW 3rd & Yamhill",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 3rd & Yamhill",
+   "geo": [
+    45.51753,
+    -122.67607
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 5th & Taylor",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 5th & Taylor",
+   "geo": [
+    45.51737,
+    -122.67848
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW Vista & Broadway Dr",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Vista & Broadway Dr",
+   "geo": [
+    45.50541,
+    -122.70371
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, NW 21st & Glisan",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NW 21st & Glisan",
+   "geo": [
+    45.52622,
+    -122.69461
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW Broadway & Oak",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Broadway & Oak",
+   "geo": [
+    45.52195,
+    -122.67834
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 10th & Washington",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 10th & Washington",
+   "geo": [
+    45.52129,
+    -122.68155
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW Morrison & 12th",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Morrison & 12th",
+   "geo": [
+    45.52059,
+    -122.68443
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW Broadway & Washington",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Broadway & Washington",
+   "geo": [
+    45.52061,
+    -122.67909
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW 1st & Oak",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 1st & Oak",
+   "geo": [
+    45.52027,
+    -122.67232
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW Yamhill & 12th",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Yamhill & 12th",
+   "geo": [
+    45.51997,
+    -122.68468
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW Morrison & 9th",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Morrison & 9th",
+   "geo": [
+    45.51984,
+    -122.68126
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW 1st & Stark",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 1st & Stark",
+   "geo": [
+    45.51983,
+    -122.67241
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 3rd & Washington",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 3rd & Washington",
+   "geo": [
+    45.51953,
+    -122.675
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW Morrison & Broadway",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Morrison & Broadway",
+   "geo": [
+    45.51923,
+    -122.67944
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW Broadway & Yamhill",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Broadway & Yamhill",
+   "geo": [
+    45.51862,
+    -122.68014
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 5th & Salmon",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 5th & Salmon",
+   "geo": [
+    45.51665,
+    -122.67865
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 6th & Main",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 6th & Main",
+   "geo": [
+    45.51658,
+    -122.68009
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 5th & Main",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 5th & Main",
+   "geo": [
+    45.51599,
+    -122.67901
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 6th & Madison",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 6th & Madison",
+   "geo": [
+    45.51583,
+    -122.68028
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 4th & Madison",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 4th & Madison",
+   "geo": [
+    45.51519,
+    -122.67857
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW Broadway & Columbia",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Broadway & Columbia",
+   "geo": [
+    45.51478,
+    -122.68195
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW Park & Columbia",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Park & Columbia",
+   "geo": [
+    45.5147,
+    -122.68365
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW 2nd & Madison",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 2nd & Madison",
+   "geo": [
+    45.51454,
+    -122.67636
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 3rd & Market",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 3rd & Market",
+   "geo": [
+    45.51237,
+    -122.67873
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW Council Crest & Greenway",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Council Crest & Greenway",
+   "geo": [
+    45.49754,
+    -122.70532
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SE Milwaukie & Powell",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SE Milwaukie & Powell",
+   "geo": [
+    45.501,
+    -122.65407
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE 1st & Holladay",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE 1st & Holladay",
+   "geo": [
+    45.53021,
+    -122.66454
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE 6th & Holladay",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE 6th & Holladay",
+   "geo": [
+    45.53014,
+    -122.6595
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE 9th & Holladay",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE 9th & Holladay",
+   "geo": [
+    45.53013,
+    -122.65634
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE 9th & Holladay (2)",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE 9th & Holladay",
+   "geo": [
+    45.52998,
+    -122.6568
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE 7th & Holladay",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE 7th & Holladay",
+   "geo": [
+    45.52997,
+    -122.6589
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE 6th & Holladay (2)",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE 6th & Holladay",
+   "geo": [
+    45.52996,
+    -122.65984
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, N Borthwick & Jessup",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "N Borthwick & Jessup",
+   "geo": [
+    45.56403,
+    -122.67385
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, N Shaver & Mississippi",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "N Shaver & Mississippi",
+   "geo": [
+    45.55216,
+    -122.67569
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, N Ivanhoe & John",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "N Ivanhoe & John",
+   "geo": [
+    45.58887,
+    -122.75343
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, N Lombard & Fiske",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "N Lombard & Fiske",
+   "geo": [
+    45.58045,
+    -122.71814
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, N Lombard & Hereford",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "N Lombard & Hereford",
+   "geo": [
+    45.58203,
+    -122.72235
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, N Lombard & Peninsular",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "N Lombard & Peninsular",
+   "geo": [
+    45.57721,
+    -122.69711
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SE Woodstock & 41st",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SE Woodstock & 41st",
+   "geo": [
+    45.47922,
+    -122.62027
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SE 46th & Woodstock",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SE 46th & Woodstock",
+   "geo": [
+    45.47908,
+    -122.61492
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 6th & Stark",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 6th & Stark",
+   "geo": [
+    45.52117,
+    -122.67734
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, NW 6th & Davis",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NW 6th & Davis",
+   "geo": [
+    45.5246,
+    -122.67643
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 6th & Alder",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 6th & Alder",
+   "geo": [
+    45.51986,
+    -122.67811
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NW 107th & ST HELENS RD",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NW 107th & ST HELENS RD",
+   "geo": [
+    45.59887,
+    -122.78606
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, NE 42nd & Hancock",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE 42nd & Hancock",
+   "geo": [
+    45.5366,
+    -122.61977
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW 2nd & Jefferson",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 2nd & Jefferson",
+   "geo": [
+    45.51401,
+    -122.67658
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE M L King Jr & Ainsworth",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE M L King Jr & Ainsworth",
+   "geo": [
+    45.5665,
+    -122.66155
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SE Bybee & Milwaukie",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SE Bybee & Milwaukie",
+   "geo": [
+    45.47365,
+    -122.64893
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 5th & Pine",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 5th & Pine",
+   "geo": [
+    45.52198,
+    -122.67575
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, N Lombard & Philadelphia",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "N Lombard & Philadelphia",
+   "geo": [
+    45.59004,
+    -122.75476
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 6th & Oak",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 6th & Oak",
+   "geo": [
+    45.5219,
+    -122.67722
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 6th & Salmon",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 6th & Salmon",
+   "geo": [
+    45.51719,
+    -122.67953
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE 57th & Sandy Blvd",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE 57th & Sandy Blvd",
+   "geo": [
+    45.54228,
+    -122.60502
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 4th & Stark",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 4th & Stark",
+   "geo": [
+    45.52061,
+    -122.67534
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW Naito & Yamhill",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Naito & Yamhill",
+   "geo": [
+    45.51698,
+    -122.67311
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, NW 6th & Irving",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NW 6th & Irving",
+   "geo": [
+    45.52818,
+    -122.67657
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE Holladay & Wheeler",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE Holladay & Wheeler",
+   "geo": [
+    45.53033,
+    -122.6656
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NW 6th & Burnside",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NW 6th & Burnside",
+   "geo": [
+    45.52318,
+    -122.67659
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, NW 5th & Flanders",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NW 5th & Flanders",
+   "geo": [
+    45.52582,
+    -122.67563
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NW 1st & Davis",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NW 1st & Davis",
+   "geo": [
+    45.52465,
+    -122.67152
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NW 1st & Davis (2)",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NW 1st & Davis",
+   "geo": [
+    45.5247,
+    -122.67132
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, Seawall at NW Everett",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "Seawall at NW Everett",
+   "geo": [
+    45.52507,
+    -122.66968
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, Seawall at NW Davis",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "Seawall at NW Davis",
+   "geo": [
+    45.52409,
+    -122.66945
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW 18th & Jefferson",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 18th & Jefferson",
+   "geo": [
+    45.51816,
+    -122.69311
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW 4th & Yamhill",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 4th & Yamhill",
+   "geo": [
+    45.51777,
+    -122.67689
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 5th & Madison",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 5th & Madison",
+   "geo": [
+    45.51536,
+    -122.67958
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 6th & Madison (2)",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 6th & Madison",
+   "geo": [
+    45.5156,
+    -122.68038
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW 5th & Montgomery",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 5th & Montgomery",
+   "geo": [
+    45.51163,
+    -122.68161
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 6th & Montgomery",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 6th & Montgomery",
+   "geo": [
+    45.51141,
+    -122.68267
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW Park & Montgomery",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Park & Montgomery",
+   "geo": [
+    45.51236,
+    -122.68524
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW 18th & Salmon",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 18th & Salmon",
+   "geo": [
+    45.52017,
+    -122.6918
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW Naito & Ankeny",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Naito & Ankeny",
+   "geo": [
+    45.52226,
+    -122.67041
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, N Kilpatrick & Denver",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "N Kilpatrick & Denver",
+   "geo": [
+    45.58254,
+    -122.68701
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, Sw Park & Madison",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "Sw Park & Madison",
+   "geo": [
+    45.51596,
+    -122.68252
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 3rd & Clay",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 3rd & Clay",
+   "geo": [
+    45.51281,
+    -122.6785
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SE Madison & Hawthorne",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SE Madison & Hawthorne",
+   "geo": [
+    45.51277,
+    -122.66809
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, S Riverplace & Esplanade",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "S Riverplace & Esplanade",
+   "geo": [
+    45.51153,
+    -122.67386
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE 117th & Holladay",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE 117th & Holladay",
+   "geo": [
+    45.53025,
+    -122.54292
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE M.L.K. Jr & Knott",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE M.L.K. Jr & Knott",
+   "geo": [
+    45.54198,
+    -122.66174
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NW Park & Davis",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NW Park & Davis",
+   "geo": [
+    45.52411,
+    -122.67886
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 3rd & Morrison",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 3rd & Morrison",
+   "geo": [
+    45.51818,
+    -122.67571
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE 19th & SKIDMORE",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE 19th & SKIDMORE",
+   "geo": [
+    45.55442,
+    -122.64611
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, POLICE MEMORIAL",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "POLICE MEMORIAL",
+   "geo": [
+    45.51345,
+    -122.67423
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 18th & Morrison",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 18th & Morrison",
+   "geo": [
+    45.52202,
+    -122.69009
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 5th & Washington",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 5th & Washington",
+   "geo": [
+    45.52003,
+    -122.67703
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 5th & Oak",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 5th & Oak",
+   "geo": [
+    45.52137,
+    -122.6763
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW 20th & Jefferson",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 20th & Jefferson",
+   "geo": [
+    45.51817,
+    -122.69426
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SE 65th & Foster",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SE 65th & Foster",
+   "geo": [
+    45.48917,
+    -122.59599
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE 7th & Holladay (2)",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE 7th & Holladay",
+   "geo": [
+    45.53014,
+    -122.65884
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, Seawall at SW Morrison",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "Seawall at SW Morrison",
+   "geo": [
+    45.51748,
+    -122.6717
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE Holladay & Grand",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE Holladay & Grand",
+   "geo": [
+    45.52998,
+    -122.66088
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE M L King Jr & Killingsworth",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE M L King Jr & Killingsworth",
+   "geo": [
+    45.56258,
+    -122.66157
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE M L KING JR BLVD & FREMONT",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE M L KING JR BLVD & FREMONT",
+   "geo": [
+    45.5484,
+    -122.66173
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE M L King Jr & Alberta",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE M L King Jr & Alberta",
+   "geo": [
+    45.55898,
+    -122.66164
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW Murray St. & SW Murray Ln",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Murray St. & SW Murray Ln",
+   "geo": [
+    45.51946,
+    -122.70016
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW Salmon & Park",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Salmon & Park",
+   "geo": [
+    45.51759,
+    -122.68212
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW 4th & Madison",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 4th & Madison",
+   "geo": [
+    45.5154,
+    -122.67769
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW Morrison & 6th",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Morrison & 6th",
+   "geo": [
+    45.51908,
+    -122.67886
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 6th & Morrison",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 6th & Morrison",
+   "geo": [
+    45.51924,
+    -122.67863
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW Yamhill & Broadway",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Yamhill & Broadway",
+   "geo": [
+    45.51869,
+    -122.67977
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW Yamhill & 6th",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Yamhill & 6th",
+   "geo": [
+    45.51853,
+    -122.67917
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 5th & Morrison",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 5th & Morrison",
+   "geo": [
+    45.51872,
+    -122.67777
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, SW 5th & Alder",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 5th & Alder",
+   "geo": [
+    45.51931,
+    -122.67721
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW Naito & Oak",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Naito & Oak",
+   "geo": [
+    45.52027,
+    -122.67131
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NW Park & Glisan",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NW Park & Glisan",
+   "geo": [
+    45.5265,
+    -122.67891
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, NW Broadway & Glisan",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NW Broadway & Glisan",
+   "geo": [
+    45.52652,
+    -122.67771
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, POWELL BUTTE INTERPRETIVE CENTER",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "POWELL BUTTE INTERPRETIVE CENTER",
+   "geo": [
+    45.49047,
+    -122.4972
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Benson Bubbler, NW 5th & Davis",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Historic four-bowl public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NW 5th & Davis",
+   "geo": [
+    45.52439,
+    -122.67556
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE M.L.K Jr & Lombard",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE M.L.K Jr & Lombard",
+   "geo": [
+    45.57712,
+    -122.66157
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE 41st & Sandy Blvd",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE 41st & Sandy Blvd",
+   "geo": [
+    45.53585,
+    -122.62076
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SE Grand & Spokane",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SE Grand & Spokane",
+   "geo": [
+    45.46522,
+    -122.66138
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW Yamhill & 17th",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Yamhill & 17th",
+   "geo": [
+    45.52123,
+    -122.68969
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW Taylor & 12th",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW Taylor & 12th",
+   "geo": [
+    45.5193,
+    -122.68541
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, NE 3rd & Holladay",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "NE 3rd & Holladay",
+   "geo": [
+    45.53015,
+    -122.66287
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, 2370 SE 60TH AVE",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "2370 SE 60TH AVE",
+   "geo": [
+    45.50548,
+    -122.60158
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SW 1st & Yamhill",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SW 1st & Yamhill",
+   "geo": [
+    45.51719,
+    -122.67411
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SE Taylor & Cesar E Chavez",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SE Taylor & Cesar E Chavez",
+   "geo": [
+    45.51509,
+    -122.62274
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Drinking fountain, SE 13th & Spokane",
+   "sub": "Free drinking water, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "water",
+   "desc": "Public drinking fountain. Anyone can use it.",
+   "hoursText": "Runs most of the year. The City turns bubblers off during cold snaps or high wind.",
+   "where": "SE 13th & Spokane",
+   "geo": [
+    45.46492,
+    -122.65309
+   ],
+   "noId": true,
+   "url": "www.portland.gov/water/about-portlands-water-system/bubblers",
+   "urlLabel": "City bubblers page"
+  },
+  {
+   "name": "Restroom, Cathedral Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Cathedral Park",
+   "geo": [
+    45.58772,
+    -122.76314
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom A, Columbia Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Columbia Park",
+   "geo": [
+    45.5761,
+    -122.71305
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom B, Columbia Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Columbia Park",
+   "geo": [
+    45.5805,
+    -122.71307
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom, Couch Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Couch Park",
+   "geo": [
+    45.52662,
+    -122.69219
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom A, Creston Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Creston Park",
+   "geo": [
+    45.49569,
+    -122.6154
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom B, Creston Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Creston Park",
+   "geo": [
+    45.49557,
+    -122.6168
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom A, Duniway Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Duniway Park",
+   "geo": [
+    45.50491,
+    -122.68348
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom B, Duniway Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Duniway Park",
+   "geo": [
+    45.50383,
+    -122.68236
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom A, Ed Benedict Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Ed Benedict Park",
+   "geo": [
+    45.49553,
+    -122.55807
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom B, Ed Benedict Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Ed Benedict Park",
+   "geo": [
+    45.49515,
+    -122.55523
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Portland Loo, Gateway Discovery Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Single-stall public toilet with a hand-washing spout outside. Anyone can use it. Wheelchair accessible.",
+   "where": "Gateway Discovery Park",
+   "geo": [
+    45.53238,
+    -122.55531
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/loo",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom A, Gateway Discovery Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Gateway Discovery Park",
+   "geo": [
+    45.5331,
+    -122.55382
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom B, Waterfront Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Waterfront Park",
+   "geo": [
+    45.51403,
+    -122.67332
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Portland Loo, Waterfront Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Single-stall public toilet with a hand-washing spout outside. Anyone can use it. Wheelchair accessible.",
+   "where": "Waterfront Park",
+   "geo": [
+    45.52165,
+    -122.67015
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/loo",
+   "urlLabel": "City restrooms page",
+   "hours": {
+    "mon": "00:00-24:00",
+    "tue": "00:00-24:00",
+    "wed": "00:00-24:00",
+    "thu": "00:00-24:00",
+    "fri": "00:00-24:00",
+    "sat": "00:00-24:00",
+    "sun": "00:00-24:00"
+   },
+   "hoursText": "Generally open 24/7, per the City."
+  },
+  {
+   "name": "Portland Loo, Jamison Square",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Single-stall public toilet with a hand-washing spout outside. Anyone can use it. Wheelchair accessible.",
+   "where": "Jamison Square",
+   "geo": [
+    45.52873,
+    -122.68217
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/loo",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom, Laurelhurst Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated.",
+   "where": "Laurelhurst Park",
+   "geo": [
+    45.52213,
+    -122.62605
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom A, Lents Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated.",
+   "where": "Lents Park",
+   "geo": [
+    45.48585,
+    -122.56995
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom B, Lents Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated.",
+   "where": "Lents Park",
+   "geo": [
+    45.48484,
+    -122.56999
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Portland Loo, NW Glisan & 5th",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Single-stall public toilet with a hand-washing spout outside. Anyone can use it.",
+   "where": "NW Glisan St & NW 5th Ave",
+   "geo": [
+    45.52672,
+    -122.67608
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/loo",
+   "urlLabel": "City restrooms page",
+   "hours": {
+    "mon": "00:00-24:00",
+    "tue": "00:00-24:00",
+    "wed": "00:00-24:00",
+    "thu": "00:00-24:00",
+    "fri": "00:00-24:00",
+    "sat": "00:00-24:00",
+    "sun": "00:00-24:00"
+   },
+   "hoursText": "Generally open 24/7, per the City."
+  },
+  {
+   "name": "Portland Loo, North Park Blocks",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Single-stall public toilet with a hand-washing spout outside. Anyone can use it. Wheelchair accessible.",
+   "where": "North Park Blocks",
+   "geo": [
+    45.52387,
+    -122.67857
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/loo",
+   "urlLabel": "City restrooms page",
+   "hours": {
+    "mon": "00:00-24:00",
+    "tue": "00:00-24:00",
+    "wed": "00:00-24:00",
+    "thu": "00:00-24:00",
+    "fri": "00:00-24:00",
+    "sat": "00:00-24:00",
+    "sun": "00:00-24:00"
+   },
+   "hoursText": "Generally open 24/7, per the City."
+  },
+  {
+   "name": "Restroom A, North Park Blocks",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "North Park Blocks",
+   "geo": [
+    45.52276,
+    -122.67863
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom B, North Park Blocks",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "North Park Blocks",
+   "geo": [
+    45.52275,
+    -122.67888
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom A, Pier Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated.",
+   "where": "Pier Park",
+   "geo": [
+    45.6035,
+    -122.75769
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom B, Pier Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Pier Park",
+   "geo": [
+    45.60229,
+    -122.76219
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom C, Pier Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Pier Park",
+   "geo": [
+    45.60182,
+    -122.756
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom E, Pier Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated.",
+   "where": "Pier Park",
+   "geo": [
+    45.6007,
+    -122.75364
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom F, Pier Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated.",
+   "where": "Pier Park",
+   "geo": [
+    45.60063,
+    -122.75285
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom, SW Terwilliger Blvd Parkway",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated.",
+   "where": "SW Terwilliger Blvd Parkway",
+   "geo": [
+    45.4914,
+    -122.68395
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom, Sellwood Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Sellwood Park",
+   "geo": [
+    45.46803,
+    -122.66092
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom, Sellwood Riverfront Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Sellwood Riverfront Park",
+   "geo": [
+    45.466,
+    -122.66347
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom, South Waterfront Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "South Waterfront Park",
+   "geo": [
+    45.50869,
+    -122.67328
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom, Springwater Corridor",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Springwater Corridor",
+   "geo": [
+    45.46197,
+    -122.61788
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Portland Loo, The Fields",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Single-stall public toilet with a hand-washing spout outside. Anyone can use it. Wheelchair accessible.",
+   "where": "The Fields",
+   "geo": [
+    45.53233,
+    -122.68191
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/loo",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom, Washington Park (Elephant House)",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Washington Park",
+   "geo": [
+    45.51643,
+    -122.70489
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom A, Washington Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Washington Park",
+   "geo": [
+    45.5219,
+    -122.70384
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom B, Washington Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Washington Park",
+   "geo": [
+    45.51952,
+    -122.70605
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom C, Washington Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Washington Park",
+   "geo": [
+    45.51799,
+    -122.70602
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom D, Washington Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Washington Park",
+   "geo": [
+    45.50815,
+    -122.71717
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom, Westmoreland Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Westmoreland Park",
+   "geo": [
+    45.47133,
+    -122.6414
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Restroom, Wilshire Park",
+   "sub": "Public restroom, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "Park restroom. Anyone can use it. Most park restrooms are not heated. Wheelchair accessible.",
+   "where": "Wilshire Park",
+   "geo": [
+    45.55294,
+    -122.62745
+   ],
+   "noId": true,
+   "url": "www.portland.gov/parks/restrooms",
+   "urlLabel": "City restrooms page",
+   "hoursText": "Park hours, usually 5am to 10pm or midnight. On the City's list of park restrooms open all year."
+  },
+  {
+   "name": "Hygiene station: People's Depot",
+   "sub": "Toilet and hand washing, City of Portland",
+   "cat": [
+    "water"
+   ],
+   "point": true,
+   "kind": "restroom",
+   "desc": "City hygiene station for people living outside: a toilet and hand-washing station. Anyone can use it.",
+   "where": "SE Portland (tap Directions for the spot)",
+   "geo": [
+    45.51739,
+    -122.66147
+   ],
+   "noId": true,
+   "hours": {
+    "mon": "00:00-24:00",
+    "tue": "00:00-24:00",
+    "wed": "00:00-24:00",
+    "thu": "00:00-24:00",
+    "fri": "00:00-24:00",
+    "sat": "00:00-24:00",
+    "sun": "00:00-24:00"
+   },
+   "hoursText": "Open 24/7, per the City's hygiene station map.",
+   "url": "www.portland.gov/united/hygienestations",
+   "urlLabel": "City hygiene stations page"
+  }
+ ]
+}
