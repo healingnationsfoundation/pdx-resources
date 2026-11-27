@@ -4,5 +4,47 @@
     "countyUpdated": "Wednesday, Nov. 4, 2026",
     "checked": "2026-11-22T19:36:47.710Z",
     "source": "https://www.multco.us/care-when-its-cold"
+  },
+  "forecast": {
+    "updated": "2026-11-27T13:41:26+00:00",
+    "periods": [
+      {
+        "name": "Today",
+        "start": "2026-11-27T06:00:00-08:00",
+        "end": "2026-11-27T18:00:00-08:00",
+        "isDaytime": true,
+        "temp": 52,
+        "unit": "F",
+        "short": "Rain"
+      },
+      {
+        "name": "Tonight",
+        "start": "2026-11-27T18:00:00-08:00",
+        "end": "2026-11-28T06:00:00-08:00",
+        "isDaytime": false,
+        "temp": 42,
+        "unit": "F",
+        "short": "Chance Light Rain then Mostly Cloudy"
+      },
+      {
+        "name": "Saturday",
+        "start": "2026-11-28T06:00:00-08:00",
+        "end": "2026-11-28T18:00:00-08:00",
+        "isDaytime": true,
+        "temp": 51,
+        "unit": "F",
+        "short": "Cloudy"
+      },
+      {
+        "name": "Saturday Night",
+        "start": "2026-11-28T18:00:00-08:00",
+        "end": "2026-11-29T06:00:00-08:00",
+        "isDaytime": false,
+        "temp": 45,
+        "unit": "F",
+        "short": "Cloudy then Chance Light Rain"
+      }
+    ],
+    "source": "https://forecast.weather.gov/MapClick.php?lat=45.5152&lon=-122.6784"
   }
 }

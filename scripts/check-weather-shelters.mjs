@@ -1,5 +1,6 @@
 // Checks whether Multnomah County's emergency severe-weather shelters are open
 // tonight, from the County's own page, and writes alerts.json for the guide's banner.
+// Also saves the National Weather Service forecast for Portland (see the end).
 // Run by .github/workflows/check-weather-shelters.yml every hour; by hand:
 //   node scripts/check-weather-shelters.mjs
 //
@@ -37,7 +38,25 @@ const next = { status, countyUpdated: updated, checked: now.toISOString(), sourc
 const changed = prev.status !== status || prev.countyUpdated !== updated
   || (status === 'open' && (!prev.checked || portlandDay(new Date(prev.checked)) !== portlandDay(now)));
 console.log(`Severe weather shelters: ${status} (County updated: ${updated || 'not found'})`);
-if (changed) {
-  writeFileSync(FILE, JSON.stringify({ severeWeather: next }, null, 2) + '\n');
+// National Weather Service forecast for Portland (api.weather.gov, free, no key). The page shows
+// tonight's low and today's high, with a cold or heat warning. The phone never calls NWS: only this
+// script does, and the page reads alerts.json. A failure here never blocks the shelter check.
+// Saved when NWS issues a new forecast or the first period changes (a few times a day).
+let forecast = old.forecast || null, fChanged = false;
+try {
+  const UA = { headers: { 'User-Agent': 'pdx-resources forecast check (github.com/healingnationsfoundation/pdx-resources)', Accept: 'application/geo+json' } };
+  const pt = await (await fetch('https://api.weather.gov/points/45.5152,-122.6784', UA)).json();
+  const fc = await (await fetch(pt.properties.forecast, UA)).json();
+  const periods = fc.properties.periods.slice(0, 4).map(p => ({
+    name: p.name, start: p.startTime, end: p.endTime, isDaytime: p.isDaytime,
+    temp: p.temperature, unit: p.temperatureUnit, short: p.shortForecast }));
+  const f = { updated: fc.properties.updateTime, periods, source: 'https://forecast.weather.gov/MapClick.php?lat=45.5152&lon=-122.6784' };
+  fChanged = !forecast || forecast.updated !== f.updated || (forecast.periods && forecast.periods[0].name) !== f.periods[0].name;
+  if (fChanged) forecast = f;
+  console.log(`Forecast: ${periods.slice(0, 2).map(p => `${p.name} ${p.temp}${p.unit} ${p.short}`).join('; ')}`);
+} catch (e) { console.log('Forecast not updated: ' + e.message); }
+
+if (changed || fChanged) {
+  writeFileSync(FILE, JSON.stringify({ severeWeather: changed ? next : prev, ...(forecast ? { forecast } : {}) }, null, 2) + '\n');
   console.log('alerts.json updated.');
 } else console.log('No change.');
