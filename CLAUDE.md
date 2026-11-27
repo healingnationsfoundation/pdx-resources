@@ -47,6 +47,8 @@ Edit `donations.json`. `kinds` are the "What do you have?" choices: "hot" (prepa
 ## Constraints
 - Must work on old phones with slow connections. No heavy libraries.
 - Should eventually work with JavaScript disabled. Today the app needs JavaScript to render; progressive enhancement is a future goal.
+- Accessibility: small text must reach 4.5:1 contrast in light and dark (the light green and orange and the dark red were darkened or lightened for this). Card names are h3 headings; opening a list moves focus to its title and Back moves it to "What do you need?", so screen readers announce the change.
+- "Print this list" prints the current list for staff and library computers: buttons, filters and live open/closed badges are hidden; phone and website print as text, with a printed-on date and the live guide address.
 - No login, no accounts, no tracking, no cookies, no analytics. The only things stored are on the phone itself, in localStorage, and never sent: `pdx-saved` (saved place slugs, shown as "Your saved places" on the home screen) and `pdx-text` (larger text, the AA button in the header). Renaming a place changes its slug, so anyone who saved it will lose it from their list.
 - No requests to outside servers (no web fonts, CDNs, or third-party scripts). Use system fonts. Plain links out (maps, phone, websites, the App Store) are fine.
 - All resources must be individually verified before updating.
