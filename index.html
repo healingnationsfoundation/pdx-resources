@@ -423,7 +423,7 @@ html.big body { zoom: 1.2; }
     <div class="soon-list" id="mine-list"></div>
   </div>
   <div class="soon" id="soon" hidden>
-    <h2 class="section-label">Opening soon</h2>
+    <h2 class="section-label" id="soon-label">Opening soon</h2>
     <div class="soon-list" id="soon-list"></div>
   </div>
   <div class="chips" id="chips"></div>
@@ -722,7 +722,7 @@ function rank(r, now) {
 
 // ---- Search: every word must match; common words also find the right category. ----
 const SYNONYMS = {
-  bed: ['shelter'], beds: ['shelter'], sleep: ['shelter'], night: ['shelter', 'overnight', 'evening'],
+  bed: ['shelter'], beds: ['shelter'], nite: ['shelter', 'overnight', 'evening'], tonight: ['shelter', 'overnight', 'evening'], tonite: ['shelter', 'overnight', 'evening'], sleep: ['shelter'], night: ['shelter', 'overnight', 'evening'],
   eat: ['food', 'meal'], meal: ['food'], meals: ['food'], lunch: ['food', 'meal'], dinner: ['food', 'meal'], breakfast: ['food', 'meal'], hungry: ['food'], groceries: ['pantry', 'food'],
   clothes: ['clothing', 'clothes & supplies'], coat: ['clothing', 'clothes & supplies', 'gear'], jacket: ['clothing', 'clothes & supplies', 'gear'],
   blanket: ['blankets', 'clothes & supplies', 'sleeping bag'], blankets: ['clothes & supplies'], socks: ['clothes & supplies'], tent: ['gear', 'clothes & supplies'],
@@ -742,6 +742,51 @@ const SYNONYMS = {
 function searchText(r) {
   const cats = r.cat.map(id => (CATEGORIES.find(c => c.id === id) || {}).label || id).join(' ');
   return `${r.name} ${r.sub||''} ${r.desc} ${r.detail||''} ${r.highlight||''} ${r.addr||''} ${r.hoursText||''} ${(r.stops||[]).map(s => s.place + ' ' + s.addr).join(' ')} ${cats}`.toLowerCase();
+}
+// Words people might type: every word in the listings plus the everyday words above.
+let VOCAB = null;
+function vocab() {
+  if (VOCAB) return VOCAB;
+  const n = new Map();
+  for (const r of RESOURCES) for (const w of searchText(r).match(/[a-z]{4,}/g) || []) n.set(w, (n.get(w) || 0) + 1);
+  for (const w of Object.keys(SYNONYMS)) n.set(w, (n.get(w) || 0) + 50);
+  return VOCAB = n;
+}
+// Edit distance with swapped letters counted as one change ("shlter", "sheter", "shleter").
+function editDist(a, b, max) {
+  if (Math.abs(a.length - b.length) > max) return max + 1;
+  let p2 = null, p = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const c = [i];
+    for (let j = 1; j <= b.length; j++) {
+      c[j] = Math.min(p[j] + 1, c[j - 1] + 1, p[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      if (p2 && i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) c[j] = Math.min(c[j], p2[j - 2] + 1);
+    }
+    p2 = p; p = c;
+  }
+  return p[b.length];
+}
+// For a word nothing matches, the closest real word (or null).
+function closestWord(w) {
+  if (w.length < 4 || /\d/.test(w)) return null;
+  const max = w.length >= 7 ? 2 : 1;
+  let best = null, bd = max + 1, bn = 0;
+  for (const [v, n] of vocab()) {
+    const d = editDist(w, v, max);
+    if (d < bd || (d === bd && n > bn)) { best = v; bd = d; bn = n; }
+  }
+  return bd <= max ? best : null;
+}
+// Fix the words in a search that match nothing at all. Returns the fixed search, or null.
+function correctQuery(q) {
+  let changed = false;
+  const words = q.split(/\s+/).filter(Boolean).map(w => {
+    if (RESOURCES.some(r => matchesQuery(r, w))) return w;
+    const c = closestWord(w);
+    if (c) { changed = true; return c; }
+    return w;
+  });
+  return changed ? words.join(' ') : null;
 }
 function matchesQuery(r, q) {
   const hay = searchText(r);
@@ -796,9 +841,11 @@ function weekHtml(r, now) {
   }).join('') + '</div>';
 }
 
-function mapsUrl(addr) {
+// Opens turn-by-turn directions: walking if it's close (we know the distance), transit otherwise.
+function mapsUrl(addr, dist = null) {
   const q = encodeURIComponent(addr);
-  return `https://www.google.com/maps/search/?api=1&query=${q}`;
+  const mode = dist !== null && dist < 1.2 ? 'walking' : 'transit';
+  return `https://www.google.com/maps/dir/?api=1&destination=${q}&travelmode=${mode}`;
 }
 
 // Data comes from a file others can edit, so treat every field as plain text.
@@ -807,23 +854,24 @@ function esc(v) {
 }
 
 // Places that open within the next few hours today, soonest first.
+function untilOpen(n, now) { return n.days * 1440 + n.at - (now.getHours() * 60 + now.getMinutes()); }
 function openingSoon(list, now, within = 180) {
-  const m = now.getHours() * 60 + now.getMinutes();
   return list.filter(r => isOpenNow(r, now) === false)
     .map(r => [r, nextOpening(r, now)])
-    .filter(([, n]) => n && n.days === 0 && n.at - m <= within)
-    .sort((a, b) => a[1].at - b[1].at);
+    .filter(([, n]) => n && n.days <= 1 && untilOpen(n, now) <= within)
+    .sort((a, b) => untilOpen(a[1], now) - untilOpen(b[1], now));
 }
+// Late at night most places are closed, so look ahead to the morning.
+function isNight(now) { const m = now.getHours() * 60 + now.getMinutes(); return m >= 21 * 60 || m < 6 * 60; }
 function inMins(d) { return d < 60 ? `in ${d} min` : `in ${Math.floor(d / 60)} hr${d % 60 ? ` ${d % 60} min` : ''}`; }
 // One tappable row: what it is, where, and when it opens.
 function soonRow(r, n, now, cat) {
-  const m = now.getHours() * 60 + now.getMinutes();
   const c = cat || r.cat.find(id => ESSENTIALS.some(e => e[0] === id)) || r.cat[0];
   const dist = nearOn && here ? distOf(r) : null;
   const where = dist !== null ? fmtMiles(dist) : (r.addr || '').split(',')[0];
   return `<button type="button" class="soon-row" data-place="${slug(r.name)}" data-cat="${esc(c)}">${icon(CATEGORY_ICON[c] || 'grid')}` +
     `<span class="s-main"><span class="s-name">${esc(r.name)}</span>${where ? `<span class="s-sub">${esc(where)}</span>` : ''}</span>` +
-    `<span class="s-when">${fmtTime(n.at)}<small>${inMins(n.at - m)}</small></span></button>`;
+    `<span class="s-when">${fmtTime(n.at)}<small>${n.days ? 'tomorrow' : inMins(untilOpen(n, now))}</small></span></button>`;
 }
 // Saved places: a list of place slugs kept only on this phone (localStorage), never sent anywhere.
 function getSaved() { try { return JSON.parse(localStorage.getItem('pdx-saved')) || []; } catch (e) { return []; } }
@@ -880,7 +928,9 @@ function renderHome() {
   document.getElementById('mine').hidden = !mine.length;
   document.getElementById('mine-list').innerHTML = mine.map(r => savedRow(r, now)).join('');
   const ess = RESOURCES.filter(r => r.cat.some(id => ESSENTIALS.some(e => e[0] === id)));
-  const soon = openingSoon(ess, now).slice(0, 4);
+  const night = isNight(now);
+  const soon = openingSoon(ess, now, night ? 600 : 180).slice(0, 4);
+  document.getElementById('soon-label').textContent = night ? 'Opening next' : 'Opening soon';
   document.getElementById('soon').hidden = !soon.length;
   document.getElementById('soon-list').innerHTML = soon.map(([r, n]) => soonRow(r, n, now)).join('');
   const openN = RESOURCES.filter(r => isOpenNow(r, now) === true).length;
@@ -991,10 +1041,15 @@ function renderCards() {
   const q = searchQuery.toLowerCase();
 
   const now = new Date();
-  const matching = RESOURCES.filter(r => {
-    if (activeFilter !== 'all' && !r.cat.includes(activeFilter)) return false;
-    return q ? matchesQuery(r, q.trim()) : true;
-  });
+  const inCat = r => activeFilter === 'all' || r.cat.includes(activeFilter);
+  let matching = RESOURCES.filter(r => inCat(r) && (q ? matchesQuery(r, q.trim()) : true));
+  // Nothing found? Try the search with spelling fixed ("sheter" finds shelter).
+  let fixed = null;
+  if (q.trim() && !matching.length) {
+    fixed = correctQuery(q.trim());
+    if (fixed) matching = RESOURCES.filter(r => inCat(r) && matchesQuery(r, fixed));
+    if (!matching.length) fixed = null;
+  }
   const openCount = matching.filter(r => isOpenNow(r, now) === true).length;
   const noHours = matching.filter(r => isOpenNow(r, now) === null && (!noIdOnly || r.noId === true)).length;
   const ranks = new Map(matching.map(r => [r, rank(r, now)]));
@@ -1011,12 +1066,13 @@ function renderCards() {
   const filtered = (openOnly ? sorted.filter(r => isOpenNow(r, now) === true)
     : laterToday ? sorted.filter(r => isLaterToday(r, now)) : sorted).filter(r => !noIdOnly || r.noId === true);
 
-  const where = `${activeFilter!=='all'?' in '+CATEGORIES.find(c=>c.id===activeFilter).label:''}${q?' matching "'+searchQuery+'"':''}${noIdOnly?', no ID needed':''}`;
+  const where = `${activeFilter!=='all'?' in '+CATEGORIES.find(c=>c.id===activeFilter).label:''}${q && !fixed?' matching "'+searchQuery+'"':''}${noIdOnly?', no ID needed':''}`;
+  const fixNote = fixed ? `Showing results for "${fixed}". ` : '';
   if (openOnly || laterToday) {
-    info.textContent = `${filtered.length} ${openOnly ? 'open now' : 'open now or later today'}${where}.` +
+    info.textContent = fixNote + `${filtered.length} ${openOnly ? 'open now' : 'open now or later today'}${where}.` +
       (noHours ? ` ${noHours} more ${noHours!==1?'have':'has'} no set hours: call ahead.` : '');
   } else {
-    info.textContent = `${filtered.length} resource${filtered.length!==1?'s':''}${where}` +
+    info.textContent = fixNote + `${filtered.length} resource${filtered.length!==1?'s':''}${where}` +
       (near ? ' · nearest first' : openCount ? ` · ${openCount} open now, shown first` : '');
   }
 
@@ -1045,7 +1101,7 @@ function renderCards() {
     if (r.noId) tags += '<span class="tag tag-noid">No ID Needed</span>';
 
     let actions = '';
-    if (r.addr) actions += `<a class="card-btn btn-directions" href="${mapsUrl(r.addr)}" target="_blank" rel="noopener">${icon('pin')}Directions</a>`;
+    if (r.addr) actions += `<a class="card-btn btn-directions" href="${mapsUrl(r.addr, near ? distOf(r) : null)}" target="_blank" rel="noopener">${icon('pin')}Directions</a>`;
     if (r.phone) actions += `<a class="card-btn btn-call" href="tel:${esc(String(r.phone).replace(/[^0-9+]/g,''))}" aria-label="Call ${esc(r.name)}, ${esc(phoneLabel(r.phone))}">${icon('phone')}${esc(phoneLabel(r.phone))}</a>`;
     if (r.url) actions += `<a class="card-btn btn-web" href="https://${esc(r.url)}" target="_blank" rel="noopener">${r.urlLabel ? esc(r.urlLabel) : icon('globe') + 'Website'}</a>`;
     const isSaved = savedSet.has(slug(r.name));
