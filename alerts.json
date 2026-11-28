@@ -6,17 +6,8 @@
     "source": "https://www.multco.us/care-when-its-cold"
   },
   "forecast": {
-    "updated": "2026-11-27T18:27:16+00:00",
+    "updated": "2026-11-28T01:41:25+00:00",
     "periods": [
-      {
-        "name": "Today",
-        "start": "2026-11-27T10:00:00-08:00",
-        "end": "2026-11-27T18:00:00-08:00",
-        "isDaytime": true,
-        "temp": 52,
-        "unit": "F",
-        "short": "Rain"
-      },
       {
         "name": "Tonight",
         "start": "2026-11-27T18:00:00-08:00",
@@ -24,7 +15,7 @@
         "isDaytime": false,
         "temp": 41,
         "unit": "F",
-        "short": "Light Rain Likely then Mostly Cloudy"
+        "short": "Light Rain Likely then Patchy Fog"
       },
       {
         "name": "Saturday",
@@ -33,7 +24,7 @@
         "isDaytime": true,
         "temp": 51,
         "unit": "F",
-        "short": "Mostly Cloudy"
+        "short": "Partly Sunny"
       },
       {
         "name": "Saturday Night",
@@ -43,6 +34,15 @@
         "temp": 45,
         "unit": "F",
         "short": "Cloudy then Chance Light Rain"
+      },
+      {
+        "name": "Sunday",
+        "start": "2026-11-29T06:00:00-08:00",
+        "end": "2026-11-29T18:00:00-08:00",
+        "isDaytime": true,
+        "temp": 51,
+        "unit": "F",
+        "short": "Light Rain"
       }
     ],
     "source": "https://forecast.weather.gov/MapClick.php?lat=45.5152&lon=-122.6784"
